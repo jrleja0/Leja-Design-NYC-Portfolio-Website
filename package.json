@@ -1,5 +1,5 @@
 {
-  "name": "Leja Design",
+  "name": "LejaDesign",
   "version": "1.0.0",
   "description": "personal website",
   "main": "index.js",
@@ -12,5 +12,25 @@
     "test": "DATABASE_URL='postgres://localhost:5432/leja-design-test' NODE_ENV=development mocha ./test/**/*.spec.js --compilers js:babel-register"
   },
   "author": "Jasiu Leja <jleja09@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.14.1",
+    "history": "^4.6.3",
+    "morgan": "^1.8.1",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.1",
+    "redux-thunk": "^2.2.0",
+    "sequelize": "^4.3.1"
+  }
 }
