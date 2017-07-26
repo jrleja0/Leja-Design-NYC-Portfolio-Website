@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 /*///
  COMPONENT
 *////
-const UserHome = (props) => {
+const HomeBody = (props) => {
 
   return (
     <div>
-      <h3>Welcome!</h3>
+      <h3>Projects</h3>
     </div>
   );
 };
@@ -22,10 +22,10 @@ const mapState = (state) => {
   };
 };
 
-export default connect(mapState)(UserHome);
+export default connect(mapState)(HomeBody);
 
 /*///
  PROP TYPES
 *////
-UserHome.propTypes = {
+HomeBody.propTypes = {
 };

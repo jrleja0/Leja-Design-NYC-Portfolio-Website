@@ -9,10 +9,13 @@ const Main = (props) => {
 
   return (
     <div>
-      <h1>Leja Design</h1>
-      <nav>
-        <div>
-          <Link to="/home">Home</Link>
+      <nav className="navbar navbar-inverse" role="navigation">
+        <div className="container">
+          <div className="navbar-header">
+            <Link className="navbar-brand" to="home">
+              <h1>Leja Design</h1>
+            </Link>
+          </div>
         </div>
       </nav>
       <hr />

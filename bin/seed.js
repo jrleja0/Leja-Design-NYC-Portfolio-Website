@@ -4,28 +4,28 @@ const Promise = require('bluebird');
 const data = {
   image: [
     {
-      name: 'file1',
-      path: 'path/file1.jpg',
+      name: 'smashbots1',
+      path: 'assets/projects/smashbots/final1_screenshot.jpg',
       category: 'project',
-      description: 'This is an image.',
+      description: 'This is an image of Smash-Bots.',
     },
     {
-      name: 'file2',
-      path: 'path/file2.jpg',
+      name: 'colorChaos1',
+      path: 'assets/projects/color_chaos/game2.jpg',
       category: 'project',
-      description: 'This is an image.',
+      description: 'This is an image of Color Chaos.',
     },
     {
-      name: 'file3',
-      path: 'path/file3.jpg',
+      name: 'diningWithTheStars1',
+      path: 'assets/projects/dining_with_the_stars/screenshot_zoolander.jpg',
       category: 'project',
-      description: 'This is an image.',
+      description: 'This is an image of Dining with the Stars.',
     },
     {
-      name: 'file4',
-      path: 'path/file4.jpg',
+      name: 'techTalkPaperJS1',
+      path: 'assets/projects/tech_talk_paperjs/tech_talk_paperjs.jpg',
       category: 'project',
-      description: 'This is an image.',
+      description: 'This is an image of "Intro to Paper.js" tech talk.',
     }
   ]
 };
