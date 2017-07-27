@@ -1,2 +1,2 @@
 export {default as Main} from './main';
-export {default as UserHome} from './user-home';
+export {default as HomeBody} from './home-body';
