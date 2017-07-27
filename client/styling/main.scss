@@ -1,0 +1,45 @@
+$blue-bold: #1b1ed1;
+$green-background: #05ad18;
+$black-with-green: #000c01;
+
+body {
+  padding-top: 60px;
+  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
+  font-family: sans-serif;
+  color: white;
+
+  a {
+    text-decoration: none;
+  }
+
+  nav {
+    // background-color: $blue-bold;
+
+    a {
+      display: inline-block;
+      margin: 1em;
+    }
+
+  }
+
+  hr {
+    border-width: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  // form div {
+  //   margin: 1em;
+  //   display: inline-block;
+  // }
+
+  // label {
+  //   display: block;
+  // }
+}

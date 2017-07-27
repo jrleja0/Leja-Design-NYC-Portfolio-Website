@@ -10,7 +10,7 @@ const Main = (props) => {
   return (
     <div>
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div className="container">
+        <div className="container-fluid">
           <div className="navbar-header">
             <Link className="navbar-brand" to="home">
               <span className="h1">
@@ -21,9 +21,9 @@ const Main = (props) => {
         </div>
       </nav>
       <hr />
-      <div className="container">
         {children}
-      </div>
+      <hr />
+      <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_bw.jpg" alt="nyc b&w cityscape" />
     </div>
   );
 };

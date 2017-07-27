@@ -36,7 +36,7 @@ const HomeBody = (props) => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container-fluid">
         <div>
           <h3>Projects</h3>
         </div>
@@ -46,7 +46,7 @@ const HomeBody = (props) => {
           imageData.map(image => (
             <div key={image.name}>
               <li>{image.name}</li>
-              <img src={image.path} alt={image.name} />
+              <img className="img-fluid" src={image.path} alt={image.name} />
             </div>
           ))
           }
