@@ -13,7 +13,7 @@ const Main = (props) => {
         <div className="container">
           <div className="navbar-header">
             <Link className="navbar-brand" to="home">
-              <h1>Leja Design</h1>
+              <h1>Leja Design NYC</h1>
             </Link>
           </div>
         </div>
