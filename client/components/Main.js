@@ -9,17 +9,21 @@ const Main = (props) => {
 
   return (
     <div>
-      <nav className="navbar navbar-inverse" role="navigation">
+      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
           <div className="navbar-header">
             <Link className="navbar-brand" to="home">
-              <h1>Leja Design NYC</h1>
+              <span className="h1">
+                Leja Design NYC
+              </span>
             </Link>
           </div>
         </div>
       </nav>
       <hr />
-      {children}
+      <div className="container">
+        {children}
+      </div>
     </div>
   );
 };

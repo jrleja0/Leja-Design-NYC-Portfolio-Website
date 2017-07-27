@@ -1,12 +1,9 @@
 body {
   font-family: sans-serif;
+  padding-top: 60px;
 
   a {
     text-decoration: none;
-  }
-
-  label {
-    display: block;
   }
 
   nav a {
@@ -14,8 +11,12 @@ body {
     margin: 1em;
   }
 
-  form div {
-    margin: 1em;
-    display: inline-block;
-  }
+  // form div {
+  //   margin: 1em;
+  //   display: inline-block;
+  // }
+
+  // label {
+  //   display: block;
+  // }
 }
