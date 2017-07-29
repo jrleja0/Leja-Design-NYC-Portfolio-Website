@@ -5,22 +5,15 @@ $black-with-green: #000c01;
 body {
   padding-top: 60px;
   background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
-  font-family: sans-serif;
   color: white;
 
   a {
     text-decoration: none;
   }
 
-  nav {
-    // background-color: $blue-bold;
-
-    a {
-      display: inline-block;
-      margin: 1em;
-    }
-
-  }
+  // nav {
+  //   background-color: $blue-bold;
+  // }
 
   hr {
     border-width: 0;
@@ -34,6 +27,27 @@ body {
     list-style: none;
     padding: 0;
   }
+
+  .mainTitle {
+    background: url("/assets/text/lejaDesignNYCTitle1.png") left center/contain no-repeat;
+    display: block;
+    width: 40%;
+    margin: 7px;
+  }
+
+  .mainTitle:hover {
+    @extend .mainTitle;
+    background: url("/assets/text/lejaDesignNYCTitle1Hover.png") left center/contain no-repeat;
+    // height: 4em;
+    // margin: .2em 1em;
+  }
+
+  // .homeLink {
+  //   visibility: hidden;
+  //   display: block;
+  //   height: 100%;
+  //   width: 30%;
+  // }
   // form div {
   //   margin: 1em;
   //   display: inline-block;
