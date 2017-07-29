@@ -13,7 +13,7 @@ const Main = (props) => {
         <div className="container-fluid ">
           <div className="row">
             {/*<div className="navbar-header col-lg-6 col-md-8 col-sm-10">*/}
-            <div className="col-lg-6 col-md-8 col-sm-10">
+            <div className="col-lg-8 col-md-8 col-sm-10">
               <Link className="navbar-brand mainTitle" to="home">
                 {/*
                 <span className="spanForHomeLink"/>
