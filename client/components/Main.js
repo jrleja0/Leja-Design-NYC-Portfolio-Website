@@ -12,17 +12,8 @@ const Main = (props) => {
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container-fluid ">
           <div className="row">
-            {/*<div className="navbar-header col-lg-6 col-md-8 col-sm-10">*/}
             <div className="col-lg-8 col-md-8 col-sm-10">
-              <Link className="navbar-brand mainTitle" to="home">
-                {/*
-                <span className="spanForHomeLink"/>
-                <span className="h1">
-                  Leja Design NYC
-                </span>
-                  <img className="img-fluid mainTitle" src="/assets/text/lejaDesignNYCTitle1.png" alt="Leja Design NYC" />
-                */}
-              </Link>
+              <Link className="navbar-brand mainTitle" to="home" />
             </div>
             <div className="col-lg-6 col-md-4 col-sm-2" />
           </div>
