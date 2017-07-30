@@ -1,2 +1,3 @@
-export {default as Main} from './main';
-export {default as HomeBody} from './home-body';
+export {default as Main} from './Main';
+export {default as HomeBody} from './HomeBody';
+export {default as Contact} from './Contact';

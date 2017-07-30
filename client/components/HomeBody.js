@@ -38,7 +38,7 @@ const HomeBody = (props) => {
     <div>
       <div className="container-fluid">
         <div>
-          <img className="img-fluid" src="/assets/text/currentProjects1.png" alt="Current Projects" />
+          <img className="img-fluid" src="/assets/text/recentProjectsYellow.png" alt="Recent Projects" />
         </div>
         <div>
           <ul>

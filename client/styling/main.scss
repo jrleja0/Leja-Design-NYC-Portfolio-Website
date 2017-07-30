@@ -1,10 +1,32 @@
 $blue-bold: #1b1ed1;
 $green-background: #05ad18;
+$pink: #F3517D;
 $black-with-green: #000c01;
+$black-with-red: #190002;
+
+.greenBackground {
+  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
+}
+
+.redBackground {
+  background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
+}
+
+.green {
+  background-color: $green-background;
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.top-bottom-margin-30 {
+  margin: 30px 0;
+}
 
 body {
+  @extend .greenBackground;
   padding-top: 60px;
-  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
   color: white;
 
   a {
@@ -40,6 +62,17 @@ body {
     background: url("/assets/text/lejaDesignNYCTitle1Hover.png") left center/contain no-repeat;
     // height: 4em;
     // margin: .2em 1em;
+  }
+
+  .headshotBackground {
+    background: url("/assets/people/headshot.jpg") center/contain no-repeat;
+    display: block;
+    height: 400px;
+  }
+
+  .contact-textbox {
+    @extend .green;
+    height: 400px;
   }
 
   // .homeLink {
