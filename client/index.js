@@ -1,4 +1,4 @@
-import './index.scss';
+import './styling/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';

@@ -36,20 +36,22 @@ const HomeBody = (props) => {
 
   return (
     <div>
-      <div>
-        <h3>Projects</h3>
-      </div>
-      <div>
-        <ul>
-        {
-        imageData.map(image => (
-          <div key={image.name}>
-            <li>{image.name}</li>
-            <img src={image.path} alt={image.name} />
-          </div>
-        ))
-        }
-        </ul>
+      <div className="container-fluid">
+        <div>
+          <img className="img-fluid" src="/assets/text/currentProjects1.png" alt="Current Projects" />
+        </div>
+        <div>
+          <ul>
+          {
+          imageData.map(image => (
+            <div key={image.name}>
+              <li>{image.name}</li>
+              <img className="img-fluid" src={image.path} alt={image.name} />
+            </div>
+          ))
+          }
+          </ul>
+        </div>
       </div>
     </div>
   );

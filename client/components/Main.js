@@ -9,17 +9,20 @@ const Main = (props) => {
 
   return (
     <div>
-      <nav className="navbar navbar-inverse" role="navigation">
-        <div className="container">
-          <div className="navbar-header">
-            <Link className="navbar-brand" to="home">
-              <h1>Leja Design NYC</h1>
-            </Link>
+      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div className="container-fluid ">
+          <div className="row">
+            <div className="col-lg-8 col-md-8 col-sm-10">
+              <Link className="navbar-brand mainTitle" to="home" />
+            </div>
+            <div className="col-lg-6 col-md-4 col-sm-2" />
           </div>
         </div>
       </nav>
       <hr />
-      {children}
+        {children}
+      <hr />
+      <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_bw.jpg" alt="nyc b&w cityscape" />
     </div>
   );
 };
