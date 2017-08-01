@@ -18,8 +18,8 @@ const Contact = (props) => {
         <div className="container-fluid">
           <div className="row top-bottom-margin-30">
             <div className="headshotBackground col-lg-6 col-md-6 col-sm-12" />
-            <div className="contact-textbox col-lg-6 col-md-6 col-sm-12">
-              <div className="contact-textbox-inner">
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="contact-textbox">
                 <ul>
                   <li className="li-extra-padding-bottom">
                     <Link className="glyphicon glyphicon-envelope" to="mailto:lejadesign@gmail.com">
@@ -29,26 +29,28 @@ const Contact = (props) => {
                   <li className="glyphicon glyphicon-briefcase li-extra-padding-bottom"><span> Resume</span></li>
                   <br />
                   <li className="glyphicon glyphicon-link"><span> Links:</span></li>
-                  <li><span className="social-labels"> GitHub  |  LinkedIn  |  Instagram</span></li>
-                  <li>
-                    <div className="div-socialMediaLinks">
-                      <span>
-                        <Link to="https://github.com/jrleja0">
-                        <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
-                        </Link>
-                      </span>
-                      <span>
-                        <Link to="https://www.linkedin.com/in/jrleja">
-                        <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
-                        </Link>
-                      </span>
-                      <span>
-                        <Link to="https://www.instagram.com/jrleja">
-                        <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
-                        </Link>
-                      </span>
-                    </div>
-                  </li>
+                  <div className="div-socialMediaLinks">
+                    <li>
+                      <div>
+                        <a href="https://github.com/jrleja0">
+                          <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
+                          <p> GitHub</p>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="https://www.linkedin.com/in/jrleja">
+                          <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
+                          <p> LinkedIn</p>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="https://www.instagram.com/jrleja">
+                          <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
+                          <p> Instagram</p>
+                        </a>
+                      </div>
+                    </li>
+                  </div>
                 </ul>
               </div>
             </div>
