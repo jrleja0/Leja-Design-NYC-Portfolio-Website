@@ -1,19 +1,57 @@
+/*///
+ Basic Colors & Layout Styling
+*////
+
 $blue-bold: #1b1ed1;
 $green-background: #05ad18;
+$pink: #F3517D;
 $black-with-green: #000c01;
+$black-with-red: #190002;
+
+.greenBackground {
+  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
+}
+
+.redBackground {
+  background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
+}
+
+.green {
+  background-color: $green-background;
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.main-font {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.top-bottom-margin-30 {
+  margin: 30px 0;
+}
+
+/*///
+ Basic Elements Styling
+*////
 
 body {
+  @extend .greenBackground;
+  @extend .main-font;
   padding-top: 60px;
-  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
-  color: white;
 
   a {
+    color: white;
     text-decoration: none;
   }
-
-  // nav {
-  //   background-color: $blue-bold;
-  // }
 
   hr {
     border-width: 0;
@@ -28,6 +66,14 @@ body {
     padding: 0;
   }
 
+/*///
+ MAIN (Navbar) Styling
+*////
+
+  // nav {
+  //   background-color: $blue-bold;
+  // }
+
   .mainTitle {
     background: url("/assets/text/lejaDesignNYCTitle1.png") left center/contain no-repeat;
     display: block;
@@ -41,6 +87,96 @@ body {
     // height: 4em;
     // margin: .2em 1em;
   }
+
+/*///
+ CONTACT Styling
+*////
+
+  .div-contactMeTitle {
+    margin: 30px 10px 0 10px;
+  }
+
+  .headshotBackground {
+    background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
+    display: block;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .contact-textbox {
+    @extend .green;
+    font-size: 22px;
+    height: 400px;
+    max-width: 650px;
+    margin: 0 auto;
+
+    ul {
+      padding: 60px 40px 0 40px;
+    }
+
+    li {
+      padding-bottom: 20px;
+    }
+
+    .li-extra-padding-bottom {
+      padding-bottom: 40px;
+    }
+
+  }
+
+  .div-socialMediaLinks {
+    background-color: $black-with-red;
+    padding: 14px 20px 0 20px;
+    text-align: center;
+    height: 110px;
+
+    div {
+      display: inline-block;
+      padding: 0 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+  }
+
+  .social-icon {
+    width: 64px;
+    height: 64px;
+    padding: 0 10px;
+  }
+
+  .social-labels {
+    white-space: pre;
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width : 480px) {
+    .headshotBackground {
+      height: 340px;
+    }
+
+    .contact-textbox {
+      ul {
+        padding: 60px 20px 0 20px;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 530px) {
+
+    .div-socialMediaLinks {
+      padding: 14px 10px 0 10px;
+
+      div {
+        padding: 0 8px;
+      }
+    }
+
+  }
+
 
   // .homeLink {
   //   visibility: hidden;
