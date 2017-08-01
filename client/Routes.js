@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Router} from 'react-router';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, IndexRedirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {Contact, HomeBody, Main} from './components';
+import {Contact, HomeBody, Main, Resume} from './components';
 
 /*///
  COMPONENT
