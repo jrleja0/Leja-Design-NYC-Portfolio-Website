@@ -89,6 +89,23 @@ body {
   }
 
 /*///
+ PROJECTS Styling
+*////
+
+  .img-main-project {
+    @extend .headshotBackground;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+  }
+
+  .project-textbox {
+    @extend .contact-textbox;
+
+  }
+
+
+
+/*///
  CONTACT Styling
 *////
 
@@ -98,7 +115,6 @@ body {
 
   .headshotBackground {
     background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
-    display: block;
     height: 400px;
     margin-bottom: 20px;
   }

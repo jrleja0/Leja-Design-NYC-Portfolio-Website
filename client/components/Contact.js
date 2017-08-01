@@ -22,9 +22,9 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-extra-padding-bottom">
-                    <Link className="glyphicon glyphicon-envelope" to="mailto:lejadesign@gmail.com">
+                    <a className="glyphicon glyphicon-envelope" href="mailto:lejadesign@gmail.com">
                       <span> lejadesign@gmail.com</span>
-                    </Link>
+                    </a>
                   </li>
                   <li className="glyphicon glyphicon-briefcase li-extra-padding-bottom"><span> Resume</span></li>
                   <br />
