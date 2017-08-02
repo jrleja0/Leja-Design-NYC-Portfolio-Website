@@ -21,17 +21,17 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-extra-padding-bottom">
-                    <a href="mailto:lejadesign@gmail.com">
-                      <span className="glyphicon glyphicon-envelope" />
+                    <a href="mailto:lejadesign@gmail.com" aria-label="Email Link">
+                      <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
                       <span>&emsp; </span><span>lejadesign@gmail.com</span>
                     </a>
                   </li>
                   <li className="li-extra-padding-bottom">
-                    <span className="glyphicon glyphicon-briefcase" />
+                    <span className="glyphicon glyphicon-briefcase" aria-hidden="true" />
                     <span>&emsp; </span><span>Resume</span>
                   </li>
                   <li className="li-add-padding-bottom">
-                    <span className="glyphicon glyphicon-link" />
+                    <span className="glyphicon glyphicon-link" aria-hidden="true" />
                     <span>&emsp; </span><span>Links:</span>
                   </li>
                   <div className="div-socialMediaLinks">

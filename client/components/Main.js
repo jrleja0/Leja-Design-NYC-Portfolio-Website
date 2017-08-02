@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {withRouter, Link} from 'react-router-dom';
 
+/*///
+ COMPONENT
+*////
 const Main = (props) => {
 
   const {children} = props;
@@ -19,9 +22,7 @@ const Main = (props) => {
           </div>
         </div>
       </nav>
-      <hr />
         {children}
-      <hr />
       <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_bw.jpg" alt="nyc b&w cityscape" />
     </div>
   );

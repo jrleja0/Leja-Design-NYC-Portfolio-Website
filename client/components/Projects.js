@@ -53,8 +53,8 @@ const HomeBody = (props) => {
 
   return (
     <div>
-      <div className="container-fluid">
-        <div>
+      <div className="container-fluid top-bottom-margin-30">
+        <div className="left-right-margin-10">
           <img className="img-fluid" src="/assets/text/recentProjectsYellow.png" alt="Recent Projects" />
         </div>
         <div className="container-fluid">
@@ -64,9 +64,13 @@ const HomeBody = (props) => {
               <h3>{image.projectName}</h3>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="img-main-project" style={
-                    { background: `url( ${image.path} ) left top/cover no-repeat` }
-                  } />
+                  <div className="img-main-project"
+                    style={
+                      image.name === 'diningWithTheStars1' ?
+                        { background: `url( ${image.path} ) left top/cover no-repeat` }
+                        : { background: `url( ${image.path} ) center top/cover no-repeat` }
+                    }
+                  />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="project-textbox">
@@ -104,7 +108,7 @@ const HomeBody = (props) => {
                                   <td>
                                     <p>
                                       { image.name === 'techTalkPaperJS1' ?
-                                        <span>Watch Presentation:</span> : <span>Watch Demo <br /> Presentation: </span>
+                                        <span>Watch <br />Presentation:</span> : <span>Watch Demo <br />Presentation:</span>
                                       }
                                     </p>
                                   </td>
@@ -120,7 +124,7 @@ const HomeBody = (props) => {
                               image.linkGithub ?
                                 <tr>
                                   <td>
-                                    <p>See GitHub Repository:</p>
+                                    <p>See GitHub <br />Repository:</p>
                                   </td>
                                   <td>
                                     <a href={image.linkGithub}>
