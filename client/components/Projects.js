@@ -18,7 +18,7 @@ const imageData = [
       path: 'assets/projects/color_chaos/game2.jpg',
       category: 'project',
       projectName: '"Catching Matching Color Chaos!" Game',
-      description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game. It is a solo hackathon project I created in 4 days.',
+      description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game that I created as a solo hackathon project in 4 days.',
       linkProject: 'TBA',
       linkDemo: 'https://www.youtube.com/watch?v=EYTeEmcarnY',
       linkGithub: 'https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game',
