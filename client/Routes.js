@@ -4,7 +4,7 @@ import {Router} from 'react-router';
 import {Route, Switch, IndexRedirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {Contact, HomeBody, Main, Resume} from './components';
+import {Contact, HomeBody, Main, Projects, Resume} from './components';
 
 /*///
  COMPONENT
@@ -20,7 +20,7 @@ class Routes extends Component {
     return (
       <Router history={history}>
         <Main>
-          <Route component={HomeBody} />
+          <Route component={Projects} />
           <Route component={Contact} />
         </Main>
       </Router>

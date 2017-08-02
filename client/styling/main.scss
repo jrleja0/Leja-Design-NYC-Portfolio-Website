@@ -16,6 +16,10 @@ $black-with-red: #190002;
   background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
 }
 
+.blueBold {
+  background-color: $blue-bold;
+}
+
 .green {
   background-color: $green-background;
 }
@@ -37,6 +41,10 @@ $black-with-red: #190002;
 
 .top-bottom-margin-30 {
   margin: 30px 0;
+}
+
+.left-right-margin-10 {
+  margin: 0 10px;
 }
 
 /*///
@@ -66,6 +74,35 @@ body {
     padding: 0;
   }
 
+  .basic-textbox {
+    max-width: 650px;
+    margin: 0 auto;
+
+    .li-add-padding-bottom {
+      padding-bottom: 20px;
+    }
+
+    .li-extra-padding-bottom {
+      padding-bottom: 40px;
+    }
+
+    .li-remove-padding {
+      padding-bottom: 0;
+    }
+
+  }
+
+  .basic-div-links {
+    background-color: $black-with-red;
+    padding: 14px 20px 14px 20px;
+    text-align: center;
+
+    p {
+      font-size: 16px;
+    }
+
+  }
+
 /*///
  MAIN (Navbar) Styling
 *////
@@ -89,6 +126,32 @@ body {
   }
 
 /*///
+ PROJECTS Styling
+*////
+
+  .img-main-project {
+    height: 400px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .project-textbox {
+    @extend .basic-textbox;
+    @extend .green;
+    font-size: 18px;
+
+    ul {
+      padding: 40px;
+    }
+
+    td, th {
+      min-width: 100px;
+      padding: 6px 0;
+    }
+
+  }
+
+/*///
  CONTACT Styling
 *////
 
@@ -98,36 +161,25 @@ body {
 
   .headshotBackground {
     background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
-    display: block;
     height: 400px;
     margin-bottom: 20px;
   }
 
   .contact-textbox {
+    @extend .basic-textbox;
+    @extend .li-add-padding-bottom;
     @extend .green;
-    font-size: 22px;
     height: 400px;
-    max-width: 650px;
-    margin: 0 auto;
+    font-size: 22px;
 
     ul {
       padding: 60px 40px 0 40px;
     }
 
-    li {
-      padding-bottom: 20px;
-    }
-
-    .li-extra-padding-bottom {
-      padding-bottom: 40px;
-    }
-
   }
 
   .div-socialMediaLinks {
-    background-color: $black-with-red;
-    padding: 14px 20px 0 20px;
-    text-align: center;
+    @extend .basic-div-links;
     height: 110px;
 
     div {
@@ -135,8 +187,10 @@ body {
       padding: 0 18px;
     }
 
-    p {
-      font-size: 16px;
+    a {
+      p {
+        padding-top: 6px;
+      }
     }
 
   }
@@ -153,7 +207,7 @@ body {
   }
 
   @media only screen and (max-width : 480px) {
-    .headshotBackground {
+    .headshotBackground, .img-main-project {
       height: 340px;
     }
 
