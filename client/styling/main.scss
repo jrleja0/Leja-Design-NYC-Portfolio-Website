@@ -71,17 +71,32 @@ body {
   }
 
   .basic-textbox {
-    height: 400px;
     max-width: 650px;
     margin: 0 auto;
 
-    li {
+    .li-add-padding-bottom {
       padding-bottom: 20px;
     }
 
     .li-extra-padding-bottom {
       padding-bottom: 40px;
     }
+
+    .li-remove-padding {
+      padding-bottom: 0;
+    }
+
+  }
+
+  .basic-div-links {
+    background-color: $black-with-red;
+    padding: 14px 20px 14px 20px;
+    text-align: center;
+
+    p {
+      font-size: 16px;
+    }
+
   }
 
 /*///
@@ -113,7 +128,7 @@ body {
   .img-main-project {
     height: 400px;
     max-width: 700px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .project-textbox {
@@ -122,11 +137,11 @@ body {
     font-size: 18px;
 
     ul {
-      padding: 40px 40px 0 40px;
+      padding: 40px;
     }
 
-    .removePadding {
-      padding-bottom: 0;
+    td, th {
+      padding: 6px 0;
     }
 
   }
@@ -145,10 +160,11 @@ body {
     margin-bottom: 20px;
   }
 
-
   .contact-textbox {
     @extend .basic-textbox;
+    @extend .li-add-padding-bottom;
     @extend .green;
+    height: 400px;
     font-size: 22px;
 
     ul {
@@ -158,18 +174,12 @@ body {
   }
 
   .div-socialMediaLinks {
-    background-color: $black-with-red;
-    padding: 14px 20px 0 20px;
-    text-align: center;
+    @extend .basic-div-links;
     height: 110px;
 
     div {
       display: inline-block;
       padding: 0 18px;
-    }
-
-    p {
-      font-size: 16px;
     }
 
   }

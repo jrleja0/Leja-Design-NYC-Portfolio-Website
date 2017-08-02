@@ -71,61 +71,68 @@ const HomeBody = (props) => {
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="project-textbox">
                     <ul>
-                      <li>
+                      <li className="li-add-padding-bottom">
                         { image.description }
                       </li>
-                      <li>
+                      <li className="li-add-padding-bottom">
                         {
                           image.technologies ?
-                            <span> Technologies used: <br /> { image.technologies } </span> : null
+                            <span>Technologies used: <br /> { image.technologies } </span> : null
                         }
                       </li>
-                      <li className="removePadding"> Links:</li>
-                      <div className="div-socialMediaLinks">
-                        <li>
-                          <div>
-                          {
-                            image.linkProject ?
-                              <p> Check it out:
-                                <span>&emsp; </span>
-                                <a href={image.linkProject} type="button" className="btn btn-default btn-lg" aria-label="Project Link">
-                                  <span className="glyphicon glyphicon-link" aria-hidden="true" />
-                                </a>
-                              </p>
-                              : null
-                          }
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                          {
-                            image.linkDemo ?
-                              <p>
-                                { image.name === 'techTalkPaperJS1' ?
-                                  'Presentation: ' : 'Demo Presentation: '
-                                }
-                                <a href={image.linkDemo}>
-                                  <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
-                                </a>
-                              </p>
-                              : null
-                          }
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                          {
-                            image.linkGithub ?
-                              <p> GitHub Repository:
-                                <a href={image.linkGithub}>
-                                  <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
-                                </a>
-                              </p>
-                              : null
-                          }
-                          </div>
-                        </li>
-                      </div>
+                      <li> Links:</li>
+                      <li>
+                        <div className="basic-div-links">
+                          <table>
+                            {
+                              image.linkProject ?
+                                <tr>
+                                  <td>
+                                    <p>Check It Out:</p>
+                                  </td>
+                                  <td>
+                                    <a href={image.linkProject} type="button" className="btn btn-default btn-lg" aria-label="Project Link">
+                                      <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                : null
+                            }
+                            {
+                              image.linkDemo ?
+                                <tr>
+                                  <td>
+                                    <p>
+                                      { image.name === 'techTalkPaperJS1' ?
+                                        <span>Watch Presentation:</span> : <span>Watch Demo <br /> Presentation: </span>
+                                      }
+                                    </p>
+                                  </td>
+                                  <td>
+                                    <a href={image.linkDemo}>
+                                      <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                : null
+                            }
+                            {
+                              image.linkGithub ?
+                                <tr>
+                                  <td>
+                                    <p>See GitHub Repository:</p>
+                                  </td>
+                                  <td>
+                                    <a href={image.linkGithub}>
+                                      <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                : null
+                            }
+                          </table>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>

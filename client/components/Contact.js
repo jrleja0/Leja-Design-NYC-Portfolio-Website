@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-
 /*///
  COMPONENT
 *////
@@ -31,7 +30,7 @@ const Contact = (props) => {
                     <span className="glyphicon glyphicon-briefcase" />
                     <span>&emsp; </span><span>Resume</span>
                   </li>
-                  <li>
+                  <li className="li-add-padding-bottom">
                     <span className="glyphicon glyphicon-link" />
                     <span>&emsp; </span><span>Links:</span>
                   </li>
