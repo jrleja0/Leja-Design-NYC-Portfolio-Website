@@ -16,6 +16,10 @@ $black-with-red: #190002;
   background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
 }
 
+.blueBold {
+  background-color: $blue-bold;
+}
+
 .green {
   background-color: $green-background;
 }
@@ -66,6 +70,20 @@ body {
     padding: 0;
   }
 
+  .basic-textbox {
+    height: 400px;
+    max-width: 650px;
+    margin: 0 auto;
+
+    li {
+      padding-bottom: 20px;
+    }
+
+    .li-extra-padding-bottom {
+      padding-bottom: 40px;
+    }
+  }
+
 /*///
  MAIN (Navbar) Styling
 *////
@@ -93,17 +111,25 @@ body {
 *////
 
   .img-main-project {
-    @extend .headshotBackground;
+    height: 400px;
     max-width: 700px;
-    margin: 0 auto 20px auto;
+    margin: auto;
   }
 
   .project-textbox {
-    @extend .contact-textbox;
+    @extend .basic-textbox;
+    @extend .green;
+    font-size: 18px;
+
+    ul {
+      padding: 40px 40px 0 40px;
+    }
+
+    .removePadding {
+      padding-bottom: 0;
+    }
 
   }
-
-
 
 /*///
  CONTACT Styling
@@ -119,23 +145,14 @@ body {
     margin-bottom: 20px;
   }
 
+
   .contact-textbox {
+    @extend .basic-textbox;
     @extend .green;
     font-size: 22px;
-    height: 400px;
-    max-width: 650px;
-    margin: 0 auto;
 
     ul {
       padding: 60px 40px 0 40px;
-    }
-
-    li {
-      padding-bottom: 20px;
-    }
-
-    .li-extra-padding-bottom {
-      padding-bottom: 40px;
     }
 
   }
@@ -169,7 +186,7 @@ body {
   }
 
   @media only screen and (max-width : 480px) {
-    .headshotBackground {
+    .headshotBackground, .img-main-project {
       height: 340px;
     }
 

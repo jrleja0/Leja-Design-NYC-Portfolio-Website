@@ -8,7 +8,8 @@ const imageData = [
       path: 'assets/projects/smashbots/smashbots_intro.gif',
       category: 'project',
       projectName: 'Smash-Bots',
-      description: 'Smash-Bots is a 2-D multiplayer online fighting game loosely based off the game Super Smash Brothers. Technologies used are: Phaser, React, and Redux for the front end; Node, Express, and PostgreSQL for the backend; Socket.io for multiplayer functionality.',
+      description: 'Smash-Bots is a 2-D multiplayer online fighting game, loosely based off the game Super Smash Brothers, with an item store and robots.',
+      technologies: 'JavaScript - Phaser, React, and Redux for the front end; Node, Express, and PostgreSQL/Sequelize for the backend; Socket.io for multiplayer functionality; HTML/CSS.',
       linkProject: 'https://smashbots.herokuapp.com',
       linkDemo: 'https://www.youtube.com/watch?v=903YYFBc9V8',
       linkGithub: 'https://github.com/mikevg466/Smash-Bots',
@@ -19,6 +20,7 @@ const imageData = [
       category: 'project',
       projectName: '"Catching Matching Color Chaos!" Game',
       description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game that I created as a solo hackathon project in 4 days.',
+      technologies: 'JavaScript - Paper.js, Socket.io, Node, Express; HTML/CSS',
       linkProject: 'TBA',
       linkDemo: 'https://www.youtube.com/watch?v=EYTeEmcarnY',
       linkGithub: 'https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game',
@@ -29,6 +31,7 @@ const imageData = [
       category: 'project',
       projectName: 'Dining with the Stars Ecommerce Site',
       description: 'Dining with the Stars is a prototype ecommerce site for a trendy business that sells dining experiences with famous celebrities.',
+      technologies: 'JavaScript - React, Redux, Node, Express, and PostgreSQL/Sequelize; HTML/CSS',
       linkProject: 'https://doa-grace-shopper.herokuapp.com',
       linkGithub: 'https://github.com/CandiceBousquet/GraceShopper',
     },
@@ -62,23 +65,33 @@ const HomeBody = (props) => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="img-main-project" style={
-                    { background: `url( ${image.path} ) center top/cover no-repeat` }
+                    { background: `url( ${image.path} ) left top/cover no-repeat` }
                   } />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="project-textbox">
                     <ul>
-                      <li className="li-extra-padding-bottom">
+                      <li>
                         { image.description }
                       </li>
-                      <br />
-                      <li><span> Links:</span></li>
+                      <li>
+                        {
+                          image.technologies ?
+                            <span> Technologies used: <br /> { image.technologies } </span> : null
+                        }
+                      </li>
+                      <li className="removePadding"> Links:</li>
                       <div className="div-socialMediaLinks">
                         <li>
                           <div>
                           {
                             image.linkProject ?
-                              <p> Check it out: <a className="glyphicon glyphicon-link" href={image.linkProject} /></p>
+                              <p> Check it out:
+                                <span>&emsp; </span>
+                                <a href={image.linkProject} type="button" className="btn btn-default btn-lg" aria-label="Project Link">
+                                  <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                                </a>
+                              </p>
                               : null
                           }
                           </div>
@@ -89,7 +102,7 @@ const HomeBody = (props) => {
                             image.linkDemo ?
                               <p>
                                 { image.name === 'techTalkPaperJS1' ?
-                                  'Presentation: ' : 'Demo Presentation '
+                                  'Presentation: ' : 'Demo Presentation: '
                                 }
                                 <a href={image.linkDemo}>
                                   <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />

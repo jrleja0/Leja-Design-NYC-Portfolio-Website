@@ -22,31 +22,37 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-extra-padding-bottom">
-                    <a className="glyphicon glyphicon-envelope" href="mailto:lejadesign@gmail.com">
-                      <span> lejadesign@gmail.com</span>
+                    <a href="mailto:lejadesign@gmail.com">
+                      <span className="glyphicon glyphicon-envelope" />
+                      <span>&emsp; </span><span>lejadesign@gmail.com</span>
                     </a>
                   </li>
-                  <li className="glyphicon glyphicon-briefcase li-extra-padding-bottom"><span> Resume</span></li>
-                  <br />
-                  <li className="glyphicon glyphicon-link"><span> Links:</span></li>
+                  <li className="li-extra-padding-bottom">
+                    <span className="glyphicon glyphicon-briefcase" />
+                    <span>&emsp; </span><span>Resume</span>
+                  </li>
+                  <li>
+                    <span className="glyphicon glyphicon-link" />
+                    <span>&emsp; </span><span>Links:</span>
+                  </li>
                   <div className="div-socialMediaLinks">
                     <li>
                       <div>
                         <a href="https://github.com/jrleja0">
                           <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
-                          <p> GitHub</p>
+                          <p>GitHub</p>
                         </a>
                       </div>
                       <div>
                         <a href="https://www.linkedin.com/in/jrleja">
                           <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
-                          <p> LinkedIn</p>
+                          <p>LinkedIn</p>
                         </a>
                       </div>
                       <div>
                         <a href="https://www.instagram.com/jrleja">
                           <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
-                          <p> Instagram</p>
+                          <p>Instagram</p>
                         </a>
                       </div>
                     </li>
