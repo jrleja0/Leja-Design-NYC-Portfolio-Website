@@ -49,7 +49,7 @@ const imageData = [
 /*///
  COMPONENT
 *////
-const HomeBody = (props) => {
+const Projects = (props) => {
 
   return (
     <div>
@@ -158,10 +158,10 @@ const mapState = (state) => {
   };
 };
 
-export default connect(mapState)(HomeBody);
+export default connect(mapState)(Projects);
 
 /*///
  PROP TYPES
 *////
-HomeBody.propTypes = {
+Projects.propTypes = {
 };
