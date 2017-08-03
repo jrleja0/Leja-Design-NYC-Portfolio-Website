@@ -5,15 +5,25 @@
 $blue-bold: #1b1ed1;
 $green-background: #05ad18;
 $pink: #F3517D;
+$black-with-blue: #010e23;
 $black-with-green: #000c01;
 $black-with-red: #190002;
 
+@mixin pattern-background($backgroundColor, $fileColor) {
+  background: $backgroundColor url(
+    "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
+}
+
 .greenBackground {
-  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
+  @include pattern-background($black-with-green, 'green');
 }
 
 .redBackground {
-  background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
+    @include pattern-background($black-with-red, 'red');
+}
+
+.blueBackground {
+    @include pattern-background($black-with-blue, 'blue');
 }
 
 .blueBold {
@@ -74,6 +84,10 @@ body {
     padding: 0;
   }
 
+  .basic-div-main-title {
+    margin: 30px 10px 0 10px;
+  }
+
   .basic-textbox {
     max-width: 650px;
     margin: 0 auto;
@@ -126,6 +140,23 @@ body {
   }
 
 /*///
+ WELCOME Styling
+*////
+
+  .welcome-img-background {
+    background: url("/assets/abstractions/cityscape_nyc_double_white.jpg") center/contain no-repeat;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-textbox {
+    @extend .basic-textbox;
+    @extend .blueBold;
+    height: 300px;
+    font-size: 16px;
+  }
+
+/*///
  PROJECTS Styling
 *////
 
@@ -154,10 +185,6 @@ body {
 /*///
  CONTACT Styling
 *////
-
-  .div-contactMeTitle {
-    margin: 30px 10px 0 10px;
-  }
 
   .headshotBackground {
     background: url("/assets/people/headshot2.jpg") center/contain no-repeat;

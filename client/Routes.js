@@ -4,10 +4,11 @@ import {Router} from 'react-router';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {Contact, Main, Projects, Resume} from './components';
+import {Contact, Main, Projects, Welcome} from './components';
 
 const Home = () => (
   <div>
+    <Welcome />
     <Projects />
     <Contact />
   </div>
