@@ -23,7 +23,10 @@ const Main = (props) => {
         </div>
       </nav>
         {children}
-      <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+      <div className="position-relative">
+        <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+        <div className="div-img-cover" />
+      </div>
     </div>
   );
 };

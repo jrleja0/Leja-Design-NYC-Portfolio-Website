@@ -57,6 +57,10 @@ $black-with-red: #190002;
   margin: 0 10px;
 }
 
+.position-relative {
+  position: relative;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -128,6 +132,14 @@ body {
 
   }
 
+  .div-img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
 /*///
  MAIN (Navbar) Styling
 *////
@@ -154,24 +166,10 @@ body {
  WELCOME Styling
 *////
 
-  .welcome-container {
-    position: relative;
-    height: 500px;
-  }
-
   .div-welcome-main-title {
     max-width: 350px;
-    margin: 30px auto 0 auto;
-  }
-
-  .welcome-img-background-bottom {
-    background: url("/assets/abstractions/cityscape_nyc_zoom_white.jpg") bottom center/contain no-repeat;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-    margin: 30px auto 40px auto;
+    margin: 10px auto 0 auto;
+    position: relative;
   }
 
   .welcome-textbox {
@@ -180,6 +178,7 @@ body {
     @include border-radius(50px);
     text-align: center;
     padding: 20px;
+    margin-bottom: 14px;
     max-width: 500px;
     height: 150px;
     font-size: 18px;
