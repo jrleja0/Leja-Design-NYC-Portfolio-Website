@@ -57,6 +57,13 @@ $black-with-red: #190002;
   margin: 0 10px;
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 /*///
  Basic Elements Styling
 *////
@@ -143,17 +150,35 @@ body {
  WELCOME Styling
 *////
 
-  .welcome-img-background {
-    background: url("/assets/abstractions/cityscape_nyc_double_white.jpg") center/contain no-repeat;
-    height: 300px;
-    margin-bottom: 20px;
+  .welcome-container {
+    position: relative;
+    height: 500px;
+  }
+
+  .div-welcome-main-title {
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+  }
+
+  .welcome-img-background-bottom {
+    background: url("/assets/abstractions/cityscape_nyc_zoom_white.jpg") bottom center/contain no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    margin: 30px auto 40px auto;
   }
 
   .welcome-textbox {
     @extend .basic-textbox;
     @extend .blueBold;
-    height: 300px;
-    font-size: 16px;
+    @include border-radius(50px);
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+    height: 150px;
+    font-size: 18px;
   }
 
 /*///
@@ -247,6 +272,10 @@ body {
   }
 
   @media screen and (max-width: 530px) {
+
+    .welcome-container {
+      height: 450px;
+    }
 
     .div-socialMediaLinks {
       padding: 14px 10px 0 10px;
