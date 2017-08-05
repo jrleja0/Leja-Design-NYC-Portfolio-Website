@@ -99,6 +99,10 @@ body {
     max-width: 650px;
     margin: 0 auto;
 
+    .li-add-padding-bottom-5 {
+      padding-bottom: 5px;
+    }
+
     .li-add-padding-bottom {
       padding-bottom: 20px;
     }
@@ -179,6 +183,11 @@ body {
     max-width: 500px;
     height: 150px;
     font-size: 18px;
+
+    li {
+      @extend .li-add-padding-bottom-5;
+    }
+
   }
 
 /*///
