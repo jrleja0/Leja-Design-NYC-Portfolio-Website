@@ -38,6 +38,10 @@ $black-with-red: #190002;
   background-color: $pink;
 }
 
+.black-with-red {
+  background-color: $black-with-red;
+}
+
 .main-font {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -144,22 +148,16 @@ body {
  MAIN (Navbar) Styling
 *////
 
-  // nav {
-  //   background-color: $blue-bold;
-  // }
-
   .mainTitle {
     background: url("/assets/text/lejaDesignNYCTitle1.png") left center/contain no-repeat;
     display: block;
-    width: 40%;
+    width: 80%;
     margin: 7px;
   }
 
   .mainTitle:hover {
     @extend .mainTitle;
     background: url("/assets/text/lejaDesignNYCTitle1Hover.png") left center/contain no-repeat;
-    // height: 4em;
-    // margin: .2em 1em;
   }
 
 /*///
@@ -299,19 +297,4 @@ body {
 
   }
 
-
-  // .homeLink {
-  //   visibility: hidden;
-  //   display: block;
-  //   height: 100%;
-  //   width: 30%;
-  // }
-  // form div {
-  //   margin: 1em;
-  //   display: inline-block;
-  // }
-
-  // label {
-  //   display: block;
-  // }
 }
