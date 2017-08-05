@@ -5,15 +5,25 @@
 $blue-bold: #1b1ed1;
 $green-background: #05ad18;
 $pink: #F3517D;
+$black-with-blue: #010e23;
 $black-with-green: #000c01;
 $black-with-red: #190002;
 
+@mixin pattern-background($backgroundColor, $fileColor) {
+  background: $backgroundColor url(
+    "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
+}
+
 .greenBackground {
-  background: $black-with-green url("/assets/abstractions/green_tile.jpg") center/cover no-repeat fixed;
+  @include pattern-background($black-with-green, 'green');
 }
 
 .redBackground {
-  background: $black-with-red url("/assets/abstractions/red_tile.jpg") center/cover no-repeat fixed;
+    @include pattern-background($black-with-red, 'red');
+}
+
+.blueBackground {
+    @include pattern-background($black-with-blue, 'blue');
 }
 
 .blueBold {
@@ -47,6 +57,13 @@ $black-with-red: #190002;
   margin: 0 10px;
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 /*///
  Basic Elements Styling
 *////
@@ -74,9 +91,17 @@ body {
     padding: 0;
   }
 
+  .basic-div-main-title {
+    margin: 30px 10px 0 10px;
+  }
+
   .basic-textbox {
     max-width: 650px;
     margin: 0 auto;
+
+    .li-add-padding-bottom-5 {
+      padding-bottom: 5px;
+    }
 
     .li-add-padding-bottom {
       padding-bottom: 20px;
@@ -126,6 +151,46 @@ body {
   }
 
 /*///
+ WELCOME Styling
+*////
+
+  .welcome-container {
+    position: relative;
+    height: 500px;
+  }
+
+  .div-welcome-main-title {
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+  }
+
+  .welcome-img-background-bottom {
+    background: url("/assets/abstractions/cityscape_nyc_zoom_white.jpg") bottom center/contain no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    margin: 30px auto 40px auto;
+  }
+
+  .welcome-textbox {
+    @extend .basic-textbox;
+    @extend .blueBold;
+    @include border-radius(50px);
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+    height: 150px;
+    font-size: 18px;
+
+    li {
+      @extend .li-add-padding-bottom-5;
+    }
+
+  }
+
+/*///
  PROJECTS Styling
 *////
 
@@ -154,10 +219,6 @@ body {
 /*///
  CONTACT Styling
 *////
-
-  .div-contactMeTitle {
-    margin: 30px 10px 0 10px;
-  }
 
   .headshotBackground {
     background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
@@ -220,6 +281,14 @@ body {
   }
 
   @media screen and (max-width: 530px) {
+
+    .welcome-container {
+      height: 450px;
+    }
+
+    .welcome-textbox {
+      font-size: 17.5px;
+    }
 
     .div-socialMediaLinks {
       padding: 14px 10px 0 10px;

@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Router} from 'react-router';
-import {Route, Switch, IndexRedirect} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {Contact, HomeBody, Main, Projects, Resume} from './components';
+import {Contact, Main, Projects, Welcome} from './components';
+
+const Home = () => (
+  <div>
+    <Welcome />
+    <Projects />
+    <Contact />
+  </div>
+);
 
 /*///
  COMPONENT
@@ -20,8 +28,12 @@ class Routes extends Component {
     return (
       <Router history={history}>
         <Main>
-          <Route component={Projects} />
-          <Route component={Contact} />
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+            <Redirect to="/home" />
+          </Switch>
         </Main>
       </Router>
     );

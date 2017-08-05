@@ -49,11 +49,11 @@ const imageData = [
 /*///
  COMPONENT
 *////
-const HomeBody = (props) => {
+const Projects = (props) => {
 
   return (
     <div>
-      <div className="container-fluid top-bottom-margin-30">
+      <div className="container-fluid top-bottom-margin-30 greenBackground">
         <div className="left-right-margin-10">
           <img className="img-fluid" src="/assets/text/recentProjectsYellow.png" alt="Recent Projects" />
         </div>
@@ -158,10 +158,10 @@ const mapState = (state) => {
   };
 };
 
-export default connect(mapState)(HomeBody);
+export default connect(mapState)(Projects);
 
 /*///
  PROP TYPES
 *////
-HomeBody.propTypes = {
+Projects.propTypes = {
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 
 /*///
  COMPONENT
@@ -11,7 +10,7 @@ const Contact = (props) => {
   return (
     <div>
       <div className="container-fluid redBackground">
-        <div className="div-contactMeTitle">
+        <div className="basic-div-main-title">
           <img className="img-fluid" src="/assets/text/contactMeAndConnectBlue.png" alt="Contact Me And Connect" />
         </div>
         <div className="container-fluid">
