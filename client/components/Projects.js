@@ -6,6 +6,7 @@ const imageData = [
     {
       name: 'smashbots1',
       path: 'assets/projects/smashbots/smashbots_intro.gif',
+      titlePath: 'assets/text/smashBots.png',
       category: 'project',
       projectName: 'Smash-Bots',
       description: 'Smash-Bots is a 2-D multiplayer online fighting game, loosely based off the game Super Smash Brothers, with an item store and robots.',
@@ -17,10 +18,11 @@ const imageData = [
     {
       name: 'colorChaos1',
       path: 'assets/projects/color_chaos/game2.jpg',
+      titlePath: 'assets/text/catchingMatchingColorChaosGame.png',
       category: 'project',
       projectName: '"Catching Matching Color Chaos!" Game',
       description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game that I created as a solo hackathon project in 4 days.',
-      technologies: 'JavaScript - Paper.js, Socket.io, Node, Express; HTML/CSS',
+      technologies: 'JavaScript - Paper.js, Socket.io, Node, Express; HTML/CSS.',
       linkProject: 'TBA',
       linkDemo: 'https://www.youtube.com/watch?v=EYTeEmcarnY',
       linkGithub: 'https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game',
@@ -28,16 +30,18 @@ const imageData = [
     {
       name: 'diningWithTheStars1',
       path: 'assets/projects/dining_with_the_stars/screenshot_zoolander.jpg',
+      titlePath: 'assets/text/diningWithTheStarsEcommerceSite.png',
       category: 'project',
       projectName: 'Dining with the Stars Ecommerce Site',
       description: 'Dining with the Stars is a prototype ecommerce site for a trendy business that sells dining experiences with famous celebrities.',
-      technologies: 'JavaScript - React, Redux, Node, Express, and PostgreSQL/Sequelize; HTML/CSS',
+      technologies: 'JavaScript - React, Redux; Node, Express, and PostgreSQL/Sequelize; HTML/CSS.',
       linkProject: 'https://doa-grace-shopper.herokuapp.com',
       linkGithub: 'https://github.com/CandiceBousquet/GraceShopper',
     },
     {
       name: 'techTalkPaperJS1',
       path: 'assets/projects/tech_talk_paperjs/tech_talk_paperjs.jpg',
+      titlePath: 'assets/text/introToPaper.jsTechTalk.png',
       category: 'project',
       projectName: '"Intro to Paper.js" Tech Talk',
       description: 'In this "Intro to Paper.js" tech talk, learn the basics of Paper.js, the vector graphics library, including items, their hierarchy, and event handlers, for creating engaging animations.',
@@ -61,7 +65,10 @@ const Projects = (props) => {
           {
           imageData.map(image => (
             <div key={image.name}>
-              <h3>{image.projectName}</h3>
+              <div className="div-project-title">
+                <img className="img-fluid" src={ image.titlePath } alt={ image.projectName } />
+                <div className="div-img-cover" />
+              </div>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="img-main-project"
@@ -75,16 +82,23 @@ const Projects = (props) => {
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="project-textbox">
                     <ul>
-                      <li className="li-add-padding-bottom">
+                      <li>
                         { image.description }
                       </li>
-                      <li className="li-add-padding-bottom">
+                      <li>
                         {
                           image.technologies ?
-                            <span>Technologies used: <br /> { image.technologies } </span> : null
+                            <span>Technologies used: <br />
+                            { image.technologies.split(';').map((tech, i) => (
+                              i === ( image.technologies.split(';').length - 1 ) ?
+                              <span key={tech}><span>{ tech }</span><br /></span>
+                              : <span key={tech}><span>{ tech };</span><br /></span>
+                              ))
+                            }
+                            </span> : null
                         }
                       </li>
-                      <li> Links:</li>
+                      <li className="li-add-padding-bottom-10">Links:</li>
                       <li>
                         <div className="basic-div-links">
                           <table>

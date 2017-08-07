@@ -12,7 +12,7 @@ const Main = (props) => {
 
   return (
     <div>
-      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav className="navbar navbar-inverse navbar-fixed-top black-with-red" role="navigation">
         <div className="container-fluid ">
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-10">
@@ -23,7 +23,10 @@ const Main = (props) => {
         </div>
       </nav>
         {children}
-      <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+      <div className="position-relative">
+        <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+        <div className="div-img-cover" />
+      </div>
     </div>
   );
 };
