@@ -2,17 +2,18 @@
  Basic Colors & Layout Styling
 *////
 
+// bold
 $blue-bold: #1b1ed1;
-$blue-with-red: #4816bc;  // #571edb;
-// $blue2: #1f0f9b;
+$blue-with-red: #4816bc;
 $green-background: #05ad18;
 $pink: #F3517D;
+// dark
 $black-with-blue: #010e23;
 $black-with-green: #000c01;
 $black-with-red: #190002;
+// light
 $light-blue: #8bb5f9;
-$light-green: #00ff15;  // #59e565;
-// $light-green2: #30ff6a;
+$light-green: #00ff15;
 $light-red: #fc747f;
 
 @mixin pattern-background($backgroundColor, $fileColor) {
@@ -176,9 +177,6 @@ body {
   }
 
   .welcome-textbox {
-    // @extend .blueBold;
-    // background-color: $light-blue;
-    // color: $black-with-blue;
     background-color: $black-with-blue;
     color: $light-blue;
     @extend .basic-textbox;
@@ -203,11 +201,6 @@ body {
   .div-project-title {
     padding: 20px 60px;
     text-align: center;
-
-    // img {
-    //   max-height: 90px;
-    // }
-
   }
 
   .img-main-project {
@@ -217,14 +210,7 @@ body {
   }
 
   .project-textbox {
-    // background-color: $light-blue;
     @extend .green;
-    // background-color: $black-with-green;
-    // color: $green-background;
-    // color: $light-green;
-    // color: $black-with-green;
-    // color: $blue-bold;
-    // background-color: $light-green;
     @extend .basic-textbox;
     font-size: 18px;
     font-weight: 600;
@@ -244,7 +230,7 @@ body {
 
     li:nth-child(even) {
       background-color: $black-with-blue;
-      color: $light-blue; // $blue-with-red;
+      color: $light-blue;
       font-weight: 500;
     }
 
@@ -260,7 +246,6 @@ body {
     }
 
   }
-
 
 /*///
  CONTACT Styling

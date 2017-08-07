@@ -65,7 +65,6 @@ const Projects = (props) => {
           {
           imageData.map(image => (
             <div key={image.name}>
-              {/*<h3>{image.projectName}</h3>*/}
               <div className="div-project-title">
                 <img className="img-fluid" src={ image.titlePath } alt={ image.projectName } />
                 <div className="div-img-cover" />
