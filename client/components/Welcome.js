@@ -19,7 +19,7 @@ const Welcome = (props) => {
           <ul>
             <li>You've found the portfolio website of</li>
             <li>Jasiu Leja, Software Developer & Artist</li>
-            <li className="li-add-padding-bottom">working and living in NYC.</li>
+            <li className="li-add-padding-bottom-20">working and living in NYC.</li>
             <li>Thanks for visiting!</li>
           </ul>
         </div>

@@ -10,7 +10,7 @@ const Contact = (props) => {
   return (
     <div>
       <div className="container-fluid redBackground">
-        <div className="basic-div-main-title">
+        <div className="basic-div-main-title contact-title">
           <img className="img-fluid" src="/assets/text/contactMeAndConnectBlue.png" alt="Contact Me And Connect" />
         </div>
         <div className="container-fluid">
@@ -19,17 +19,17 @@ const Contact = (props) => {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="contact-textbox">
                 <ul>
-                  <li className="li-extra-padding-bottom">
+                  <li className="li-add-padding-bottom-40">
                     <a href="mailto:lejadesign@gmail.com" aria-label="Email Link">
                       <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
                       <span>&emsp; </span><span>lejadesign@gmail.com</span>
                     </a>
                   </li>
-                  <li className="li-extra-padding-bottom">
+                  <li className="li-add-padding-bottom-40">
                     <span className="glyphicon glyphicon-briefcase" aria-hidden="true" />
                     <span>&emsp; </span><span>Resume</span>
                   </li>
-                  <li className="li-add-padding-bottom">
+                  <li className="li-add-padding-bottom-20">
                     <span className="glyphicon glyphicon-link" aria-hidden="true" />
                     <span>&emsp; </span><span>Links:</span>
                   </li>

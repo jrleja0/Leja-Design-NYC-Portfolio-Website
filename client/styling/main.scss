@@ -3,11 +3,17 @@
 *////
 
 $blue-bold: #1b1ed1;
+$blue-with-red: #4816bc;  // #571edb;
+// $blue2: #1f0f9b;
 $green-background: #05ad18;
 $pink: #F3517D;
 $black-with-blue: #010e23;
 $black-with-green: #000c01;
 $black-with-red: #190002;
+$light-blue: #8bb5f9;
+$light-green: #00ff15;  // #59e565;
+// $light-green2: #30ff6a;
+$light-red: #fc747f;
 
 @mixin pattern-background($backgroundColor, $fileColor) {
   background: $backgroundColor url(
@@ -111,15 +117,19 @@ body {
       padding-bottom: 5px;
     }
 
-    .li-add-padding-bottom {
+    .li-add-padding-bottom-10 {
+      padding-bottom: 10px;
+    }
+
+    .li-add-padding-bottom-20 {
       padding-bottom: 20px;
     }
 
-    .li-extra-padding-bottom {
+    .li-add-padding-bottom-40 {
       padding-bottom: 40px;
     }
 
-    .li-remove-padding {
+    .li-remove-padding-bottom {
       padding-bottom: 0;
     }
 
@@ -129,11 +139,6 @@ body {
     background-color: $black-with-red;
     padding: 14px 20px 14px 20px;
     text-align: center;
-
-    p {
-      font-size: 16px;
-    }
-
   }
 
   .div-img-cover {
@@ -171,8 +176,12 @@ body {
   }
 
   .welcome-textbox {
+    // @extend .blueBold;
+    // background-color: $light-blue;
+    // color: $black-with-blue;
+    background-color: $black-with-blue;
+    color: $light-blue;
     @extend .basic-textbox;
-    @extend .blueBold;
     @include border-radius(50px);
     text-align: center;
     padding: 20px;
@@ -191,6 +200,16 @@ body {
  PROJECTS Styling
 *////
 
+  .div-project-title {
+    padding: 20px 60px;
+    text-align: center;
+
+    // img {
+    //   max-height: 90px;
+    // }
+
+  }
+
   .img-main-project {
     height: 400px;
     max-width: 700px;
@@ -198,12 +217,24 @@ body {
   }
 
   .project-textbox {
-    @extend .basic-textbox;
+    // background-color: $light-blue;
     @extend .green;
+    // background-color: $black-with-green;
+    // color: $green-background;
+    // color: $light-green;
+    // color: $black-with-green;
+    // color: $blue-bold;
+    // background-color: $light-green;
+    @extend .basic-textbox;
     font-size: 18px;
+    font-weight: 600;
 
     ul {
-      padding: 40px;
+      padding: 20px;
+    }
+
+    li {
+      padding: 20px;
     }
 
     td, th {
@@ -211,7 +242,25 @@ body {
       padding: 6px 0;
     }
 
+    li:nth-child(even) {
+      background-color: $black-with-blue;
+      color: $light-blue; // $blue-with-red;
+      font-weight: 500;
+    }
+
+    li:nth-child(odd) {
+      background-color: $light-blue;
+      color: $blue-bold;
+    }
+
+    p {
+      color: white;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
   }
+
 
 /*///
  CONTACT Styling
@@ -225,7 +274,7 @@ body {
 
   .contact-textbox {
     @extend .basic-textbox;
-    @extend .li-add-padding-bottom;
+    @extend .li-add-padding-bottom-20;
     @extend .green;
     height: 400px;
     font-size: 22px;
@@ -247,6 +296,7 @@ body {
 
     a {
       p {
+        font-size: 16px;
         padding-top: 6px;
       }
     }
@@ -287,12 +337,24 @@ body {
       font-size: 17.5px;
     }
 
+    .contact-title {
+      margin: 30px 0 0 0;
+    }
+
     .div-socialMediaLinks {
       padding: 14px 10px 0 10px;
 
       div {
         padding: 0 8px;
       }
+    }
+
+  }
+
+  @media screen and (max-width: 850px) {
+
+    .div-project-title {
+      padding: 20px 0;
     }
 
   }
