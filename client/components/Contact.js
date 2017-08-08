@@ -35,19 +35,19 @@ const Contact = (props) => {
                   </li>
                   <div className="div-socialMediaLinks">
                     <li>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://github.com/jrleja0">
                           <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
                           <p>GitHub</p>
                         </a>
                       </div>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://www.linkedin.com/in/jrleja">
                           <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
                           <p>LinkedIn</p>
                         </a>
                       </div>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://www.instagram.com/jrleja">
                           <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
                           <p>Instagram</p>
