@@ -98,7 +98,10 @@ const Projects = (props) => {
                             </span> : null
                         }
                       </li>
-                      <li className="li-add-padding-bottom-10">Links:</li>
+                      <li className="li-add-padding-bottom-10">
+                        <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                        <span>&ensp; </span><span> Links:</span>
+                      </li>
                       <li>
                         <div className="basic-div-links">
                           <table>

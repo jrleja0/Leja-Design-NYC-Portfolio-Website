@@ -20,9 +20,13 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-add-padding-bottom-40">
-                    <a href="mailto:lejadesign@gmail.com" aria-label="Email Link">
+                    <span className="glyphicon glyphicon-star" aria-hidden="true" />
+                    <span>&emsp; </span><span>Jasiu Leja</span>
+                  </li>
+                  <li className="li-add-padding-bottom-40">
+                    <a className="highlightLink" href="mailto:jrleja.design@gmail.com" aria-label="Email Link">
                       <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
-                      <span>&emsp; </span><span>lejadesign@gmail.com</span>
+                      <span>&emsp; </span><span>jrleja.design@gmail.com</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-40">

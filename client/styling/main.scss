@@ -19,9 +19,11 @@ $light-green: #00ff15;
 $light-red: #fc747f;
 $light-yellow: #f2ff49;
 // translucent
-$blue-bold-rgba: rgba(27, 30, 209, 0.8);
+$blue-bold-rgba6: rgba(27, 30, 209, 0.6);
+$blue-bold-rgba8: rgba(27, 30, 209, 0.8);
 $light-green-rgba: rgba(0, 255, 21, 0.8);
-$pink-rgba: rgba(255, 0, 157, 0.6);
+$pink-rgba: rgba(255, 0, 157, 0.8);
+$red-pink-rgba: rgba(255, 0, 59, 0.8);
 $yellow-rgba: rgba(247, 247, 12, 0.8);
 
 @mixin pattern-background($backgroundColor, $fileColor) {
@@ -165,7 +167,7 @@ body {
 
   .highlight-blue:hover {
     @extend .highlight-basic:hover;
-    background-color: $blue-bold-rgba;
+    background-color: $blue-bold-rgba8;
   }
 
   .highlight-pink:hover {
@@ -193,6 +195,7 @@ body {
   .stylingMainNavbar {
     @extend .black-with-red;
     padding-left: 20px;
+    font-size: 16px;
 
     .container {
       margin-left: 0;
@@ -201,6 +204,7 @@ body {
 
     .navbar-float-tabs {
       float: right;
+      padding-top: 8px;
     }
 
     .navbar-nav {
@@ -211,9 +215,12 @@ body {
 
       a:hover {
         @extend .highlight-basic:hover;
+      }
 
-        a {
-          background-color: transparent;
+      .active {
+
+        a, a:hover {
+          background-color: $blue-bold-rgba6;
         }
 
       }
@@ -222,12 +229,21 @@ body {
 
     .dropdown-menu {
       background-color: $black-with-red;
+      font-size: 16px;
 
       li:hover {
         @extend .highlight-basic:hover;
 
         a {
           @extend .highlight-basic:hover;
+        }
+
+      }
+
+      .active {
+
+        a, a:hover {
+          background-color: $blue-bold-rgba6;
         }
 
       }
@@ -330,19 +346,30 @@ body {
   .contact-textbox {
     @extend .basic-textbox;
     @extend .li-add-padding-bottom-20;
-    @extend .green;
-    height: 400px;
+    background-color: $blue-bold-rgba6;
+    height: 450px;
     font-size: 22px;
 
     ul {
-      padding: 60px 40px 0 40px;
+      color: $light-green;
+      padding: 45px 40px 0 40px;
+
+      .highlightLink {
+        color: $yellow;
+      }
+
+      .highlightLink:hover {
+        color: $pink-rgba;
+      }
+
     }
 
   }
 
   .div-socialMediaLinks {
     @extend .basic-div-links;
-    height: 110px;
+    height: 130px;
+    padding: 20px;
 
     div {
       display: inline-block;
@@ -361,7 +388,7 @@ body {
   .social-icon {
     width: 64px;
     height: 64px;
-    padding: 0 10px;
+    padding: 5px;
   }
 
   .social-labels {
@@ -402,7 +429,7 @@ body {
     }
 
     .div-socialMediaLinks {
-      padding: 14px 10px 0 10px;
+      padding: 14px 7px 0 7px;
 
       div {
         padding: 0 8px;
