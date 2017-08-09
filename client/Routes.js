@@ -4,7 +4,7 @@ import {Router} from 'react-router';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {Contact, Main, Projects, Welcome} from './components';
+import {ArtShowcase, Contact, Main, Projects, Welcome} from './components';
 
 const Home = () => (
   <div>
@@ -31,6 +31,7 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/projects" component={Projects} />
+            <Route path="/art" component={ArtShowcase} />
             <Route path="/contact" component={Contact} />
             <Redirect to="/home" />
           </Switch>

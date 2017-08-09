@@ -117,7 +117,9 @@ body {
   }
 
   .basic-div-main-title {
-    margin: 30px 10px 0 10px;
+    position: relative;
+    width: 90%;
+    margin: 30px auto 0 auto;
   }
 
   .basic-textbox {
@@ -284,9 +286,17 @@ body {
  PROJECTS Styling
 *////
 
+  .div-project-main-title {
+    @extend .basic-div-main-title;
+    @extend .left-right-margin-10;
+    margin: 0 auto;
+  }
+
   .div-project-title {
+    width: 60%;
     padding: 20px 60px;
-    text-align: center;
+    margin: 0 auto;
+    position: relative;
   }
 
   .img-main-project {
@@ -334,8 +344,32 @@ body {
   }
 
 /*///
+ ART SHOWCASE Styling
+*////
+
+  .div-artGrid-main-img {
+    max-width: 1000px;
+    margin: 10px auto 0 auto;
+    position: relative;
+  }
+
+  .text-comingSoon {
+    position: absolute;
+    width: 70%;
+    top: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+/*///
  CONTACT Styling
 *////
+
+  .contact-main-title {
+    @extend .basic-div-main-title;
+    width: 60%;
+  }
 
   .headshotBackground {
     background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
@@ -397,19 +431,30 @@ body {
   }
 
 /*///
- Media Queries
+ Media Queries - largest to smallest max-width
 *////
 
-  @media only screen and (max-width : 480px) {
+  @media screen and (max-width: 991px) {
 
-    .headshotBackground, .img-main-project {
-      height: 340px;
+    .stylingMainNavbar {
+      padding: 10px 0 10px 20px;
     }
 
-    .contact-textbox {
-      ul {
-        padding: 60px 20px 0 20px;
-      }
+    .mainTitle {
+      height: 32px;
+      width: 240px;
+    }
+
+    .mainTitle:hover {
+      background-position: 0 -33px;
+    }
+
+  }
+
+  @media screen and (max-width: 850px) {
+
+    .div-project-title {
+      padding: 20px 0;
     }
 
   }
@@ -438,27 +483,26 @@ body {
 
   }
 
-  @media screen and (max-width: 850px) {
+  @media only screen and (max-width : 480px) {
 
-    .div-project-title {
-      padding: 20px 0;
+    .headshotBackground, .img-main-project {
+      height: 340px;
+    }
+
+    .contact-textbox {
+      ul {
+        padding: 60px 20px 0 20px;
+      }
     }
 
   }
 
-  @media screen and (max-width: 991px) {
+  @media only screen and (max-width : 415px) {
 
-    .stylingMainNavbar {
-      padding: 10px 0 10px 20px;
-    }
-
-    .mainTitle {
-      height: 32px;
-      width: 240px;
-    }
-
-    .mainTitle:hover {
-      background-position: 0 -33px;
+    .contact-textbox {
+      ul {
+        padding: 60px 12px 0 12px;
+      }
     }
 
   }

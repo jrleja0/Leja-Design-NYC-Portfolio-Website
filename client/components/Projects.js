@@ -58,8 +58,9 @@ const Projects = (props) => {
   return (
     <div>
       <div className="container-fluid top-bottom-margin-30 greenBackground">
-        <div className="left-right-margin-10">
-          <img className="img-fluid" src="/assets/text/recentProjectsYellow.png" alt="Recent Projects" />
+        <div className="div-project-main-title">
+          <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
+          <div className="div-img-cover" />
         </div>
         <div className="container-fluid">
           {
@@ -130,9 +131,10 @@ const Projects = (props) => {
                                         }
                                       </p>
                                     </td>
-                                    <td className="highlight-blue">
+                                    <td className="highlight-blue position-relative">
                                       <a href={image.linkDemo}>
                                         <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
+                                        <div className="div-img-cover" />
                                       </a>
                                     </td>
                                   </tr>
@@ -144,9 +146,10 @@ const Projects = (props) => {
                                     <td>
                                       <p>See GitHub <br />Repository:</p>
                                     </td>
-                                    <td className="highlight-blue">
+                                    <td className="highlight-blue position-relative">
                                       <a href={image.linkGithub}>
                                         <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
+                                        <div className="div-img-cover" />
                                       </a>
                                     </td>
                                   </tr>
