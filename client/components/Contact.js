@@ -20,9 +20,13 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-add-padding-bottom-40">
-                    <a href="mailto:lejadesign@gmail.com" aria-label="Email Link">
+                    <span className="glyphicon glyphicon-star" aria-hidden="true" />
+                    <span>&emsp; </span><span>Jasiu Leja</span>
+                  </li>
+                  <li className="li-add-padding-bottom-40">
+                    <a className="highlightLink" href="mailto:jrleja.design@gmail.com" aria-label="Email Link">
                       <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
-                      <span>&emsp; </span><span>lejadesign@gmail.com</span>
+                      <span>&emsp; </span><span>jrleja.design@gmail.com</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-40">
@@ -35,19 +39,19 @@ const Contact = (props) => {
                   </li>
                   <div className="div-socialMediaLinks">
                     <li>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://github.com/jrleja0">
                           <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
                           <p>GitHub</p>
                         </a>
                       </div>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://www.linkedin.com/in/jrleja">
                           <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
                           <p>LinkedIn</p>
                         </a>
                       </div>
-                      <div>
+                      <div className="highlight-pink">
                         <a href="https://www.instagram.com/jrleja">
                           <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
                           <p>Instagram</p>

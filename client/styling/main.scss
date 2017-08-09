@@ -7,6 +7,8 @@ $blue-bold: #1b1ed1;
 $blue-with-red: #4816bc;
 $green-background: #05ad18;
 $pink: #F3517D;
+$pink-bold: #ff009d;
+$yellow: #f7f70c;
 // dark
 $black-with-blue: #010e23;
 $black-with-green: #000c01;
@@ -15,6 +17,14 @@ $black-with-red: #190002;
 $light-blue: #8bb5f9;
 $light-green: #00ff15;
 $light-red: #fc747f;
+$light-yellow: #f2ff49;
+// translucent
+$blue-bold-rgba6: rgba(27, 30, 209, 0.6);
+$blue-bold-rgba8: rgba(27, 30, 209, 0.8);
+$light-green-rgba: rgba(0, 255, 21, 0.8);
+$pink-rgba: rgba(255, 0, 157, 0.8);
+$red-pink-rgba: rgba(255, 0, 59, 0.8);
+$yellow-rgba: rgba(247, 247, 12, 0.8);
 
 @mixin pattern-background($backgroundColor, $fileColor) {
   background: $backgroundColor url(
@@ -88,7 +98,7 @@ body {
   @extend .main-font;
   padding-top: 60px;
 
-  a {
+  a, a:hover {
     color: white;
     text-decoration: none;
   }
@@ -150,20 +160,96 @@ body {
     left: 0;
   }
 
+  .highlight-basic:hover {
+    background-color: $light-green-rgba;
+    font-weight: 600;
+  }
+
+  .highlight-blue:hover {
+    @extend .highlight-basic:hover;
+    background-color: $blue-bold-rgba8;
+  }
+
+  .highlight-pink:hover {
+    @extend .highlight-basic:hover;
+    background-color: $pink-rgba;
+  }
+
 /*///
  MAIN (Navbar) Styling
 *////
 
   .mainTitle {
-    background: url("/assets/text/lejaDesignNYCTitle1.png") left center/contain no-repeat;
+    background: url("/assets/text/jrlejaDesignNYCTitle.png") left top/cover no-repeat;
     display: block;
-    width: 80%;
+    height: 50px;
+    width: 360px;
     margin: 7px;
   }
 
   .mainTitle:hover {
     @extend .mainTitle;
-    background: url("/assets/text/lejaDesignNYCTitle1Hover.png") left center/contain no-repeat;
+    background-position: 0 -50px;
+  }
+
+  .stylingMainNavbar {
+    @extend .black-with-red;
+    padding-left: 20px;
+    font-size: 16px;
+
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .navbar-float-tabs {
+      float: right;
+      padding-top: 8px;
+    }
+
+    .navbar-nav {
+
+      a {
+        color: white;
+      }
+
+      a:hover {
+        @extend .highlight-basic:hover;
+      }
+
+      .active {
+
+        a, a:hover {
+          background-color: $blue-bold-rgba6;
+        }
+
+      }
+
+    }
+
+    .dropdown-menu {
+      background-color: $black-with-red;
+      font-size: 16px;
+
+      li:hover {
+        @extend .highlight-basic:hover;
+
+        a {
+          @extend .highlight-basic:hover;
+        }
+
+      }
+
+      .active {
+
+        a, a:hover {
+          background-color: $blue-bold-rgba6;
+        }
+
+      }
+
+    }
+
   }
 
 /*///
@@ -260,19 +346,30 @@ body {
   .contact-textbox {
     @extend .basic-textbox;
     @extend .li-add-padding-bottom-20;
-    @extend .green;
-    height: 400px;
+    background-color: $blue-bold-rgba6;
+    height: 450px;
     font-size: 22px;
 
     ul {
-      padding: 60px 40px 0 40px;
+      color: $light-green;
+      padding: 45px 40px 0 40px;
+
+      .highlightLink {
+        color: $yellow;
+      }
+
+      .highlightLink:hover {
+        color: $pink-rgba;
+      }
+
     }
 
   }
 
   .div-socialMediaLinks {
     @extend .basic-div-links;
-    height: 110px;
+    height: 130px;
+    padding: 20px;
 
     div {
       display: inline-block;
@@ -291,7 +388,7 @@ body {
   .social-icon {
     width: 64px;
     height: 64px;
-    padding: 0 10px;
+    padding: 5px;
   }
 
   .social-labels {
@@ -299,7 +396,12 @@ body {
     font-size: 20px;
   }
 
+/*///
+ Media Queries
+*////
+
   @media only screen and (max-width : 480px) {
+
     .headshotBackground, .img-main-project {
       height: 340px;
     }
@@ -327,7 +429,7 @@ body {
     }
 
     .div-socialMediaLinks {
-      padding: 14px 10px 0 10px;
+      padding: 14px 7px 0 7px;
 
       div {
         padding: 0 8px;
@@ -340,6 +442,23 @@ body {
 
     .div-project-title {
       padding: 20px 0;
+    }
+
+  }
+
+  @media screen and (max-width: 991px) {
+
+    .stylingMainNavbar {
+      padding: 10px 0 10px 20px;
+    }
+
+    .mainTitle {
+      height: 32px;
+      width: 240px;
+    }
+
+    .mainTitle:hover {
+      background-position: 0 -33px;
     }
 
   }

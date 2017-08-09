@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {withRouter, Link} from 'react-router-dom';
+import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 
 /*///
  COMPONENT
@@ -12,16 +14,29 @@ const Main = (props) => {
 
   return (
     <div>
-      <nav className="navbar navbar-inverse navbar-fixed-top black-with-red" role="navigation">
-        <div className="container-fluid ">
-          <div className="row">
-            <div className="col-lg-8 col-md-8 col-sm-10">
-              <Link className="navbar-brand mainTitle" to="home" />
-            </div>
-            <div className="col-lg-6 col-md-4 col-sm-2" />
-          </div>
-        </div>
-      </nav>
+      <Navbar className="stylingMainNavbar" fixedTop inverse collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link className="mainTitle" to="/home" activeClassName="active" />
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav className="navbar-float-tabs">
+            <NavDropdown className="dropdownHighlight" eventKey={1} title="Projects, Apps, & Art" id="navbar-projects-dropdown">
+              <LinkContainer to="/projects" activeClassName="active">
+                <MenuItem className="dropdownHighlightMenuItem" eventKey={1.1}>Projects & Apps</MenuItem>
+              </LinkContainer>
+              <LinkContainer to="/art" activeClassName="active">
+                <MenuItem className="dropdownHighlightMenuItem" eventKey={1.2}>Art</MenuItem>
+              </LinkContainer>
+            </NavDropdown>
+            <LinkContainer to="/contact" activeClassName="active">
+              <NavItem className="contactHighlight" eventKey={2}>Contact</NavItem>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
         {children}
       <div className="position-relative">
         <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
