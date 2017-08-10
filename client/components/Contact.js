@@ -31,8 +31,10 @@ const Contact = (props) => {
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-40">
-                    <span className="glyphicon glyphicon-briefcase" aria-hidden="true" />
-                    <span>&emsp; </span><span>Resume</span>
+                    <a className="highlightLink" href="/resume/Jasiu_Leja_Resume.pdf">
+                      <span className="glyphicon glyphicon-briefcase" aria-hidden="true" />
+                      <span>&emsp; </span><span>Resume</span>
+                    </a>
                   </li>
                   <li className="li-add-padding-bottom-20">
                     <span className="glyphicon glyphicon-link" aria-hidden="true" />
