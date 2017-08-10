@@ -10,8 +10,9 @@ const Contact = (props) => {
   return (
     <div>
       <div className="container-fluid redBackground">
-        <div className="basic-div-main-title contact-title">
-          <img className="img-fluid" src="/assets/text/contactMeAndConnectBlue.png" alt="Contact Me And Connect" />
+        <div className="contact-main-title">
+          <img className="img-fluid" src="/assets/text/contactMeAndConnect2.png" alt="Contact Me And Connect" />
+          <div className="div-img-cover" />
         </div>
         <div className="container-fluid">
           <div className="row top-bottom-margin-30">
@@ -39,22 +40,25 @@ const Contact = (props) => {
                   </li>
                   <div className="div-socialMediaLinks">
                     <li>
-                      <div className="highlight-pink">
+                      <div className="highlight-pink position-relative">
                         <a href="https://github.com/jrleja0">
                           <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
                           <p>GitHub</p>
+                          <div className="div-img-cover" />
                         </a>
                       </div>
-                      <div className="highlight-pink">
-                        <a href="https://www.linkedin.com/in/jrleja">
+                      <div className="highlight-pink position-relative">
+                        <a href="https://linkedin.com/in/jrleja">
                           <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
                           <p>LinkedIn</p>
+                          <div className="div-img-cover" />
                         </a>
                       </div>
-                      <div className="highlight-pink">
-                        <a href="https://www.instagram.com/jrleja">
+                      <div className="highlight-pink position-relative">
+                        <a href="https://instagram.com/jrleja">
                           <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
                           <p>Instagram</p>
+                          <div className="div-img-cover" />
                         </a>
                       </div>
                     </li>
