@@ -11,7 +11,7 @@ const Contact = (props) => {
     <div>
       <div className="container-fluid redBackground">
         <div className="contact-main-title">
-          <img className="img-fluid" src="/assets/text/contactMeAndConnect.png" alt="Contact Me And Connect" />
+          <img className="img-fluid" src="/assets/text/contactMeAndConnectTitle.png" alt="Contact Me And Connect" />
           <div className="div-img-cover" />
         </div>
         <div className="container-fluid">

@@ -118,7 +118,7 @@ body {
 
   .basic-div-main-title {
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: 30px auto 0 auto;
   }
 
@@ -164,7 +164,6 @@ body {
 
   .highlight-basic:hover {
     background-color: $light-green-rgba;
-    font-weight: 600;
   }
 
   .highlight-blue:hover {
@@ -232,6 +231,7 @@ body {
     .dropdown-menu {
       background-color: $black-with-red;
       font-size: 16px;
+      text-align: center;
 
       li:hover {
         @extend .highlight-basic:hover;
@@ -254,9 +254,29 @@ body {
 
   }
 
+  #top {
+    position: absolute;
+    top: 0;
+  }
+
 /*///
  MAIN (Footer) Styling
 *////
+
+  .footer-linkToTop {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 200px;
+
+    a {
+    color: $pink-rgba;
+    }
+
+  }
 
   .footer-text {
     @extend .main-font;
@@ -302,7 +322,8 @@ body {
   .div-project-main-title {
     @extend .basic-div-main-title;
     @extend .left-right-margin-10;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
+    padding: 0 60px;
   }
 
   .div-project-title {
@@ -360,9 +381,15 @@ body {
  ART SHOWCASE Styling
 *////
 
-  .div-artGrid-main-img {
+  .artShowcase-main-title {
+    @extend .basic-div-main-title;
+    margin-bottom: 30px;
+    padding: 0 60px;
+  }
+
+  .div-artShowcase-main-img {
     max-width: 1000px;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 30px auto;
     position: relative;
   }
 
@@ -375,6 +402,17 @@ body {
     margin: 0 auto;
   }
 
+  .art-image-description {
+    background-color: $pink-rgba;
+    color: white;
+    font-size: 16px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 6px;
+  }
+
 /*///
  CONTACT Styling
 *////
@@ -382,6 +420,7 @@ body {
   .contact-main-title {
     @extend .basic-div-main-title;
     width: 60%;
+    margin-top: 40px;
   }
 
   .headshotBackground {
@@ -447,32 +486,94 @@ body {
  Media Queries - largest to smallest max-width
 *////
 
+  @media screen and (max-width: 1199px) {
+
+    .div-project-main-title {
+      padding: 0 20px;
+    }
+
+    .div-project-title {
+      width: 80%;
+    }
+
+    .artShowcase-main-title {
+      padding: 0 30px;
+    }
+
+    .footer-linkToTop {
+      font-size: 180px;
+    }
+
+  }
+
   @media screen and (max-width: 991px) {
 
     .stylingMainNavbar {
-      padding: 10px 0 10px 20px;
+      padding-bottom: 4px;
+
+      button {
+        margin-top: 12px;
+        padding: 12px 10px;
+      }
+
     }
 
     .mainTitle {
       height: 32px;
       width: 240px;
+      margin-top: 16px;
     }
 
     .mainTitle:hover {
       background-position: 0 -33px;
     }
 
+    .div-project-main-title {
+      padding: 0 10px;
+    }
+
+    .div-project-title {
+      width: 80%;
+    }
+
   }
 
   @media screen and (max-width: 850px) {
 
+    .div-project-main-title {
+      padding: 0;
+    }
+
     .div-project-title {
+      width: 90%;
       padding: 20px 0;
+    }
+
+    .contact-main-title {
+      width: 100%;
+      padding: 0 60px;
+    }
+
+    .artShowcase-main-title {
+      padding: 0;
+    }
+
+    .art-image-description {
+      font-size: 14px;
+      padding: 3px;
+    }
+
+    .footer-linkToTop {
+      font-size: 150px;
     }
 
   }
 
   @media screen and (max-width: 530px) {
+
+    .div-project-main-title {
+      margin-top: 10px;
+    }
 
     .welcome-container {
       height: 450px;
@@ -482,8 +583,13 @@ body {
       font-size: 17.5px;
     }
 
-    .contact-title {
-      margin: 30px 0 0 0;
+    .div-project-title {
+      width: 100%;
+    }
+
+    .contact-main-title {
+      width: 100%;
+      padding: 0 30px;
     }
 
     .div-socialMediaLinks {
@@ -494,9 +600,17 @@ body {
       }
     }
 
+    .footer-linkToTop {
+      font-size: 100px;
+    }
+
   }
 
   @media only screen and (max-width : 480px) {
+
+    .footer-text {
+      font-size: 16px;
+    }
 
     .headshotBackground, .img-main-project {
       height: 340px;

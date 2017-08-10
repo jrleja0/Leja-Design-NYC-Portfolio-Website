@@ -23,7 +23,7 @@ const Main = (props) => {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav className="navbar-float-tabs">
-            <NavDropdown className="dropdownHighlight" eventKey={1} title="Projects, Apps, & Art" id="navbar-projects-dropdown">
+            <NavDropdown className="dropdownHighlight" eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
               <LinkContainer to="/projects" activeClassName="active">
                 <MenuItem className="dropdownHighlightMenuItem" eventKey={1.1}>Projects & Apps</MenuItem>
               </LinkContainer>
@@ -37,6 +37,7 @@ const Main = (props) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <span id="top" />
         {children}
       <div className="position-relative">
         <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
@@ -46,6 +47,11 @@ const Main = (props) => {
           </pre>
         </div>
         <div className="div-img-cover" />
+        <div className="footer-linkToTop">
+          <a href="#top">
+            <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </div>
   );
