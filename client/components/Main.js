@@ -40,6 +40,11 @@ const Main = (props) => {
         {children}
       <div className="position-relative">
         <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+        <div>
+          <pre className="footer-text">
+            <span className="glyphicon glyphicon-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+          </pre>
+        </div>
         <div className="div-img-cover" />
       </div>
     </div>
