@@ -304,13 +304,17 @@ body {
     @include border-radius(50px);
     text-align: center;
     padding: 20px;
-    margin-bottom: 14px;
-    max-width: 500px;
-    height: 150px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    height: 190px;
     font-size: 18px;
 
     li {
       @extend .li-add-padding-bottom-5;
+    }
+
+    .green-text {
+      color: $green-background;
     }
 
   }
@@ -565,6 +569,15 @@ body {
 
     .footer-linkToTop {
       font-size: 150px;
+    }
+
+  }
+
+  @media screen and (max-width: 630px) {
+
+    .welcome-textbox {
+      max-width: 378px;
+      height: 250px;
     }
 
   }
