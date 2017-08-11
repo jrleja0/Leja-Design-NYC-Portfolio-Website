@@ -208,10 +208,15 @@ body {
       padding-top: 8px;
     }
 
-    .navbar-nav {
+    #main-nav {
+
+      // #navbar-projects-dropdown {
+      //   background-color: $yellow;
+      // }
 
       a {
         color: white;
+        text-align: center;
       }
 
       a:hover {
@@ -220,7 +225,7 @@ body {
 
       .active {
 
-        a, a:hover {
+        a, a:hover, .open {
           background-color: $blue-bold-rgba6;
         }
 
