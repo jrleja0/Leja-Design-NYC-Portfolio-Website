@@ -18,6 +18,7 @@ $light-blue: #8bb5f9;
 $light-green: #00ff15;
 $light-red: #fc747f;
 $light-yellow: #f2ff49;
+$light-grey: #dee3ea;
 // translucent
 $blue-bold-rgba6: rgba(27, 30, 209, 0.6);
 $blue-bold-rgba8: rgba(27, 30, 209, 0.8);
@@ -84,9 +85,9 @@ $yellow-rgba: rgba(247, 247, 12, 0.8);
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
 /*///
@@ -209,10 +210,12 @@ body {
     }
 
     #main-nav {
+      padding-top: 4px;
+      padding-bottom: 2px;
 
-      // #navbar-projects-dropdown {
-      //   background-color: $yellow;
-      // }
+      > li {
+        margin: 4px;
+      }
 
       a {
         color: white;
@@ -225,8 +228,44 @@ body {
 
       .active {
 
-        a, a:hover, .open {
+        a {
           background-color: $blue-bold-rgba6;
+        }
+
+        a:hover {
+          background-color: $blue-bold-rgba8;
+        }
+
+      }
+
+      #navbar-projects-dropdown {
+        border: 1px solid white;
+      }
+
+      .open {
+        border: 1px solid white;
+
+        #navbar-projects-dropdown {
+          background-color: white;
+          color: $black-with-blue;
+        }
+
+        #navbar-projects-dropdown:hover {
+          background-color: $light-grey;
+        }
+
+        .dropdown-menu {
+          border: 1px solid white;
+          padding: 0;
+        }
+
+        .dropdownMenuItem {
+
+          a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+
         }
 
       }
@@ -236,23 +275,19 @@ body {
     .dropdown-menu {
       background-color: $black-with-red;
       font-size: 16px;
-      text-align: center;
+    }
 
-      li:hover {
-        @extend .highlight-basic:hover;
+    .dropdownMenuItem {
+      width: 186px;
+    }
 
-        a {
-          @extend .highlight-basic:hover;
-        }
+    .nav-contact {
 
-      }
-
-      .active {
-
-        a, a:hover {
-          background-color: $blue-bold-rgba6;
-        }
-
+      a {
+        border: 2px solid $blue-bold;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 13px;
       }
 
     }
@@ -574,6 +609,22 @@ body {
 
     .footer-linkToTop {
       font-size: 150px;
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .stylingMainNavbar {
+
+      .nav-contact {
+
+        a {
+          padding-bottom: 10px;
+        }
+
+      }
+
     }
 
   }

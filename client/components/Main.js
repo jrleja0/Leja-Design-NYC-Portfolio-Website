@@ -23,15 +23,15 @@ const Main = (props) => {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav id="main-nav" className="navbar-float-tabs">
-            <NavDropdown className="dropdownHighlight" eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
-              <LinkContainer className="dropdownHighlightMenuItem" to="/projects" activeClassName="active">
+            <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
+              <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
                 <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
               </LinkContainer>
-              <LinkContainer className="dropdownHighlightMenuItem" to="/art" activeClassName="active">
+              <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
                 <MenuItem eventKey={1.2}>Art</MenuItem>
               </LinkContainer>
             </NavDropdown>
-            <LinkContainer className="contactHighlight" to="/contact" activeClassName="active">
+            <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
               <NavItem eventKey={2}>Contact</NavItem>
             </LinkContainer>
           </Nav>
