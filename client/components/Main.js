@@ -17,7 +17,7 @@ const Main = (props) => {
       <Navbar className="stylingMainNavbar" fixedTop inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link className="mainTitle" to="/home" activeClassName="active" />
+            <Link className="mainTitle" to="/home" />
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
