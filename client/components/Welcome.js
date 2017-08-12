@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 
 /*///
  COMPONENT
@@ -17,9 +16,10 @@ const Welcome = (props) => {
         </div>
         <div className="welcome-textbox">
           <ul>
-            <li>You've found the portfolio website of</li>
-            <li>Jasiu Leja, Software Developer & Artist</li>
-            <li className="li-add-padding-bottom-20">working and living in NYC.</li>
+            <li><span className="green-text">J R Leja Design NYC</span> showcases the web apps, games, and other</li>
+            <li className="li-add-padding-bottom-20">software development and art projects of <span className="green-text">Jasiu Leja</span>.</li>
+            <li>Jasiu is a NYC-based Fullstack/Front-End <span className="green-text">Software Developer</span></li>
+            <li className="li-add-padding-bottom-20">with a passion for art and design.</li>
             <li>Thanks for visiting!</li>
           </ul>
         </div>

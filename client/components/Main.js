@@ -17,26 +17,27 @@ const Main = (props) => {
       <Navbar className="stylingMainNavbar" fixedTop inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link className="mainTitle" to="/home" activeClassName="active" />
+            <Link className="mainTitle" to="/home" />
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav className="navbar-float-tabs">
-            <NavDropdown className="dropdownHighlight" eventKey={1} title="Projects, Apps, & Art" id="navbar-projects-dropdown">
-              <LinkContainer to="/projects" activeClassName="active">
-                <MenuItem className="dropdownHighlightMenuItem" eventKey={1.1}>Projects & Apps</MenuItem>
+          <Nav id="main-nav" className="navbar-float-tabs">
+            <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
+              <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
+                <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
               </LinkContainer>
-              <LinkContainer to="/art" activeClassName="active">
-                <MenuItem className="dropdownHighlightMenuItem" eventKey={1.2}>Art</MenuItem>
+              <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
+                <MenuItem eventKey={1.2}>Art</MenuItem>
               </LinkContainer>
             </NavDropdown>
-            <LinkContainer to="/contact" activeClassName="active">
-              <NavItem className="contactHighlight" eventKey={2}>Contact</NavItem>
+            <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
+              <NavItem eventKey={2}>Contact</NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <span id="top" />
         {children}
       <div className="position-relative">
         <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
@@ -46,6 +47,11 @@ const Main = (props) => {
           </pre>
         </div>
         <div className="div-img-cover" />
+        <div className="footer-linkToTop">
+          <a href="#top">
+            <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </div>
   );
