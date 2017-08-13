@@ -49,9 +49,11 @@ const Main = (props) => {
         </div>
         <div className="div-img-cover" />
         <div className="footer-linkToTop">
-          <a role="button" tabIndex="0" onClick={scrollUp}>
-            <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
-          </a>
+          <div>
+            <a role="button" tabIndex="0" onClick={scrollUp}>
+              <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

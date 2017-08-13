@@ -27,15 +27,15 @@ class Routes extends Component {
 
     return (
       <Router history={history}>
-            <Main>
-              <Switch>
-                <Route path="/home" component={Home} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/art" component={ArtShowcase} />
-                <Route path="/contact" component={Contact} />
-                <Redirect to="/home" />
-              </Switch>
-            </Main>
+        <Main>
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/art" component={ArtShowcase} />
+            <Route path="/contact" component={Contact} />
+            <Redirect to="/home" />
+          </Switch>
+        </Main>
       </Router>
     );
   }

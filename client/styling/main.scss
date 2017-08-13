@@ -304,13 +304,11 @@ body {
 *////
 
   .footer-linkToTop {
-    position: absolute;
-    margin: 0 auto;
-    bottom: 85px;
-    left: 0;
-    right: 0;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
     text-align: center;
-    font-size: 200px;
+    font-size: 150px;
 
     a {
       color: $pink-rgba;
@@ -328,12 +326,12 @@ body {
     }
 
     span {
-      width: 165px;
+      width: 135px;
       position: absolute;
       margin: 0 auto;
       left: 0;
       right: 0;
-      top: -10px;
+      top: 0;
     }
 
   }
@@ -564,10 +562,6 @@ body {
       padding: 0 30px;
     }
 
-    .footer-linkToTop {
-      font-size: 180px;
-    }
-
   }
 
   @media screen and (max-width: 991px) {
@@ -628,8 +622,18 @@ body {
     }
 
     .footer-linkToTop {
-      font-size: 150px;
-      bottom: 55px;
+      font-size: 100px;
+
+      a {
+        width: 126px;
+        height: 126px;
+      }
+
+      span {
+        width: 90px;
+        top: 5px;
+      }
+
     }
 
   }
@@ -688,13 +692,6 @@ body {
       div {
         padding: 0 8px;
       }
-    }
-
-    .footer-linkToTop {
-      font-size: 100px;
-      bottom: 55px;
-
-
     }
 
   }
