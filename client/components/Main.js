@@ -8,57 +8,89 @@ import {LinkContainer} from 'react-router-bootstrap';
 /*///
  COMPONENT
 *////
-const Main = (props) => {
+class Main extends React.Component {
 
-  const {children} = props;
-  const scrollUp = () => window.scrollTo(0, 0);
+  constructor(props) {
+    super(props);
 
-  return (
-    <div>
-      <Navbar className="stylingMainNavbar" fixedTop inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link className="mainTitle" to="/home" />
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav id="main-nav" className="navbar-float-tabs">
-            <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
-              <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
-                <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
+    this.state = {
+      showScrollUpButton: false
+    };
+
+    this.scrollUp = this.scrollUp.bind(this);
+    this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScrollUpButton);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScrollUpButton);
+  }
+
+  scrollUp() {
+    window.scrollTo(0, 0);
+  }
+
+  handleScrollUpButton() {
+    if (!this.state.showScrollUpButton && window.scrollY > 980) {
+      this.setState({ showScrollUpButton: true });
+    } else if (this.state.showScrollUpButton && window.scrollY < 980) {
+      this.setState({ showScrollUpButton: false });
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar className="stylingMainNavbar" inverse collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <Link className="mainTitle" to="/home" />
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav id="main-nav" className="navbar-float-tabs">
+              <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
+                <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
+                  <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
+                </LinkContainer>
+                <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
+                  <MenuItem eventKey={1.2}>Art</MenuItem>
+                </LinkContainer>
+              </NavDropdown>
+              <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
+                <NavItem eventKey={2}>Contact</NavItem>
               </LinkContainer>
-              <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
-                <MenuItem eventKey={1.2}>Art</MenuItem>
-              </LinkContainer>
-            </NavDropdown>
-            <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
-              <NavItem eventKey={2}>Contact</NavItem>
-            </LinkContainer>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <span id="top" />
-        {children}
-      <div className="position-relative">
-        <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
-        <div>
-          <pre className="footer-text">
-            <span className="glyphicon glyphicon-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
-          </pre>
-        </div>
-        <div className="div-img-cover" />
-        <div className="footer-linkToTop">
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+          {this.props.children}
+        <div className="position-relative">
+          <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
           <div>
-            <a role="button" tabIndex="0" onClick={scrollUp}>
-              <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
-            </a>
+            <pre className="footer-text">
+              <span className="glyphicon glyphicon-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+            </pre>
+          </div>
+          <div className="div-img-cover" />
+          <div className="footer-linkToTop">
+            { this.state.showScrollUpButton ?
+              <div>
+                <a role="button" tabIndex="0" onClick={this.scrollUp}>
+                  <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+                </a>
+              </div>
+              : null
+            }
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 /*///
  CONTAINER
