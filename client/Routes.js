@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Router} from 'react-router';
 import {Redirect, Route, Switch} from 'react-router-dom';
+import {ScrollContext} from 'react-router-scroll';
 import PropTypes from 'prop-types';
 import history from './history';
 import {ArtShowcase, Contact, Main, Projects, ScrollToTop, Welcome} from './components';
@@ -27,18 +28,20 @@ class Routes extends Component {
 
     return (
       <Router history={history}>
-        <div>
-           <ScrollToTop />
-          <Main>
-            <Switch>
-              <Route path="/home" component={Home} />
-              <Route path="/projects" component={Projects} />
-              <Route path="/art" component={ArtShowcase} />
-              <Route path="/contact" component={Contact} />
-              <Redirect to="/home" />
-            </Switch>
-          </Main>
-        </div>
+        <ScrollContext>
+          <div>
+            {/* <ScrollToTop /> */}
+            <Main>
+              <Switch>
+                <Route path="/home" component={Home} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/art" component={ArtShowcase} />
+                <Route path="/contact" component={Contact} />
+                <Redirect to="/home" />
+              </Switch>
+            </Main>
+          </div>
+        </ScrollContext>
       </Router>
     );
   }

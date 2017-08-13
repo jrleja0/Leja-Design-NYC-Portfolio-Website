@@ -11,6 +11,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 const Main = (props) => {
 
   const {children} = props;
+  const scrollUp = () => window.scrollTo(0, 0);
 
   return (
     <div>
@@ -48,7 +49,7 @@ const Main = (props) => {
         </div>
         <div className="div-img-cover" />
         <div className="footer-linkToTop">
-          <a href="#top">
+          <a role="button" tabIndex="0" onClick={scrollUp}>
             <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
           </a>
         </div>

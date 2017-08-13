@@ -306,14 +306,34 @@ body {
   .footer-linkToTop {
     position: absolute;
     margin: 0 auto;
-    bottom: 50px;
+    bottom: 85px;
     left: 0;
     right: 0;
     text-align: center;
     font-size: 200px;
 
     a {
-    color: $pink-rgba;
+      color: $pink-rgba;
+      display: inline-block;
+      @include border-radius(140px);
+      position: relative;
+      width: 186px;
+      height: 186px;
+    }
+
+    a:hover {
+      color: $pink-bold;
+      background-color: $light-green;
+      border: 5px solid $pink-bold;
+    }
+
+    span {
+      width: 165px;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: -10px;
     }
 
   }
@@ -609,6 +629,7 @@ body {
 
     .footer-linkToTop {
       font-size: 150px;
+      bottom: 55px;
     }
 
   }
@@ -671,6 +692,9 @@ body {
 
     .footer-linkToTop {
       font-size: 100px;
+      bottom: 55px;
+
+
     }
 
   }
