@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Router} from 'react-router';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import {ScrollContext} from 'react-router-scroll';
 import PropTypes from 'prop-types';
 import history from './history';
-import {ArtShowcase, Contact, Main, Projects, ScrollToTop, Welcome} from './components';
+import {ArtShowcase, Contact, Main, Projects, Welcome} from './components';
 
 const Home = () => (
   <div>
@@ -28,9 +27,6 @@ class Routes extends Component {
 
     return (
       <Router history={history}>
-        <ScrollContext>
-          <div>
-            {/* <ScrollToTop /> */}
             <Main>
               <Switch>
                 <Route path="/home" component={Home} />
@@ -40,8 +36,6 @@ class Routes extends Component {
                 <Redirect to="/home" />
               </Switch>
             </Main>
-          </div>
-        </ScrollContext>
       </Router>
     );
   }
