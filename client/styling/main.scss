@@ -397,6 +397,8 @@ body {
   }
 
   .img-main-project {
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 400px;
     max-width: 700px;
     margin: 0 auto;
@@ -662,6 +664,10 @@ body {
       height: 250px;
     }
 
+    .footer-text {
+      font-size: 16px;
+    }
+
   }
 
   @media screen and (max-width: 530px) {
@@ -697,13 +703,13 @@ body {
 
   }
 
-  @media only screen and (max-width : 480px) {
+  @media only screen and (max-width: 480px) {
 
     .footer-text {
       font-size: 16px;
     }
 
-    .headshotBackground, .img-main-project {
+    .img-main-project, .headshotBackground {
       height: 340px;
     }
 
@@ -715,12 +721,109 @@ body {
 
   }
 
-  @media only screen and (max-width : 415px) {
+  @media only screen and (max-width: 415px) {
+
+    .img-main-project {
+      background-size: contain;
+      height: 250px;
+    }
+
+    .headshotBackground {
+      height: 300px;
+    }
+
+    .contact-main-title {
+      padding: 0;
+    }
+
+    .contact-container {
+      padding: 0;
+    }
 
     .contact-textbox {
+      font-size: 21px;
+    }
+
+  }
+
+  @media only screen and (max-width: 370px) {
+
+    .welcome-textbox {
+      height: 270px;
+    }
+
+    .projects-main-container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .art-image-description {
+      font-size: 12px;
+    }
+
+    .contact-textbox {
+      font-size: 19px;
+    }
+
+    .div-socialMediaLinks {
+      padding: 14px 0px 0 0px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+    }
+
+  }
+
+  @media only screen and (max-width: 347px) {
+
+    .mainTitle {
+      width: 200px;
+      height: 10px;
+      margin-top: 20px;
+      padding-bottom: 12px;
+    }
+
+    .mainTitle:hover {
+      background-position: 0 -28px;
+    }
+
+    .welcome-textbox {
+      height: 310px;
+    }
+
+    .img-main-project {
+      height: 220px;
+    }
+
+    .art-image-description {
+      font-size: 11px;
+    }
+
+    .contact-row-below-title {
+      margin-top: 15px;
+    }
+
+    .contact-textbox {
+      font-size: 17px;
+
       ul {
-        padding: 60px 12px 0 12px;
+        padding: 60px 6px 0 6px;
+
+        > li {
+          padding-left: 16px;
+        }
+
       }
+
+    }
+
+    .div-socialMediaLinks {
+      padding: 14px 0px 0 0px;
+    }
+
+    .footer-text {
+      font-size: 12px;
     }
 
   }

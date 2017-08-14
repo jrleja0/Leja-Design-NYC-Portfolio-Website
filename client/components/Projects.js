@@ -62,7 +62,7 @@ const Projects = (props) => {
           <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
           <div className="div-img-cover" />
         </div>
-        <div className="container-fluid">
+        <div className="projects-main-container container-fluid">
           {
           imageData.map(image => (
             <div key={image.name}>
@@ -75,8 +75,15 @@ const Projects = (props) => {
                   <div className="img-main-project"
                     style={
                       image.name === 'diningWithTheStars1' ?
-                        { background: `url( ${image.path} ) left top/cover no-repeat` }
-                        : { background: `url( ${image.path} ) center top/cover no-repeat` }
+                        {
+                          'background-image': `url( ${image.path} )`,
+                          'background-position': 'left top'
+                        }
+                        :
+                        {
+                          'background-image': `url( ${image.path} )`,
+                          'background-position': 'center top'
+                        }
                     }
                   />
                 </div>

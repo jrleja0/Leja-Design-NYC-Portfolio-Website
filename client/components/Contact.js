@@ -15,9 +15,9 @@ const Contact = (props) => {
           <div className="div-img-cover" />
         </div>
         <div className="container-fluid">
-          <div className="row top-bottom-margin-30">
+          <div className="row contact-row-below-title top-bottom-margin-30">
             <div className="headshotBackground col-lg-6 col-md-6 col-sm-12" />
-            <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="contact-container col-lg-6 col-md-6 col-sm-12">
               <div className="contact-textbox">
                 <ul>
                   <li className="li-add-padding-bottom-40">
