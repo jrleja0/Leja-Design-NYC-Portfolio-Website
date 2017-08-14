@@ -6,14 +6,32 @@ const Image = db.define('image', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  path: {
+  imagePath: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  titlePath: {
+    type: Sequelize.STRING
   },
   category: {
     type: Sequelize.STRING
   },
+  projectName: {
+    type: Sequelize.STRING
+  },
   description: {
+    type: Sequelize.TEXT
+  },
+  technologies: {
+    type: Sequelize.TEXT
+  },
+  linkProject: {
+    type: Sequelize.TEXT
+  },
+  linkDemo: {
+    type: Sequelize.TEXT
+  },
+  linkGitHub: {
     type: Sequelize.TEXT
   }
 });
