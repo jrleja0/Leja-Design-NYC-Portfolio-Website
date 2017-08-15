@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 /*///
  COMPONENT
@@ -26,10 +25,4 @@ const ArtShowcase = (props) => {
   );
 };
 
-/*///
- CONTAINER
-*////
-// const mapState = null;
-
-// export default connect(mapState)(ArtShowcase);
 export default ArtShowcase;

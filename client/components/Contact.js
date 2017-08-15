@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 /*///
  COMPONENT
@@ -74,10 +73,4 @@ const Contact = (props) => {
   );
 };
 
-/*///
- CONTAINER
-*////
-// const mapState = null;
-
-// export default connect(mapState)(Contact);
 export default Contact;

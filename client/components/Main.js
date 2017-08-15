@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {withRouter, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
@@ -92,14 +91,6 @@ class Main extends React.Component {
   }
 }
 
-/*///
- CONTAINER
-*////
-// const mapState = null;
-
-// const mapDispatch = null;
-
-// export default withRouter(connect(mapState, mapDispatch)(Main));
 export default Main;
 
 /*///

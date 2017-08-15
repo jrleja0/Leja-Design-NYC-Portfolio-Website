@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 /*///
  COMPONENT
@@ -27,10 +26,4 @@ const Welcome = (props) => {
   );
 };
 
-/*///
- CONTAINER
-*////
-// const mapState = null;
-
-// export default connect(mapState)(Welcome);
 export default Welcome;
