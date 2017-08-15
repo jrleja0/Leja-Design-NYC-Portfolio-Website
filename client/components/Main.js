@@ -95,17 +95,12 @@ class Main extends React.Component {
 /*///
  CONTAINER
 *////
-const mapState = (state) => {
-  return {
-  };
-};
+// const mapState = null;
 
-const mapDispatch = (dispatch) => {
-  return {
-  };
-};
+// const mapDispatch = null;
 
-export default withRouter(connect(mapState, mapDispatch)(Main));
+// export default withRouter(connect(mapState, mapDispatch)(Main));
+export default Main;
 
 /*///
  PROP TYPES

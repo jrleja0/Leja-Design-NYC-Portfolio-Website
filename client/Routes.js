@@ -43,8 +43,8 @@ class Routes extends Component {
 
 /*///
  CONTAINER
-*////(
-const mapState = (state) => ({});
+*////
+const mapState = null;
 
 const mapDispatch = (dispatch) => ({
   loadInitialData: () => {

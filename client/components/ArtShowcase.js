@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 /*///
@@ -30,15 +29,7 @@ const ArtShowcase = (props) => {
 /*///
  CONTAINER
 *////
-const mapState = (state) => {
-  return {
-  };
-};
+// const mapState = null;
 
-export default connect(mapState)(ArtShowcase);
-
-/*///
- PROP TYPES
-*////
-ArtShowcase.propTypes = {
-};
+// export default connect(mapState)(ArtShowcase);
+export default ArtShowcase;

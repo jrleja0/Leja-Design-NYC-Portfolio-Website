@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 /*///
@@ -78,15 +77,7 @@ const Contact = (props) => {
 /*///
  CONTAINER
 *////
-const mapState = (state) => {
-  return {
-  };
-};
+// const mapState = null;
 
-export default connect(mapState)(Contact);
-
-/*///
- PROP TYPES
-*////
-Contact.propTypes = {
-};
+// export default connect(mapState)(Contact);
+export default Contact;
