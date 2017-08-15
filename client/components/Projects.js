@@ -18,7 +18,7 @@ const Projects = (props) => {
         </div>
         <div className="projects-main-container container-fluid">
           {
-          imageData ? imageData.map(image => (
+          imageData && imageData.length ? imageData.map(image => (
             <div key={image.name}>
               <div className="div-project-title">
                 <img className="img-fluid" src={ image.titlePath } alt={ image.projectName } />
@@ -126,7 +126,13 @@ const Projects = (props) => {
               </div>
             </div>
           ))
-          : null
+          : <div className="div-container-image-under-construction">
+              <img
+                src="/assets/under_construction.gif"
+                alt="Sorry, page is under construction."
+              />
+              <div className="div-img-cover" />
+            </div>
           }
         </div>
       </div>

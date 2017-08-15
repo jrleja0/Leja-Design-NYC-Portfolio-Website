@@ -1,4 +1,4 @@
-# Leja Design NYC
+# J R Leja Design NYC
 
 ## Deployed at
 
@@ -6,7 +6,9 @@ Currently in development. Check back soon!
 
 ## Description
 
-Welcome to the portfolio website of Jasiu Leja, Software Developer in NYC.
+Welcome! J R Leja Design NYC showcases the web apps, games, and other software development and art projects of Jasiu Leja.
+Jasiu is a NYC-based Fullstack/Front-End Software Developer with a passion for art and design.
+Thanks for visiting!
 
 ## Projects & Links
 
@@ -66,3 +68,6 @@ https://www.linkedin.com/in/jrleja
 
 GitHub:
 https://github.com/jrleja0
+
+Instagram:
+https://instagram.com/jrleja

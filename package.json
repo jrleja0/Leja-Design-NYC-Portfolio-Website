@@ -1,7 +1,7 @@
 {
   "name": "jrleja.design",
   "version": "1.0.0",
-  "description": "JRLeja Design's website",
+  "description": "J R Leja Design's website",
   "main": "index.js",
   "scripts": {
     "start": "node server",
