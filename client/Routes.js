@@ -5,6 +5,7 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
 import {ArtShowcase, Contact, Main, Projects, Welcome} from './components';
+import { fetchImages } from './store';
 
 const Home = () => (
   <div>
@@ -24,7 +25,6 @@ class Routes extends Component {
   }
 
   render () {
-
     return (
       <Router history={history}>
         <Main>
@@ -44,18 +44,13 @@ class Routes extends Component {
 /*///
  CONTAINER
 *////
-const mapState = (state) => {
-  return {
-  };
-};
+const mapState = null;
 
-const mapDispatch = (dispatch) => {
-  return {
-    loadInitialData () {
-      dispatch(/* fetch data*/);
-    }
-  };
-};
+const mapDispatch = (dispatch) => ({
+  loadInitialData: () => {
+    dispatch(fetchImages());
+  }
+});
 
 export default connect(mapState, mapDispatch)(Routes);
 

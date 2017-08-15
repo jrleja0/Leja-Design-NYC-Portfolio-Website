@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 /*///
  COMPONENT
@@ -28,18 +26,4 @@ const Welcome = (props) => {
   );
 };
 
-/*///
- CONTAINER
-*////
-const mapState = (state) => {
-  return {
-  };
-};
-
-export default connect(mapState)(Welcome);
-
-/*///
- PROP TYPES
-*////
-Welcome.propTypes = {
-};
+export default Welcome;

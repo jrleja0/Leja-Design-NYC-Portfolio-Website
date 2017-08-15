@@ -176,6 +176,12 @@ body {
     background-color: $pink-rgba;
   }
 
+  .div-container-image-under-construction {
+    @extend .div-project-main-title;
+    width: 50%;
+    text-align: center;
+  }
+
 /*///
  MAIN (Navbar) Styling
 *////
