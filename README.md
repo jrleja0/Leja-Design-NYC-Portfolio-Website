@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=903YYFBc9V8
 A fast-paced color matching multiplayer game. Solo hackathon project created in 4 days.
 
 Deployed at:
-TBA
+https://color-chaos.herokuapp.com
 
 GitHub Repository:
 https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game

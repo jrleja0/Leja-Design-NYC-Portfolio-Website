@@ -23,7 +23,7 @@ const data = {
       projectName: '"Catching Matching Color Chaos!" Game',
       description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game that was created as a solo hackathon project in 4 days.',
       technologies: 'JavaScript - Paper.js, Socket.io, Node, Express; HTML/CSS.',
-      linkProject: 'TBA',
+      linkProject: 'https://color-chaos.herokuapp.com',
       linkDemo: 'https://www.youtube.com/watch?v=EYTeEmcarnY',
       linkGitHub: 'https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game',
     },
