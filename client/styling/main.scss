@@ -178,6 +178,7 @@ body {
 
   .div-container-image-under-construction {
     @extend .div-project-main-title;
+    margin: 20px auto 0 auto;
     width: 50%;
     text-align: center;
   }
@@ -391,8 +392,12 @@ body {
   .div-project-main-title {
     @extend .basic-div-main-title;
     @extend .left-right-margin-10;
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
     padding: 0 60px;
+  }
+
+  .projects-main-container {
+    margin-bottom: 30px;
   }
 
   .div-project-title {
@@ -679,7 +684,7 @@ body {
   @media screen and (max-width: 530px) {
 
     .div-project-main-title {
-      margin-top: 10px;
+      margin-top: 30px;
     }
 
     .welcome-container {
@@ -758,7 +763,7 @@ body {
       height: 270px;
     }
 
-    .projects-main-container{
+    .projects-main-container {
       padding-left: 0;
       padding-right: 0;
     }

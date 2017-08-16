@@ -11,7 +11,7 @@ const Projects = (props) => {
 
   return (
     <div>
-      <div className="container-fluid top-bottom-margin-30 greenBackground">
+      <div className="container-fluid greenBackground">
         <div className="div-project-main-title">
           <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
           <div className="div-img-cover" />
