@@ -2,13 +2,15 @@
 
 ## Deployed at
 
-Currently in development. Check back soon!
+https://jrleja-design.herokuapp.com
 
 ## Description
 
 Welcome! J R Leja Design NYC showcases the web apps, games, and other software development and art projects of Jasiu Leja.
 Jasiu is a NYC-based Fullstack/Front-End Software Developer with a passion for art and design.
 Thanks for visiting!
+
+This website is a fullstack JavaScript app (Node, Express, React/Redux, PostgreSQL/Sequelize) that features a mobile-responsive UI with SCSS styling.
 
 ## Projects & Links
 
