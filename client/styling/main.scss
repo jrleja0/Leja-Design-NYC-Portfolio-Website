@@ -1,187 +1,8 @@
 /*///
- Basic Colors & Layout Styling
-*////
-
-// bold
-$blue-bold: #1b1ed1;
-$blue-with-red: #4816bc;
-$green-background: #05ad18;
-$pink: #F3517D;
-$pink-bold: #ff009d;
-$yellow: #f7f70c;
-// dark
-$black-with-blue: #010e23;
-$black-with-green: #000c01;
-$black-with-red: #190002;
-// light
-$light-blue: #8bb5f9;
-$light-green: #00ff15;
-$light-red: #fc747f;
-$light-yellow: #f2ff49;
-$light-grey: #dee3ea;
-// translucent
-$blue-bold-rgba6: rgba(27, 30, 209, 0.6);
-$blue-bold-rgba8: rgba(27, 30, 209, 0.8);
-$light-green-rgba: rgba(0, 255, 21, 0.8);
-$pink-rgba: rgba(255, 0, 157, 0.8);
-$red-pink-rgba: rgba(255, 0, 59, 0.8);
-$yellow-rgba: rgba(247, 247, 12, 0.8);
-
-@mixin pattern-background($backgroundColor, $fileColor) {
-  background: $backgroundColor url(
-    "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
-}
-
-.greenBackground {
-  @include pattern-background($black-with-green, 'green');
-}
-
-.redBackground {
-    @include pattern-background($black-with-red, 'red');
-}
-
-.blueBackground {
-    @include pattern-background($black-with-blue, 'blue');
-}
-
-.blueBold {
-  background-color: $blue-bold;
-}
-
-.green {
-  background-color: $green-background;
-}
-
-.pink {
-  background-color: $pink;
-}
-
-.black-with-red {
-  background-color: $black-with-red;
-}
-
-.main-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: white;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.top-bottom-margin-30 {
-  margin: 30px 0;
-}
-
-.left-right-margin-10 {
-  margin: 0 10px;
-}
-
-.position-relative {
-  position: relative;
-}
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-/*///
- Basic Elements Styling
+ Main Components
 *////
 
 body {
-  @extend .greenBackground;
-  @extend .main-font;
-
-  a, a:hover {
-    color: white;
-    text-decoration: none;
-  }
-
-  hr {
-    border-width: 0;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .basic-div-main-title {
-    position: relative;
-    width: 100%;
-    margin: 30px auto 0 auto;
-  }
-
-  .basic-textbox {
-    max-width: 650px;
-    margin: 0 auto;
-
-    .li-add-padding-bottom-5 {
-      padding-bottom: 5px;
-    }
-
-    .li-add-padding-bottom-10 {
-      padding-bottom: 10px;
-    }
-
-    .li-add-padding-bottom-20 {
-      padding-bottom: 20px;
-    }
-
-    .li-add-padding-bottom-40 {
-      padding-bottom: 40px;
-    }
-
-    .li-remove-padding-bottom {
-      padding-bottom: 0;
-    }
-
-  }
-
-  .basic-div-links {
-    background-color: $black-with-red;
-    padding: 14px 20px 14px 20px;
-    text-align: center;
-  }
-
-  .div-img-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  .highlight-basic:hover {
-    background-color: $light-green-rgba;
-  }
-
-  .highlight-blue:hover {
-    @extend .highlight-basic:hover;
-    background-color: $blue-bold-rgba8;
-  }
-
-  .highlight-pink:hover {
-    @extend .highlight-basic:hover;
-    background-color: $pink-rgba;
-  }
-
-  .div-container-image-under-construction {
-    @extend .div-project-main-title;
-    margin: 20px auto 0 auto;
-    width: 50%;
-    text-align: center;
-  }
 
 /*///
  MAIN (Navbar) Styling
@@ -190,9 +11,11 @@ body {
   .mainTitle {
     background: url("/assets/text/jrlejaDesignNYCTitle.png") left top/cover no-repeat;
     display: block;
+    float: left;
     height: 50px;
     width: 360px;
     margin: 7px;
+    margin-left: -15px;
   }
 
   .mainTitle:hover {
@@ -202,13 +25,35 @@ body {
 
   .stylingMainNavbar {
     @extend .black-with-red;
+    position: relative;
+    min-height: 50px;
     padding-left: 20px;
     margin-bottom: 0;
     font-size: 16px;
+    border: 1px solid $black-with-blue;
 
     .container {
       margin-left: 0;
       margin-right: 0;
+    }
+
+    .navbar-header {
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .navbar-toggle {
+      display: none;
+      position: relative;
+      float: right;
+      margin: 12px 15px 8px 0px;
+      padding: 12px 10px;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      border-color: $medium-grey;
     }
 
     .navbar-float-tabs {
@@ -368,9 +213,10 @@ body {
     color: $light-blue;
     @extend .basic-textbox;
     @include border-radius(50px);
+    // border: 5px solid $yellow;
     text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     max-width: 800px;
     height: 190px;
     font-size: 18px;
@@ -416,13 +262,15 @@ body {
   }
 
   .project-textbox {
-    @extend .green;
+    // @extend .green;
     @extend .basic-textbox;
     font-size: 18px;
     font-weight: 600;
+    max-width: 1200px;
 
     ul {
-      padding: 20px;
+      margin: 10px 0;
+      padding: 0 20px 0 20px;
     }
 
     li {
@@ -441,8 +289,10 @@ body {
     }
 
     li:nth-child(odd) {
-      background-color: $light-blue;
-      color: $blue-bold;
+      // background-color: $light-blue;
+      // color: $blue-bold;
+      background-color: white;
+      color: black;
     }
 
     p {
@@ -557,287 +407,6 @@ body {
   .social-labels {
     white-space: pre;
     font-size: 20px;
-  }
-
-/*///
- Media Queries - largest to smallest max-width
-*////
-
-  @media screen and (max-width: 1199px) {
-
-    .div-project-main-title {
-      padding: 0 20px;
-    }
-
-    .div-project-title {
-      width: 80%;
-    }
-
-    .artShowcase-main-title {
-      padding: 0 30px;
-    }
-
-  }
-
-  @media screen and (max-width: 991px) {
-
-    .stylingMainNavbar {
-      padding-bottom: 4px;
-
-      button {
-        margin-top: 12px;
-        padding: 12px 10px;
-      }
-
-    }
-
-    .mainTitle {
-      height: 32px;
-      width: 240px;
-      margin-top: 16px;
-    }
-
-    .mainTitle:hover {
-      background-position: 0 -33px;
-    }
-
-    .div-project-main-title {
-      padding: 0 10px;
-    }
-
-    .div-project-title {
-      width: 80%;
-    }
-
-  }
-
-  @media screen and (max-width: 850px) {
-
-    .div-project-main-title {
-      padding: 0;
-    }
-
-    .div-project-title {
-      width: 90%;
-      padding: 20px 0;
-    }
-
-    .contact-main-title {
-      width: 100%;
-      padding: 0 60px;
-    }
-
-    .artShowcase-main-title {
-      padding: 0;
-    }
-
-    .art-image-description {
-      font-size: 14px;
-      padding: 3px;
-    }
-
-    .footer-linkToTop {
-      font-size: 100px;
-
-      a {
-        width: 126px;
-        height: 126px;
-      }
-
-      span {
-        width: 90px;
-        top: 5px;
-      }
-
-    }
-
-  }
-
-  @media screen and (max-width: 767px) {
-
-    .stylingMainNavbar {
-
-      .nav-contact {
-
-        a {
-          padding-bottom: 10px;
-        }
-
-      }
-
-    }
-
-  }
-
-  @media screen and (max-width: 630px) {
-
-    .welcome-textbox {
-      max-width: 378px;
-      height: 250px;
-    }
-
-    .footer-text {
-      font-size: 16px;
-    }
-
-  }
-
-  @media screen and (max-width: 530px) {
-
-    .div-project-main-title {
-      margin-top: 30px;
-    }
-
-    .welcome-container {
-      height: 450px;
-    }
-
-    .welcome-textbox {
-      font-size: 17.5px;
-    }
-
-    .div-project-title {
-      width: 100%;
-    }
-
-    .contact-main-title {
-      width: 100%;
-      padding: 0 30px;
-    }
-
-    .div-socialMediaLinks {
-      padding: 14px 7px 0 7px;
-
-      div {
-        padding: 0 8px;
-      }
-    }
-
-  }
-
-  @media only screen and (max-width: 480px) {
-
-    .footer-text {
-      font-size: 16px;
-    }
-
-    .img-main-project, .headshotBackground {
-      height: 340px;
-    }
-
-    .contact-textbox {
-      ul {
-        padding: 60px 20px 0 20px;
-      }
-    }
-
-  }
-
-  @media only screen and (max-width: 415px) {
-
-    .img-main-project {
-      background-size: contain;
-      height: 250px;
-    }
-
-    .headshotBackground {
-      height: 300px;
-    }
-
-    .contact-main-title {
-      padding: 0;
-    }
-
-    .contact-container {
-      padding: 0;
-    }
-
-    .contact-textbox {
-      font-size: 21px;
-    }
-
-  }
-
-  @media only screen and (max-width: 370px) {
-
-    .welcome-textbox {
-      height: 270px;
-    }
-
-    .projects-main-container {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .art-image-description {
-      font-size: 12px;
-    }
-
-    .contact-textbox {
-      font-size: 19px;
-    }
-
-    .div-socialMediaLinks {
-      padding: 14px 0px 0 0px;
-    }
-
-    .footer-text {
-      font-size: 14px;
-    }
-
-  }
-
-  @media only screen and (max-width: 347px) {
-
-    .mainTitle {
-      width: 200px;
-      height: 10px;
-      margin-top: 20px;
-      padding-bottom: 12px;
-    }
-
-    .mainTitle:hover {
-      background-position: 0 -28px;
-    }
-
-    .welcome-textbox {
-      height: 310px;
-    }
-
-    .img-main-project {
-      height: 220px;
-    }
-
-    .art-image-description {
-      font-size: 11px;
-    }
-
-    .contact-row-below-title {
-      margin-top: 15px;
-    }
-
-    .contact-textbox {
-      font-size: 17px;
-
-      ul {
-        padding: 60px 6px 0 6px;
-
-        > li {
-          padding-left: 16px;
-        }
-
-      }
-
-    }
-
-    .div-socialMediaLinks {
-      padding: 14px 0px 0 0px;
-    }
-
-    .footer-text {
-      font-size: 12px;
-    }
-
   }
 
 }
