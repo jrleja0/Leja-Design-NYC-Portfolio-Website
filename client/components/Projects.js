@@ -25,7 +25,7 @@ const Projects = (props) => {
                 <div className="div-img-cover" />
               </div>
               <div className="row">
-                <div className="col-lg-6 col-md-6 col-sm-12">
+                {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
                   <div className="img-main-project"
                     style={
                       image.name === 'diningWithTheStars1' ?
@@ -40,9 +40,12 @@ const Projects = (props) => {
                         }
                     }
                   />
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="project-textbox">
+                {/* </div> */}
+              </div>
+              <div className="row">
+                <div className="project-textbox">
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                    {/* <div className="project-textbox"> */}
                     <ul>
                       <li>
                         { image.description }
@@ -60,6 +63,10 @@ const Projects = (props) => {
                             </span> : null
                         }
                       </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                    <ul>
                       <li className="li-add-padding-bottom-10">
                         <span className="glyphicon glyphicon-link" aria-hidden="true" />
                         <span>&ensp; </span><span> Links:</span>

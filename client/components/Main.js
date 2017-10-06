@@ -43,6 +43,12 @@ class Main extends React.Component {
   render() {
     return (
       <div>
+      {/*
+        <nav className="stylingMainNavbar">
+          <div className="container">
+            <div className="navbar-header">
+              <Link className="mainTitle" to="/home" />
+      */}
         <Navbar className="stylingMainNavbar" inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
