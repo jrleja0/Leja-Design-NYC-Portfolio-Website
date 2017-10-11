@@ -44,9 +44,9 @@ const Projects = (props) => {
               </div>
               <div className="row">
                 <div className="project-textbox">
-                  <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="col-lg-7 col-md-7 col-sm-12">
                     {/* <div className="project-textbox"> */}
-                    <ul>
+                    <ul className="description-column">
                       <li>
                         { image.description }
                       </li>
@@ -65,9 +65,9 @@ const Projects = (props) => {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-lg-6 col-md-6 col-sm-12">
-                    <ul>
-                      <li className="li-add-padding-bottom-10">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <ul className="links-column">
+                      <li className="links-title li-add-padding-bottom-10">
                         <span className="glyphicon glyphicon-link" aria-hidden="true" />
                         <span>&ensp; </span><span> Links:</span>
                       </li>
