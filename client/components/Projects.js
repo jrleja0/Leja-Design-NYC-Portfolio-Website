@@ -42,7 +42,7 @@ const Projects = (props) => {
                   />
                 {/* </div> */}
               </div>
-              <div className="row">
+              <div className="row project-text-row">
                 {/* <div className="project-textbox-backdrop" > */}
                   <div className="project-textbox">
                     <div className="col-lg-7 col-md-7 col-sm-12">

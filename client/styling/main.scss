@@ -261,6 +261,12 @@ body {
     margin: 0 auto;
   }
 
+  .project-text-row {
+    background-color: $black-with-red;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
   .project-textbox-backdrop {
     background-color: $black-with-red-rgba;
   }
