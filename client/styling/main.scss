@@ -261,6 +261,10 @@ body {
     margin: 0 auto;
   }
 
+  .project-textbox-backdrop {
+    background-color: $black-with-red-rgba;
+  }
+
   .project-textbox {
     // @extend .green;
     @extend .basic-textbox;
