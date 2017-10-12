@@ -7,12 +7,12 @@ const Welcome = (props) => {
 
   return (
     <div>
-      <div className="container-fluid blueBackground">
+      {/* <div className="container-fluid blueBackground">
         <div className="div-welcome-main-title">
           <img className="img-fluid" src="/assets/abstractions/welcome_image.jpg" alt="Welcome" />
           <div className="div-img-cover" />
         </div>
-      </div>
+      </div> */}
       <div className="container-fluid black-with-blue">
         <div className="welcome-textbox">
           <ul>
