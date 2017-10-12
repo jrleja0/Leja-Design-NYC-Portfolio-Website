@@ -26,19 +26,9 @@ const Projects = (props) => {
               </div>
               <div className="row">
                 {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
-                  <div className="img-main-project"
-                    style={
-                      image.name === 'diningWithTheStars1' ?
-                        {
-                          backgroundImage: `url( ${image.imagePath} )`,
-                          backgroundPosition: 'left top'
-                        }
-                        :
-                        {
-                          backgroundImage: `url( ${image.imagePath} )`,
-                          backgroundPosition: 'center top'
-                        }
-                    }
+                  <div
+                    className={ `img-main-project ${image.name}` }
+                    style={ { backgroundImage: `url( ${image.imagePath} )` } }
                   />
                 {/* </div> */}
               </div>
