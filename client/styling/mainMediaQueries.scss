@@ -46,6 +46,11 @@ body {
 
     .project-textbox {
       max-width: 650px;
+
+      ul {
+        margin: 15px auto 0 auto;
+      }
+
     }
 
   }
@@ -191,6 +196,14 @@ body {
     .img-main-project {
       background-size: contain;
       height: 250px;
+    }
+
+    .diningWithTheStars1 {
+      background-position: center top;
+    }
+
+    .smashbots1, .techTalkPaperJS1 {
+      height: 218px;
     }
 
     .headshotBackground {

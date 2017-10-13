@@ -4,11 +4,12 @@ import {Router} from 'react-router';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from './history';
-import {ArtShowcase, Contact, Main, Projects, Welcome} from './components';
+import {ArtShowcase, Contact, Main, Projects, Slideshow, Welcome} from './components';
 import { fetchImages } from './store';
 
 const Home = () => (
   <div>
+    <Slideshow />
     <Welcome />
     <Projects />
     <Contact />
