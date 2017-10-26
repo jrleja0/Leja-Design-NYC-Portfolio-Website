@@ -20,6 +20,19 @@ body {
 
   }
 
+  // @media screen and (max-width: 1199px) {
+
+  //   .heading-font {
+  //     font-size: 90px;
+  //     line-height: 85px;
+  //   }
+
+  //   .subheading-font {
+  //     font-size: 60px;
+  //   }
+
+  // }
+
   @media screen and (max-width: 991px) {
 
     .stylingMainNavbar {
@@ -56,6 +69,15 @@ body {
   }
 
   @media screen and (max-width: 850px) {
+
+    .heading-font {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    .subheading-font {
+      font-size: 40px;
+    }
 
     .div-project-main-title {
       padding: 0;
@@ -128,6 +150,15 @@ body {
   }
 
   @media screen and (max-width: 630px) {
+
+    .heading-font {
+      font-size: 50px;
+      line-height: 48px;
+    }
+
+    .subheading-font {
+      font-size: 30px;
+    }
 
     .welcome-textbox {
       max-width: 378px;
