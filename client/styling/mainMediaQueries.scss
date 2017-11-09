@@ -147,6 +147,11 @@ body {
       margin-left: 7px;
     }
 
+    .welcome-textbox {
+      font-size: 18.5px;
+      line-height: 28px;
+    }
+
   }
 
   @media screen and (max-width: 630px) {
@@ -162,7 +167,11 @@ body {
 
     .welcome-textbox {
       max-width: 378px;
-      height: 250px;
+      height: 310px;
+
+      li {
+        padding-bottom: 0;
+      }
     }
 
     .footer-text {
