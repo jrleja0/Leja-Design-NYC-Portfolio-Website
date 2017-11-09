@@ -214,10 +214,8 @@ body {
     color: $light-blue;
     @extend .basic-textbox;
     @include border-radius(50px);
-    // border: 5px solid $yellow;
     text-align: center;
     padding: 24px;
-    // margin-bottom: 20px;
     max-width: 800px;
     height: 240px;
     font-size: 23px;
@@ -240,8 +238,6 @@ body {
   .div-project-main-title {
     background-color: $black-with-green-rgba;
     @extend .basic-div-main-title;
-    // @extend .left-right-margin-10;
-    // margin: 50px auto 0 auto;
     padding: 0 60px;
   }
 
@@ -283,7 +279,6 @@ body {
   }
 
   .project-textbox {
-    // @extend .green;
     @extend .basic-textbox;
     font-size: 18px;
     font-weight: 600;
@@ -309,8 +304,6 @@ body {
     }
 
     li:nth-child(odd) {
-      // background-color: $light-blue;
-      // color: $blue-bold;
       background-color: white;
       color: black;
     }
@@ -393,15 +386,6 @@ body {
     height: 196px;
     margin-bottom: 30px;
     padding: 0 60px;
-
-    // margin-top: 0;
-    // padding-top: 10px;
-    // padding-bottom: 10px;
-    // background-color: $black-with-green-rgba;
-    // @extend .basic-div-main-title;
-    // width: 60%;
-    // margin-top: 40px;
-    // background-color: $blue-bold-rgba6;
 
     .subheading-font {
       color: $blue-bold-violet;
