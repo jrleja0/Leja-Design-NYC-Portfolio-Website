@@ -14,11 +14,11 @@ const Projects = (props) => {
       <div className="container-fluid greenBackground">
         <div className="row">
           <div className="div-project-main-title">
-            {/* <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" /> */}
+            {/* <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
+            <div className="div-img-cover" />*/}
             <h1 className="heading-font">Recent Projects<br />
               <span className="subheading-font">Apps | Games | Tech Talks</span>
             </h1>
-            <div className="div-img-cover" />
           </div>
         </div>
         <div className="projects-main-container container-fluid">

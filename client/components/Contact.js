@@ -8,9 +8,16 @@ const Contact = (props) => {
   return (
     <div>
       <div className="container-fluid redBackground">
-        <div className="contact-main-title">
+        {/* <div className="contact-main-title">
           <img className="img-fluid" src="/assets/text/contactMeAndConnectTitle.png" alt="Contact Me And Connect" />
           <div className="div-img-cover" />
+        </div> */}
+        <div className="row">
+          <div className="contact-main-title">
+            <h1 className="heading-font">Contact Me<br />
+              <span className="subheading-font">& Connect</span>
+            </h1>
+          </div>
         </div>
         <div className="container-fluid">
           <div className="row contact-row-below-title top-bottom-margin-30">
