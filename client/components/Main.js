@@ -55,12 +55,12 @@ class Main extends React.Component {
               {/* <Link className="mainTitle" to="/home" /> */}
               <Link className="main-title" to="/home">
                 <svg width="360" height="50" textAnchor="middle" display="block">
-                  <image className="jrlejaDesignNYCTitleHover"
-                    x="0" y="0" width="360" height="50"
-                    href="/assets/text/jrlejaDesignNYCTitleHover.png" />
                   <image className="jrlejaDesignNYCTitle"
                     x="0" y="0" width="360" height="50"
                     href="/assets/text/jrlejaDesignNYCTitle.png" />
+                  <image className="jrlejaDesignNYCTitleHover"
+                    x="0" y="-50" width="360" height="50"
+                    href="/assets/text/jrlejaDesignNYCTitleHover.png" />
                 </svg>
               </Link>
             </Navbar.Brand>

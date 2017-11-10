@@ -8,21 +8,12 @@ body {
  MAIN (Navbar) Styling
 *////
 
-
   .main-title {
-      // transition: width 2s, height 2s;
-      // -webkit-transition: width 2s, height 2s;
 
     .jrlejaDesignNYCTitle {
-      transition: opacity 2s;
-      -webkit-transition: opacity 2s;
-      opacity: 1;
       display: block;
     }
     .jrlejaDesignNYCTitleHover {
-      // transition: opacity 3s;
-      // -webkit-transition: opacity 3s;
-      // opacity: 0.5;
       display: none;
     }
 
@@ -32,29 +23,33 @@ body {
 
     .jrlejaDesignNYCTitleHover {
       display: block;
-      // opacity: 1;
+      opacity: 1;
+      animation: animateHoverLogo 3s;
+      -webkit-animation: animateHoverLogo 3s;
     }
-    .jrlejaDesignNYCTitle {
-      opacity: 0;
-      display: none;
+
+    @keyframes animateHoverLogo {
+      25%, 52% {
+        transform: translate(0px,50px);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg);
+        opacity: 0.5;
+      }
+    }
+    @-webkit-keyframes animateHoverLogo {
+      25%, 52% {
+        transform: translate(0px,50px);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg);
+        opacity: 0.5;
+      }
     }
 
   }
-
-  // .mainTitle {
-  //   background: url("/assets/text/jrlejaDesignNYCTitle.png") left top/cover no-repeat;
-  //   display: block;
-  //   float: left;
-  //   height: 50px;
-  //   width: 360px;
-  //   margin: 7px;
-  //   margin-left: -15px;
-  // }
-
-  // .mainTitle:hover {
-  //   @extend .mainTitle;
-  //   background-position: 0 -50px;
-  // }
 
   .stylingMainNavbar {
     @extend .black-with-red;
