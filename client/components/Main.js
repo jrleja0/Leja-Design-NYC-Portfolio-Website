@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import {MainLogo} from './index';
 import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
@@ -54,14 +55,7 @@ class Main extends React.Component {
             <Navbar.Brand>
               {/* <Link className="mainTitle" to="/home" /> */}
               <Link className="main-title" to="/home">
-                <svg width="360" height="50" textAnchor="middle" display="block">
-                  <image className="jrlejaDesignNYCTitle"
-                    x="0" y="0" width="360" height="50"
-                    href="/assets/text/jrlejaDesignNYCTitle.png" />
-                  <image className="jrlejaDesignNYCTitleHover"
-                    x="0" y="-50" width="360" height="50"
-                    href="/assets/text/jrlejaDesignNYCTitleHover.png" />
-                </svg>
+                <MainLogo width="360" height="50" display="block" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />
