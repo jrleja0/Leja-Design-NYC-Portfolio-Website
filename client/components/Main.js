@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {MainLogo} from './index';
 import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
@@ -50,18 +50,46 @@ class Main extends React.Component {
             <div className="navbar-header">
               <Link className="mainTitle" to="/home" />
       */}
-        <Navbar className="stylingMainNavbar" inverse collapseOnSelect>
+        <div className="main-navbar-styling">
+          <div>
+            <MainLogo width="380" height="70" display="block"
+              leftPadding="12" topPadding="6" />
+            {/* <MainLogo width="270" height="50" display="none"
+              leftPadding="12" topPadding="6" /> */}
+          </div>
+          <div>
+            <div className="main-nav-buttons">
+              <div className="nav-contact">
+                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+              </div>
+              <div className="nav-menu">
+                <a role="button" tabIndex="0" onClick={this.showMenu}>
+                  Menu <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" />
+                </a>
+              </div>
+              {/* <div id="navbar-projects-dropdown"><span>Menu</span>
+                <Link className="dropdownMenuItem" to="/projects" activeClassName="active">
+                  <div><span>Projects & Apps</span></div>
+                </Link>
+                <Link className="dropdownMenuItem" to="/art" activeClassName="active">
+                  <div><span>Art</span></div>
+                </Link>
+              </div> */}
+            </div>
+          </div>
+        </div>
+        <Navbar className="main-navbar-styling" inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              {/* <Link className="mainTitle" to="/home" /> */}
-              <Link className="main-title" to="/home">
-                <MainLogo width="360" height="50" display="block" />
-              </Link>
+              <MainLogo width={360} height={50} display="block"
+                leftPadding="12" topPadding="6" />
+              {/* <MainLogo width="270" height="50" display="none"
+                    leftPadding="12" topPadding="6" /> */}
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav id="main-nav" className="navbar-float-tabs">
+            <Nav className="main-nav-buttons navbar-float-tabs">
               <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
                 <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
                   <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>

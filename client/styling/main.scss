@@ -30,7 +30,7 @@ body {
 
     @keyframes animateHoverLogo {
       25%, 52% {
-        transform: translate(0px,50px);
+        transform: translate(0px,70px);
         opacity: 1;
       }
       100% {
@@ -40,7 +40,7 @@ body {
     }
     @-webkit-keyframes animateHoverLogo {
       25%, 52% {
-        transform: translate(0px,50px);
+        transform: translate(0px,70px);
         opacity: 1;
       }
       100% {
@@ -51,25 +51,20 @@ body {
 
   }
 
-  .stylingMainNavbar {
+  .main-navbar-styling {
     @extend .black-with-red;
-    position: relative;
-    min-height: 50px;
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-size: 18px;
     border: 1px solid $black-with-blue;
-    border-radius: 0;
+    font-size: 18px;
+    min-height: 70px;
+    // height: 70px;
+    // position: relative;
+    // min-height: 50px;
+    // padding-left: 20px;
+    // margin-bottom: 0;
+    // border-radius: 0;
 
-    .container {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .navbar-header {
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
+    div {
+      display: inline-block;
     }
 
     .navbar-toggle {
@@ -85,38 +80,13 @@ body {
       border-color: $medium-grey;
     }
 
-    .navbar-float-tabs {
-      float: right;
-      padding-top: 8px;
-    }
-
-    #main-nav {
-      padding-top: 4px;
-      padding-bottom: 2px;
-
-      > li {
-        margin: 4px;
-      }
+    .main-nav-buttons {
+      // float: right;
 
       a {
         color: white;
         text-align: center;
-      }
-
-      a:hover {
-        @extend .highlight-basic:hover;
-      }
-
-      .active {
-
-        a {
-          background-color: $blue-bold-rgba6;
-        }
-
-        a:hover {
-          background-color: $blue-bold-rgba8;
-        }
-
+        padding: 15px 40px 13px 40px;
       }
 
       #navbar-projects-dropdown {
@@ -163,14 +133,27 @@ body {
     }
 
     .nav-contact {
-
       a {
         border: 2px solid $blue-bold;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 13px;
       }
 
+      a:hover, a.active {
+        background-color: $blue-bold-rgba6;
+      }
+
+      a.active:hover {
+        background-color: $blue-bold-rgba8;
+      }
+    }
+
+    .nav-menu {
+      a {
+        border: 2px solid white;
+      }
+
+      a:hover {
+        background-color: $light-blue-rgba6;
+      }
     }
 
   }

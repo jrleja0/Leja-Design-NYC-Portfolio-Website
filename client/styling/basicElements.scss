@@ -17,12 +17,15 @@ $black-with-green: #000c01;
 $black-with-red: #190002;
 // light
 $light-blue: #8bb5f9;
+$light-blue-bright: #0aeaff;
 $warm-green: #8bba1b;
 $light-green: #00ff15;
 $light-red: #fc747f;
 $light-yellow: #f2ff49;
 $light-grey: #dee3ea;
 // translucent
+$light-blue-rgba6: rgba(139, 181, 249, 0.6);
+$blue-bold-rgba4: rgba(27, 30, 209, 0.4);
 $blue-bold-rgba6: rgba(27, 30, 209, 0.6);
 $blue-bold-rgba8: rgba(27, 30, 209, 0.8);
 $light-green-rgba: rgba(0, 255, 21, 0.8);
@@ -132,9 +135,10 @@ body {
   @extend .greenBackground;
   @extend .main-font;
 
-  a, a:hover {
+  a, a:hover, a:focus {
     color: white;
     text-decoration: none;
+    outline-width: 0;
   }
 
   button {
@@ -205,6 +209,26 @@ body {
     left: 0;
   }
 
+  .div-container-image-under-construction {
+    @extend .div-project-main-title;
+    margin: 20px auto 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  //// Text Selection Color ////
+
+  ::selection {
+    color: black;
+    background: $light-blue-bright;
+  }
+  ::-moz-selection {
+    color: black;
+    background: $light-blue-bright;
+  }
+
+  //// Button Highlight Color ////
+
   .highlight-basic:hover {
     background-color: $light-green-rgba;
   }
@@ -217,13 +241,6 @@ body {
   .highlight-pink:hover {
     @extend .highlight-basic:hover;
     background-color: $pink-rgba;
-  }
-
-  .div-container-image-under-construction {
-    @extend .div-project-main-title;
-    margin: 20px auto 0 auto;
-    width: 50%;
-    text-align: center;
   }
 
 /* pseudo elements */
