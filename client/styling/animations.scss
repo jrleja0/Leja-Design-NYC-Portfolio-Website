@@ -1,0 +1,58 @@
+/*///
+ Animations and Keyframes
+*////
+
+body {
+
+  /*///
+   MAIN (Navbar) Animations
+  *////
+
+  .main-title:hover {
+
+    @mixin animateDown($pixelsDown) {
+      transform: translate(0px,$pixelsDown);
+      opacity: 1;
+    }
+    @mixin rotateUp($degrees) {
+      transform: rotate($degrees);
+      opacity: 0.5;
+    }
+
+    .jrlejaDesignNYCTitleHover {
+      display: block;
+      opacity: 1;
+      animation: animateHoverLogo 3s;
+      -webkit-animation: animateHoverLogo 3s;
+    }
+
+    @mixin mainLogoAnimationMixin($pixelsDown) {
+      @keyframes animateHoverLogo {
+        25%, 52% {
+          @include animateDown($pixelsDown);
+        }
+        100% {
+          @include rotateUp(-45deg);
+        }
+      }
+      @-webkit-keyframes animateHoverLogo {
+        25%, 52% {
+          @include animateDown($pixelsDown);
+        }
+        100% {
+          @include rotateUp(-45deg);
+        }
+      }
+    }
+
+    //// when logo is large, move hover-logo down 70px.
+    //// when logo is small, move hover-logo down 50px.
+
+    @include mainLogoAnimationMixin(70px);
+
+    @media screen and (max-width: 767px) {
+      @include mainLogoAnimationMixin(50px);
+    }
+
+  }
+}

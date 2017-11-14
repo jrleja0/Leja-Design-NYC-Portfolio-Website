@@ -1,10 +1,17 @@
 /*///
  Media Queries - largest to smallest max-width
+ (default screen size is 1200px or over)
 *////
 
 body {
 
   @media screen and (max-width: 1199px) {
+
+    .main-navbar-styling {
+      .main-nav-buttons {
+        margin-left: 40px;
+      }
+    }
 
     .div-project-main-title {
       padding: 0 20px;
@@ -57,6 +64,12 @@ body {
 
   @media screen and (max-width: 850px) {
 
+    .main-navbar-styling {
+      .main-nav-buttons {
+        margin-left: 10px;
+      }
+    }
+
     .heading-font {
       font-size: 60px;
       line-height: 60px;
@@ -107,6 +120,24 @@ body {
   }
 
   @media screen and (max-width: 767px) {
+
+    .main-navbar-styling {
+      .nav-contact, .main-logo-lg {
+        display: none;
+      }
+
+      .main-logo-sm {
+        display: block;
+      }
+
+      .main-nav-buttons {
+        top: -16px;
+
+        a {
+          padding: 12px 40px 10px 40px;
+        }
+      }
+    }
 
     .stylingMainNavbar {
 

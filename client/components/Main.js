@@ -51,32 +51,34 @@ class Main extends React.Component {
               <Link className="mainTitle" to="/home" />
       */}
         <div className="main-navbar-styling">
-          <div>
-            <MainLogo width="380" height="70" display="block"
+          {/* <div className="col-lg-4 col-md-6 col-sm-6"> */}
+          <div className="main-logo-container">
+            <MainLogo className="main-logo-lg" width="380" height="70" display="block"
               leftPadding="12" topPadding="6" />
-            {/* <MainLogo width="270" height="50" display="none"
-              leftPadding="12" topPadding="6" /> */}
+            <MainLogo className="main-logo-sm" width="270" height="50" display="none"
+              leftPadding="12" topPadding="6" />
           </div>
-          <div>
-            <div className="main-nav-buttons">
-              <div className="nav-contact">
-                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-              </div>
-              <div className="nav-menu">
-                <a role="button" tabIndex="0" onClick={this.showMenu}>
-                  Menu <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" />
-                </a>
-              </div>
-              {/* <div id="navbar-projects-dropdown"><span>Menu</span>
-                <Link className="dropdownMenuItem" to="/projects" activeClassName="active">
-                  <div><span>Projects & Apps</span></div>
-                </Link>
-                <Link className="dropdownMenuItem" to="/art" activeClassName="active">
-                  <div><span>Art</span></div>
-                </Link>
-              </div> */}
+          {/* <div className="col-lg-4 col-md-6 col-sm-6"> */}
+          <div className="main-nav-buttons">
+            <div className="nav-contact">
+              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </div>
+            <div className="nav-menu">
+              <a role="button" tabIndex="0" onClick={this.showMenu}>
+                Menu <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" />
+              </a>
+            </div>
+            {/* <div id="navbar-projects-dropdown"><span>Menu</span>
+              <Link className="dropdownMenuItem" to="/projects" activeClassName="active">
+                <div><span>Projects & Apps</span></div>
+              </Link>
+              <Link className="dropdownMenuItem" to="/art" activeClassName="active">
+                <div><span>Art</span></div>
+              </Link>
+            </div> */}
           </div>
+          {/* </div> */}
+          {/* <div className="col-lg-4" /> */}
         </div>
         <Navbar className="main-navbar-styling" inverse collapseOnSelect>
           <Navbar.Header>

@@ -19,49 +19,11 @@ body {
 
   }
 
-  .main-title:hover {
-
-    .jrlejaDesignNYCTitleHover {
-      display: block;
-      opacity: 1;
-      animation: animateHoverLogo 3s;
-      -webkit-animation: animateHoverLogo 3s;
-    }
-
-    @keyframes animateHoverLogo {
-      25%, 52% {
-        transform: translate(0px,70px);
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(-45deg);
-        opacity: 0.5;
-      }
-    }
-    @-webkit-keyframes animateHoverLogo {
-      25%, 52% {
-        transform: translate(0px,70px);
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(-45deg);
-        opacity: 0.5;
-      }
-    }
-
-  }
-
   .main-navbar-styling {
     @extend .black-with-red;
     border: 1px solid $black-with-blue;
     font-size: 18px;
-    min-height: 70px;
-    // height: 70px;
-    // position: relative;
-    // min-height: 50px;
-    // padding-left: 20px;
-    // margin-bottom: 0;
-    // border-radius: 0;
+    min-height: 50px;
 
     div {
       display: inline-block;
@@ -81,7 +43,13 @@ body {
     }
 
     .main-nav-buttons {
-      // float: right;
+      position: relative;
+      margin-left: 60px;
+      top: -22px;
+
+      div {
+        padding: 0 10px;
+      }
 
       a {
         color: white;
