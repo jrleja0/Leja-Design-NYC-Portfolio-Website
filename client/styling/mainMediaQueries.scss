@@ -131,10 +131,11 @@ body {
       }
 
       .main-nav-buttons {
-        top: -16px;
+        top: -14px;
+        margin-left: 30px;
 
         a {
-          padding: 12px 40px 10px 40px;
+          padding: 12px 30px 10px 30px;
         }
       }
     }
@@ -200,6 +201,28 @@ body {
 
   @media screen and (max-width: 530px) {
 
+    .main-navbar-styling {
+      .main-nav-buttons {
+        top: -16px;
+      }
+
+      .nav-menu {
+        a {
+          padding: 12px 25px 10px 25px;
+        }
+
+        span {
+          display: none;
+        }
+
+        i {
+          font-size: 32px;
+          padding-left: 0;
+          left: 2px;
+        }
+      }
+    }
+
     .div-project-main-title {
       margin-top: 30px;
     }
@@ -250,6 +273,24 @@ body {
   }
 
   @media only screen and (max-width: 415px) {
+
+    .main-navbar-styling {
+      .main-nav-buttons {
+        margin-left: 10px;
+      }
+
+      .nav-menu {
+        a {
+          padding: 12px 15px 10px 15px;
+        }
+
+        i {
+          font-size: 26px;
+          top: 2px;
+          left: 0;
+        }
+      }
+    }
 
     .img-main-project {
       background-size: contain;

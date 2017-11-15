@@ -65,7 +65,8 @@ class Main extends React.Component {
             </div>
             <div className="nav-menu">
               <a role="button" tabIndex="0" onClick={this.showMenu}>
-                Menu <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" />
+                <span>Menu</span>
+                <i className="fa fa-bars" aria-hidden="true" />
               </a>
             </div>
             {/* <div id="navbar-projects-dropdown"><span>Menu</span>
@@ -111,7 +112,7 @@ class Main extends React.Component {
           <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
           <div>
             <pre className="footer-text">
-              <span className="glyphicon glyphicon-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
             </pre>
           </div>
           <div className="div-img-cover" />
@@ -119,7 +120,7 @@ class Main extends React.Component {
             { this.state.showScrollUpButton ?
               <div>
                 <a role="button" tabIndex="0" onClick={this.scrollUp}>
-                  <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+                  <i className="fa fa-chevron-up" aria-hidden="true" />
                 </a>
               </div>
               : null
