@@ -81,6 +81,22 @@ class Main extends React.Component {
           {/* </div> */}
           {/* <div className="col-lg-4" /> */}
         </div>
+        <div className="dropdown-main-menu">
+          <div className="main-logo-container">
+            <MainLogo className="main-logo-lg" width="380" height="70" display="block"
+              leftPadding="12" topPadding="6" />
+            <MainLogo className="main-logo-sm" width="270" height="50" display="none"
+              leftPadding="12" topPadding="6" />
+          </div>
+          <div>
+            <ul>
+              <li>Home</li>
+              <li>Contact</li>
+              <li>Projects & Apps</li>
+              <li>Art</li>
+            </ul>
+          </div>
+        </div>
         <Navbar className="main-navbar-styling" inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
