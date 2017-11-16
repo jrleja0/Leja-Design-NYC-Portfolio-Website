@@ -44,21 +44,13 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-      {/*
-        <nav className="stylingMainNavbar">
-          <div className="container">
-            <div className="navbar-header">
-              <Link className="mainTitle" to="/home" />
-      */}
         <div className="main-navbar-styling">
-          {/* <div className="col-lg-4 col-md-6 col-sm-6"> */}
           <div className="main-logo-container">
             <MainLogo className="main-logo-lg" width="380" height="70" display="block"
               leftPadding="12" topPadding="6" />
             <MainLogo className="main-logo-sm" width="270" height="50" display="none"
               leftPadding="12" topPadding="6" />
           </div>
-          {/* <div className="col-lg-4 col-md-6 col-sm-6"> */}
           <div className="main-nav-buttons">
             <div className="nav-contact">
               <NavLink to="/contact" activeClassName="active">Contact</NavLink>
@@ -69,60 +61,24 @@ class Main extends React.Component {
                 <i className="fa fa-bars" aria-hidden="true" />
               </a>
             </div>
-            {/* <div id="navbar-projects-dropdown"><span>Menu</span>
-              <Link className="dropdownMenuItem" to="/projects" activeClassName="active">
-                <div><span>Projects & Apps</span></div>
-              </Link>
-              <Link className="dropdownMenuItem" to="/art" activeClassName="active">
-                <div><span>Art</span></div>
-              </Link>
-            </div> */}
           </div>
-          {/* </div> */}
-          {/* <div className="col-lg-4" /> */}
         </div>
         <div className="dropdown-main-menu">
-          <div className="main-logo-container">
-            <MainLogo className="main-logo-lg" width="380" height="70" display="block"
-              leftPadding="12" topPadding="6" />
-            <MainLogo className="main-logo-sm" width="270" height="50" display="none"
-              leftPadding="12" topPadding="6" />
-          </div>
-          <div>
-            <ul>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>Projects & Apps</li>
-              <li>Art</li>
-            </ul>
-          </div>
+          <ul>
+            <li>
+              <NavLink to="/home" activeClassName="active">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects" activeClassName="active">Coding Projects & Apps</NavLink>
+            </li>
+            <li>
+              <NavLink to="/art" activeClassName="active">Art</NavLink>
+            </li>
+          </ul>
         </div>
-        <Navbar className="main-navbar-styling" inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <MainLogo width={360} height={50} display="block"
-                leftPadding="12" topPadding="6" />
-              {/* <MainLogo width="270" height="50" display="none"
-                    leftPadding="12" topPadding="6" /> */}
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav className="main-nav-buttons navbar-float-tabs">
-              <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
-                <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
-                  <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
-                </LinkContainer>
-                <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
-                  <MenuItem eventKey={1.2}>Art</MenuItem>
-                </LinkContainer>
-              </NavDropdown>
-              <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
-                <NavItem eventKey={2}>Contact</NavItem>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
           {this.props.children}
         <div className="position-relative">
           <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
