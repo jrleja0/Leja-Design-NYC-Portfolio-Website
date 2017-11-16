@@ -17,6 +17,7 @@ class Main extends React.Component {
     };
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.mouseOverMenuOptions = this.mouseOverMenuOptions.bind(this);
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
   }
@@ -49,8 +50,23 @@ class Main extends React.Component {
     }
   }
 
-  hoverMenuOptions() {
-    console.log('event', event.target);
+  mouseOverMenuOptions(event) {
+    const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
+    if (event.target.tagName === 'LI') {
+      switch (event.target.className) {
+        case 'dropdown-main-menu-blue':
+          dropdown.className = 'dropdown-main-menu blueBackground';
+          break;
+        case 'dropdown-main-menu-green':
+          dropdown.className = 'dropdown-main-menu greenBackground';
+          break;
+        case 'dropdown-main-menu-red':
+          dropdown.className = 'dropdown-main-menu redBackground';
+          break;
+        default:
+          dropdown.className = 'dropdown-main-menu blueBackground';
+      }
+    }
   }
 
   scrollUp() {
@@ -88,19 +104,19 @@ class Main extends React.Component {
             </div>
           </div>
         </div>
-        <div className="dropdown-main-menu" onHover={this.hoverMenuOptions}>
+        <div className="dropdown-main-menu blueBackground" onMouseOver={this.mouseOverMenuOptions}>
           <ul>
-            <li>
-              <NavLink to="/home" activeClassName="active">Home</NavLink>
+            <li className="dropdown-main-menu-blue">
+              <NavLink to="/home" activeClassName="active" onClick={this.toggleMenu}>Home</NavLink>
             </li>
-            <li>
-              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            <li className="dropdown-main-menu-red">
+              <NavLink to="/contact" activeClassName="active" onClick={this.toggleMenu}>Contact</NavLink>
             </li>
-            <li>
-              <NavLink to="/projects" activeClassName="active">Coding Projects & Apps</NavLink>
+            <li className="dropdown-main-menu-green">
+              <NavLink to="/projects" activeClassName="active" onClick={this.toggleMenu}>Coding Projects & Apps</NavLink>
             </li>
-            <li>
-              <NavLink to="/art" activeClassName="active">Art</NavLink>
+            <li className="dropdown-main-menu-blue">
+              <NavLink to="/art" activeClassName="active" onClick={this.toggleMenu}>Art</NavLink>
             </li>
           </ul>
         </div>
