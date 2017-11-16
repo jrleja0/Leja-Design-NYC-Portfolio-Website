@@ -9,14 +9,12 @@ body {
 *////
 
   .main-title {
-
     .jrlejaDesignNYCTitle {
       display: block;
     }
     .jrlejaDesignNYCTitleHover {
       display: none;
     }
-
   }
 
   .main-navbar-styling {
@@ -28,19 +26,6 @@ body {
     div {
       display: inline-block;
     }
-
-    // .navbar-toggle {
-    //   display: none;
-    //   position: relative;
-    //   float: right;
-    //   margin: 12px 15px 8px 0px;
-    //   padding: 12px 10px;
-    //   background-color: transparent;
-    //   background-image: none;
-    //   border: 1px solid transparent;
-    //   border-radius: 4px;
-    //   border-color: $medium-grey;
-    // }
 
     .main-nav-buttons {
       position: relative;
@@ -56,49 +41,7 @@ body {
         text-align: center;
         padding: 15px 40px 13px 40px;
       }
-
-      // #navbar-projects-dropdown {
-      //   border: 1px solid white;
-      // }
-
-      // .open {
-      //   border: 1px solid white;
-
-      //   #navbar-projects-dropdown {
-      //     background-color: white;
-      //     color: $black-with-blue;
-      //   }
-
-      //   #navbar-projects-dropdown:hover {
-      //     background-color: $light-grey;
-      //   }
-
-      //   .dropdown-menu {
-      //     border: 1px solid white;
-      //     padding: 0;
-      //   }
-
-      //   .dropdownMenuItem {
-
-      //     a {
-      //       padding-top: 10px;
-      //       padding-bottom: 10px;
-      //     }
-
-      //   }
-
-      // }
-
     }
-
-    // .dropdown-menu {
-    //   background-color: $black-with-red;
-    //   font-size: 16px;
-    // }
-
-    // .dropdownMenuItem {
-    //   width: 186px;
-    // }
 
     .nav-contact {
       a {
@@ -116,12 +59,13 @@ body {
 
     .nav-menu {
       a {
+        color: white;
         border: 2px solid white;
         padding-right: 30px;
       }
 
       a:hover {
-        background-color: $light-blue-rgba6;
+        background-color: $light-blue-rgba8;
       }
 
       i {
@@ -130,8 +74,32 @@ body {
         top: 4px;
         position: relative;
       }
+
+      i.fa-times-circle {
+        display: none;
+      }
+      i.fa-bars {
+        display: inline-block;
+      }
     }
 
+    .nav-menu.active {
+      a {
+        color: $black-with-blue;
+        background-color: $light-blue-rgba8;
+      }
+
+      a:hover {
+        background-color: $light-blue;
+      }
+
+      i.fa-bars {
+        display: none;
+      }
+      i.fa-times-circle {
+        display: inline-block;
+      }
+    }
   }
 
   .dropdown-main-menu {
@@ -143,6 +111,7 @@ body {
     text-align: center;
     font-size: 28px;
     line-height: 32px;
+    display: none;
 
     ul {
       padding: 40px 0;
@@ -152,11 +121,6 @@ body {
       padding: 15px 0;
     }
   }
-
-  // #top {
-  //   position: absolute;
-  //   top: 0;
-  // }
 
 /*///
  MAIN (Footer) Styling
@@ -193,7 +157,6 @@ body {
       right: 0;
       top: 0;
     }
-
   }
 
   .footer-text {
@@ -234,7 +197,6 @@ body {
     .green-text {
       color: $green-background;
     }
-
   }
 
 /*///
@@ -323,7 +285,6 @@ body {
       font-weight: 400;
       font-family: Roboto, Helvetica, Arial, sans-serif;
     }
-
   }
 
   .description-column {
@@ -342,7 +303,6 @@ body {
     .links-title {
       padding-left: 52px;
     }
-
   }
 
 /*///
@@ -429,9 +389,7 @@ body {
       .highlightLink:hover {
         color: $pink-rgba;
       }
-
     }
-
   }
 
   .div-socialMediaLinks {
@@ -450,7 +408,6 @@ body {
         padding-top: 6px;
       }
     }
-
   }
 
   .social-icon {
@@ -463,5 +420,4 @@ body {
     white-space: pre;
     font-size: 20px;
   }
-
 }

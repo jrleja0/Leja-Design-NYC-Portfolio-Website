@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import {MainLogo} from './index';
-import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
 
 /*///
  COMPONENT
@@ -14,9 +12,11 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
+      menuActive: false,
       showScrollUpButton: false
     };
 
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
   }
@@ -27,6 +27,30 @@ class Main extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScrollUpButton);
+  }
+
+  toggleMenu() {
+    const body = document.getElementsByTagName('body')[0];
+    const navContact = document.getElementsByClassName('nav-contact')[0];
+    const navMenu = document.getElementsByClassName('nav-menu')[0];
+    const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
+    if (!this.state.menuActive) {
+      body.style.overflow = 'hidden';
+      navContact.style.visibility = 'hidden';
+      navMenu.className += ' active';
+      dropdown.style.display = 'block';
+      this.setState({menuActive: true});
+    } else {
+      body.style.overflow = 'auto';
+      navContact.style.visibility = '';
+      navMenu.className = 'nav-menu';
+      dropdown.style.display = 'none';
+      this.setState({menuActive: false});
+    }
+  }
+
+  hoverMenuOptions() {
+    console.log('event', event.target);
   }
 
   scrollUp() {
@@ -56,14 +80,15 @@ class Main extends React.Component {
               <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </div>
             <div className="nav-menu">
-              <a role="button" tabIndex="0" onClick={this.showMenu}>
+              <a role="button" tabIndex="0" onClick={this.toggleMenu}>
                 <span>Menu</span>
                 <i className="fa fa-bars" aria-hidden="true" />
+                <i className="fa fa-times-circle" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
-        <div className="dropdown-main-menu">
+        <div className="dropdown-main-menu" onHover={this.hoverMenuOptions}>
           <ul>
             <li>
               <NavLink to="/home" activeClassName="active">Home</NavLink>
