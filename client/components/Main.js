@@ -17,6 +17,7 @@ class Main extends React.Component {
     };
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.hideMenu = this.hideMenu.bind(this);
     this.mouseOverMenuOptions = this.mouseOverMenuOptions.bind(this);
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
@@ -47,6 +48,12 @@ class Main extends React.Component {
       navMenu.className = 'nav-menu';
       dropdown.style.display = 'none';
       this.setState({menuActive: false});
+    }
+  }
+
+  hideMenu() {
+    if (this.state.menuActive) {
+      this.toggleMenu();
     }
   }
 
@@ -86,10 +93,12 @@ class Main extends React.Component {
       <div>
         <div className="main-navbar-styling">
           <div className="main-logo-container">
-            <MainLogo className="main-logo-lg" width="380" height="70" display="block"
-              leftPadding="12" topPadding="6" />
-            <MainLogo className="main-logo-sm" width="270" height="50" display="none"
-              leftPadding="12" topPadding="6" />
+            <MainLogo className="main-logo-lg" width="380" height="70"
+              display="block" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
+            <MainLogo className="main-logo-sm" width="270" height="50"
+              display="none" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
           </div>
           <div className="main-nav-buttons">
             <div className="nav-contact">
