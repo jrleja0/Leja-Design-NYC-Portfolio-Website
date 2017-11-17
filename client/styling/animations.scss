@@ -8,6 +8,8 @@ body {
    MAIN (Navbar) Animations
   *////
 
+  //// Main Title Logo ////
+
   .main-title:hover {
 
     @mixin animateDown($pixelsDown) {
@@ -55,4 +57,61 @@ body {
     }
 
   }
+
+  //// Dropdown Main Menu ////
+
+  .dropdown-main-menu {
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  //// Dropdown Main Menu Options (Spans) ////
+
+  .dropdown-main-menu a span {
+    animation: revealMenuOptions  1s;
+    -webkit-animation: revealMenuOptions 1s;
+  }
+
+  @keyframes revealMenuOptions {
+    0%, 25% {
+      position: relative;
+      left: -100px;
+      opacity: 0;
+    }
+    100% {
+      position: relative;
+      left: 0;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes revealMenuOptions {
+    0% {
+      position: relative;
+      left: -100px;
+      opacity: 0;
+    }
+    100% {
+      position: relative;
+      left: 0;
+      opacity: 1;
+    }
+  }
+
 }

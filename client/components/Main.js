@@ -97,6 +97,7 @@ class Main extends React.Component {
           dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
       }
     } else {
+      if (event.target.tagName === 'SPAN') return;
       dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
     }
   }
@@ -143,22 +144,30 @@ class Main extends React.Component {
             <li>
               <NavLink to="/home" activeClassName="active"
                 className="dropdown-main-menu-blue"
-                onClick={() => this.toggleMenu('blue')}>Home</NavLink>
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Home</span>
+              </NavLink>
             </li>
             <li>
               <NavLink to="/contact" activeClassName="active"
                 className="dropdown-main-menu-red"
-                onClick={() => this.toggleMenu('red')}>Contact</NavLink>
+                onClick={() => this.toggleMenu('red')}>
+                <span>Contact</span>
+              </NavLink>
             </li>
             <li>
               <NavLink to="/projects" activeClassName="active"
                 className="dropdown-main-menu-green"
-                onClick={() => this.toggleMenu('green')}>Coding Projects & Apps</NavLink>
+                onClick={() => this.toggleMenu('green')}>
+                <span>Coding Projects & Apps</span>
+              </NavLink>
             </li>
             <li>
               <NavLink to="/art" activeClassName="active"
                 className="dropdown-main-menu-blue"
-                onClick={() => this.toggleMenu('blue')}>Art</NavLink>
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Art</span>
+              </NavLink>
             </li>
           </ul>
         </div>
