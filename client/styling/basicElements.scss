@@ -6,11 +6,12 @@
 $blue-bold: #1b1ed1;
 $blue-bold-violet: #0600c6;
 $blue-with-red: #4816bc;
-$green-background: #05ad18;
+$green-bold: #05ad18;
+$red-bold: #e01627;
 $pink: #F3517D;
 $pink-bold: #ff009d;
-$yellow: #f7f70c;
-$medium-grey: #333;
+$yellow-bold: #f7f70c;
+$yellow-golden: #ffee00;
 // dark
 $black-with-blue: #010e23;
 $black-with-green: #000c01;
@@ -34,12 +35,17 @@ $blue-bold-rgba8: rgba(27, 30, 209, 0.8);
 $black-with-blue-rgba2: rgba(1, 14, 35, 0.2);
 $black-with-blue-rgba4: rgba(1, 14, 35, 0.4);
 $black-with-blue-rgba6: rgba(1, 14, 35, 0.6);
+$black-with-blue-rgba8: rgba(1, 14, 35, 0.8);
+$green-bold-rgba6: rgba(5, 173, 24, 0.6);
 $light-green-rgba: rgba(0, 255, 21, 0.8);
 $black-with-green-rgba: rgba(0, 12, 1,0.8);
+$red-bold-rgba6: rgba(224, 22, 39, 0.6);
 $pink-rgba: rgba(255, 0, 157, 0.8);
 $red-pink-rgba: rgba(255, 0, 59, 0.8);
 $black-with-red-rgba: rgba(25, 0, 2, 0.8);
-$yellow-rgba: rgba(247, 247, 12, 0.8);
+$yellow-bold-rgba: rgba(247, 247, 12, 0.8);
+$yellow-golden-rgba: rgba(255, 238, 0, 0.8);
+
 
 @mixin pattern-background($backgroundColor, $fileColor) {
   background: $backgroundColor url(
@@ -52,11 +58,15 @@ $yellow-rgba: rgba(247, 247, 12, 0.8);
 }
 
 .redBackground {
-    @include pattern-background($black-with-red, 'red');
+  @include pattern-background($black-with-red, 'red');
 }
 
 .blueBackground {
-    @include pattern-background($black-with-blue, 'blue');
+  @include pattern-background($black-with-blue, 'blue');
+}
+
+.yellowBackground {
+  @include pattern-background($yellow-bold, 'yellow');
 }
 
 .blueBold {
@@ -64,7 +74,7 @@ $yellow-rgba: rgba(247, 247, 12, 0.8);
 }
 
 .green {
-  background-color: $green-background;
+  background-color: $green-bold;
 }
 
 .pink {

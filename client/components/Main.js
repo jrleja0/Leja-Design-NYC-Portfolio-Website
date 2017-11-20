@@ -164,7 +164,7 @@ class Main extends React.Component {
             </li>
             <li>
               <NavLink to="/art" activeClassName="active"
-                className="dropdown-main-menu-blue"
+                className="dropdown-main-menu-blue yellow-highlight"
                 onClick={() => this.toggleMenu('blue')}>
                 <span>Art</span>
               </NavLink>
