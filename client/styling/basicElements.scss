@@ -107,6 +107,7 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
 .subheading-font {
   font-family: Georgia, serif;
   font-size: 60px;
+  line-height: 60px;
   color: white;
 }
 
@@ -137,7 +138,7 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
  Basic Elements Styling
 *////
 
-* {
+*, :before, :after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -148,6 +149,8 @@ html {
 }
 
 body {
+  margin: 0;
+  display: block;
   @extend .greenBackground;
   @extend .main-font;
 
@@ -226,9 +229,9 @@ body {
   }
 
   .div-container-image-under-construction {
-    @extend .div-project-main-title;
+    @extend .basic-div-main-title;
     margin: 20px auto 0 auto;
-    width: 50%;
+    width: 60%;
     text-align: center;
   }
 
