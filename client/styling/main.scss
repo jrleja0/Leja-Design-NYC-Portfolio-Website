@@ -170,10 +170,12 @@ body {
     bottom: 5px;
     right: 5px;
     text-align: center;
-    font-size: 150px;
+    font-size: 170px;
 
     a {
       color: $pink-rgba;
+      background-color: transparent;
+      border: 5px solid transparent;
       display: inline-block;
       @include border-radius(140px);
       position: relative;
@@ -182,19 +184,10 @@ body {
       outline-width: 0;
     }
 
-    a:hover {
-      color: $pink-bold;
-      background-color: $light-green;
-      border: 5px solid $pink-bold;
-    }
-
-    span {
-      width: 135px;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      top: 0;
+    i {
+      display: inline-block;
+      position: relative;
+      bottom: 14px;
     }
   }
 

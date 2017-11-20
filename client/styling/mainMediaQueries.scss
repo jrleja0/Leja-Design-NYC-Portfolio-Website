@@ -88,16 +88,15 @@ body {
     }
 
     .footer-linkToTop {
-      font-size: 100px;
+      font-size: 108px;
 
       a {
         width: 126px;
         height: 126px;
       }
 
-      span {
-        width: 90px;
-        top: 5px;
+      i {
+        bottom: 10px;
       }
     }
 
@@ -283,6 +282,14 @@ body {
 
   @media only screen and (max-width: 370px) {
 
+    .main-navbar-styling {
+      .main-nav-buttons {
+        div {
+          padding: 0;
+        }
+      }
+    }
+
     .welcome-textbox {
       height: 270px;
     }
@@ -311,6 +318,23 @@ body {
   }
 
   @media only screen and (max-width: 347px) {
+
+    .main-navbar-styling {
+      .main-logo-container {
+        position: relative;
+        left: -6px;
+      }
+
+      .main-nav-buttons {
+        margin-left: 0;
+      }
+
+      .nav-menu {
+        a {
+          padding: 12px 8px 10px 8px;
+        }
+      }
+    }
 
     .welcome-textbox {
       height: 310px;

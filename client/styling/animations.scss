@@ -24,8 +24,8 @@ body {
     .jrlejaDesignNYCTitleHover {
       display: block;
       opacity: 1;
-      animation: animateHoverLogo 3s;
-      -webkit-animation: animateHoverLogo 3s;
+      animation: 3s infinite animateHoverLogo;
+      -webkit-animation: 3s infinite animateHoverLogo;
     }
 
     @mixin mainLogoAnimationMixin($pixelsDown) {
@@ -61,8 +61,8 @@ body {
   //// Dropdown Main Menu ////
 
   .dropdown-main-menu {
-    animation: fadeIn 0.5s;
-    -webkit-animation: fadeIn 0.5s;
+    animation: 0.5s fadeIn;
+    -webkit-animation: 0.5s fadeIn;
   }
 
   @keyframes fadeIn {
@@ -85,8 +85,8 @@ body {
   //// Dropdown Main Menu Options (Spans) ////
 
   .dropdown-main-menu a span {
-    animation: revealMenuOptions  1s;
-    -webkit-animation: revealMenuOptions 1s;
+    animation: 1s revealMenuOptions;
+    -webkit-animation: 1s revealMenuOptions;
   }
 
   @keyframes revealMenuOptions {
@@ -102,7 +102,7 @@ body {
     }
   }
   @-webkit-keyframes revealMenuOptions {
-    0% {
+    0%, 25% {
       position: relative;
       left: -100px;
       opacity: 0;
@@ -112,6 +112,48 @@ body {
       left: 0;
       opacity: 1;
     }
+  }
+
+  /*///
+  MAIN (Footer) Styling
+  *////
+
+  .footer-linkToTop {
+
+    a:hover {
+      animation: 10s infinite revealScrollUpPointer;
+      -webkit-animation: 10s infinite revealScrollUpPointer;
+    }
+
+    @keyframes revealScrollUpPointer {
+      0% {
+        color: $pink-rgba;
+        background-color: transparent;
+        border: 5px solid transparent;
+        bottom: 0;
+      }
+      10%, 100% {
+        color: $pink-bold;
+        background-color: $light-green;
+        border: 5px solid $pink-bold;
+        bottom: 40px;
+      }
+    }
+    @-webkit-keyframes revealScrollUpPointer {
+      0% {
+        color: $pink-rgba;
+        background-color: transparent;
+        border: 5px solid transparent;
+        bottom: 0;
+      }
+      10%, 100% {
+        color: $pink-bold;
+        background-color: $light-green;
+        border: 5px solid $pink-bold;
+        bottom: 40px;
+      }
+    }
+
   }
 
 }
