@@ -4,11 +4,11 @@
 
 body {
 
-  /*///
-   MAIN (Navbar) Animations
-  *////
+/*///
+ MAIN (Navbar) Animations
+*////
 
-  //// Main Title Logo ////
+//// Main Title Logo ////
 
   .main-title:hover {
 
@@ -58,7 +58,7 @@ body {
 
   }
 
-  //// Dropdown Main Menu ////
+//// Dropdown Main Menu ////
 
   .dropdown-main-menu {
     animation: 0.5s fadeIn;
@@ -82,7 +82,7 @@ body {
     }
   }
 
-  //// Dropdown Main Menu Options (Spans) ////
+//// Dropdown Main Menu Options (Spans) ////
 
   .dropdown-main-menu a span {
     animation: 1s revealMenuOptions;
@@ -114,9 +114,9 @@ body {
     }
   }
 
-  /*///
-  MAIN (Footer) Styling
-  *////
+/*///
+ MAIN (Footer) Animations
+*////
 
   .footer-linkToTop {
 
@@ -155,5 +155,65 @@ body {
     }
 
   }
+
+/*///
+ GENERAL Animations
+*////
+
+//// Animating all main titles (moving up) ////
+
+  .basic-main-title-animation-move-up {
+    position: relative;
+    animation: 3s moveUp;
+    -webkit-animation: 3s moveUp;
+  }
+
+  @keyframes moveUp {
+    0% {
+      bottom: 80px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes moveUp {
+    0% {
+      bottom: 80px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+
+/*///
+ PROJECTS Animations
+*////
+
+  // .div-project-title {
+  //   animation: 3s moveRight;
+  //   -webkit-animation: 3s moveRight;
+  // }
+
+  // @keyframes moveRight {
+  //   0% {
+  //     left: -100px;
+  //   }
+  //   100% {
+  //     left: 0;
+  //   }
+  // }
+  // @-webkit-keyframes moveRight {
+  //   0% {
+  //     left: -100px;
+  //   }
+  //   100% {
+  //     left: 0;
+  //   }
+  // }
 
 }
