@@ -306,8 +306,21 @@ body {
     }
 
     td, th {
-      min-width: 100px;
-      padding: 6px 0;
+      min-width: 80px;
+      padding: 6px;
+
+    }
+
+    td.td-button {
+      border: 2px solid white;
+      background-color: $blue-bold-rgba4;
+      @include border-radius(10px);
+      @extend .highlight-blue;
+    }
+
+    td.td-button:hover {
+      // @extend .highlight-blue:hover;
+      border: 2px solid $blue-bold;
     }
 
     li:nth-child(even) {
@@ -457,9 +470,13 @@ body {
   }
 
   .social-icon {
-    width: 64px;
-    height: 64px;
-    padding: 5px;
+    padding: 10px 5px;
+    font-size: 55px;
+  }
+
+  .link-icon {
+    @extend .social-icon;
+    font-size: 45px;
   }
 
   .social-labels {

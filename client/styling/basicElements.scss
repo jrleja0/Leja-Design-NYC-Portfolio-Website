@@ -275,19 +275,16 @@ body {
 
   //// Button Highlight Color ////
 
-  .highlight-basic:hover {
-    background-color: $light-green-rgba;
-    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  .highlight-blue, .highlight-pink {
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
   }
 
   .highlight-blue:hover {
-    @extend .highlight-basic:hover;
     background-color: $blue-bold-rgba8;
   }
 
   .highlight-pink:hover {
-    @extend .highlight-basic:hover;
     background-color: $pink-rgba;
   }
 

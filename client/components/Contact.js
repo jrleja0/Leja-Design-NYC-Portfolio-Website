@@ -26,46 +26,52 @@ const Contact = (props) => {
               <div className="contact-textbox">
                 <ul>
                   <li className="li-add-padding-bottom-40">
-                    <span className="glyphicon glyphicon-star" aria-hidden="true" />
+                    <i className="fa fa-star" aria-hidden="true" />
                     <span>&emsp; </span><span>Jasiu Leja</span>
                   </li>
                   <li className="li-add-padding-bottom-40">
                     <a className="highlightLink" href="mailto:jrleja.design@gmail.com" aria-label="Email Link">
-                      <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
+                      <i className="fa fa-envelope" aria-hidden="true" />
                       <span>&emsp; </span><span>jrleja.design@gmail.com</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-40">
                     <a className="highlightLink" href="/resume/Jasiu_Leja_Resume.pdf">
-                      <span className="glyphicon glyphicon-briefcase" aria-hidden="true" />
+                      <i className="fa fa-briefcase" aria-hidden="true" />
                       <span>&emsp; </span><span>Resume</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-20">
-                    <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                    <i className="fa fa-link" aria-hidden="true" />
                     <span>&emsp; </span><span>Links:</span>
                   </li>
                   <div className="div-socialMediaLinks">
                     <li>
-                      <div className="highlight-pink position-relative">
-                        <a href="https://github.com/jrleja0">
-                          <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
+                      <div className="highlight-pink">
+                        <a href="https://github.com/jrleja0" type="button" aria-label="GitHub Profile">
+                          <i className="fa fa-github social-icon" aria-hidden="true" />
                           <p>GitHub</p>
-                          <div className="div-img-cover" />
+                          {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
+                          <p>GitHub</p>
+                          <div className="div-img-cover" /> */}
                         </a>
                       </div>
-                      <div className="highlight-pink position-relative">
-                        <a href="https://linkedin.com/in/jrleja">
-                          <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
+                      <div className="highlight-pink">
+                        <a href="https://linkedin.com/in/jrleja" type="button" aria-label="LinkedIn Profile">
+                          <i className="fa fa-linkedin-square social-icon" aria-hidden="true" />
                           <p>LinkedIn</p>
-                          <div className="div-img-cover" />
+                          {/* <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
+                          <p>LinkedIn</p>
+                          <div className="div-img-cover" /> */}
                         </a>
                       </div>
-                      <div className="highlight-pink position-relative">
-                        <a href="https://instagram.com/jrleja">
-                          <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
+                      <div className="highlight-pink">
+                        <a href="https://instagram.com/jrleja" type="button" aria-label="Instagram Profile">
+                          <i className="fa fa-instagram social-icon" aria-hidden="true" />
                           <p>Instagram</p>
-                          <div className="div-img-cover" />
+                          {/* <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
+                          <p>Instagram</p>
+                          <div className="div-img-cover" /> */}
                         </a>
                       </div>
                     </li>
