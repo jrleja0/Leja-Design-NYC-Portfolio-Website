@@ -165,16 +165,33 @@ body {
     cursor: pointer;
   }
 
+  h1 {
+    margin: 0;
+  }
+
   hr {
     border-width: 0;
   }
 
   img {
     width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
   }
 
   nav {
     display: block;
+  }
+
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    overflow: auto;
   }
 
   ul {
@@ -250,6 +267,8 @@ body {
 
   .highlight-basic:hover {
     background-color: $light-green-rgba;
+    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .highlight-blue:hover {

@@ -14,7 +14,7 @@ const Projects = (props) => {
       <div className="container-fluid greenBackground">
         <div className="row">
           <div className="div-project-main-title">
-            {/* <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
+            {/* <img src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
             <div className="div-img-cover" />*/}
             <h1 className="heading-font">Recent Projects<br />
               <span className="subheading-font">Apps | Games | Tech Talks</span>
@@ -26,7 +26,7 @@ const Projects = (props) => {
           imageData && imageData.length ? imageData.map(image => (
             <div key={image.name}>
               <div className="div-project-title">
-                <img className="img-fluid" src={ image.titlePath } alt={ image.projectName } />
+                <img src={ image.titlePath } alt={ image.projectName } />
                 <div className="div-img-cover" />
               </div>
               <div className="row">

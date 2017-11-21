@@ -173,7 +173,7 @@ class Main extends React.Component {
         </div>
           {this.props.children}
         <div className="position-relative">
-          <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+          <img src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
           <div>
             <pre className="footer-text">
               <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
