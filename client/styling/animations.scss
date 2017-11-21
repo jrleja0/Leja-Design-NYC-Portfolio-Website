@@ -189,6 +189,13 @@ body {
     }
   }
 
+//// Animating all images (fading in) ////
+
+  img {
+    animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+    -webkit-animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+  }
+
 
 /*///
  PROJECTS Animations
