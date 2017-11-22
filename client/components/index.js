@@ -1,4 +1,5 @@
 export {default as Main} from './Main';
+export {default as MainLogo} from './MainLogo';
 export {default as ArtShowcase} from './ArtShowcase';
 export {default as Contact} from './Contact';
 export {default as Projects} from './Projects';

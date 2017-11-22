@@ -12,16 +12,21 @@ const Projects = (props) => {
   return (
     <div>
       <div className="container-fluid greenBackground">
-        <div className="div-project-main-title">
-          <img className="img-fluid" src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
-          <div className="div-img-cover" />
+        <div className="row">
+          <div className="div-project-main-title">
+            {/* <img src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
+            <div className="div-img-cover" />*/}
+            <h1 className="heading-font">Recent Projects<br />
+              <span className="subheading-font">Apps | Games | Tech Talks</span>
+            </h1>
+          </div>
         </div>
         <div className="projects-main-container container-fluid">
           {
           imageData && imageData.length ? imageData.map(image => (
             <div key={image.name}>
               <div className="div-project-title">
-                <img className="img-fluid" src={ image.titlePath } alt={ image.projectName } />
+                <img src={ image.titlePath } alt={ image.projectName } />
                 <div className="div-img-cover" />
               </div>
               <div className="row">
@@ -59,7 +64,7 @@ const Projects = (props) => {
                     <div className="col-lg-5 col-md-5 col-sm-12">
                       <ul className="links-column">
                         <li className="links-title li-add-padding-bottom-10">
-                          <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                          <i className="fa fa-link" aria-hidden="true" />
                           <span>&ensp; </span><span> Links:</span>
                         </li>
                         <li>
@@ -72,9 +77,9 @@ const Projects = (props) => {
                                       <td>
                                         <p>Check It Out:</p>
                                       </td>
-                                      <td className="highlight-blue">
-                                        <a href={image.linkProject} type="button" className="btn btn-default btn-lg" aria-label="Project Link">
-                                          <span className="glyphicon glyphicon-link" aria-hidden="true" />
+                                      <td className="highlight-blue td-button">
+                                        <a href={image.linkProject} type="button" aria-label="Project Link">
+                                          <i className="fa fa-link link-icon" aria-hidden="true" />
                                         </a>
                                       </td>
                                     </tr>
@@ -90,10 +95,11 @@ const Projects = (props) => {
                                           }
                                         </p>
                                       </td>
-                                      <td className="highlight-blue position-relative">
-                                        <a href={image.linkDemo}>
-                                          <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
-                                          <div className="div-img-cover" />
+                                      <td className="highlight-blue td-button">
+                                        <a href={image.linkDemo} type="button" aria-label="YouTube Presentation Link">
+                                          <i className="fa fa-youtube-play social-icon" aria-hidden="true" />
+                                          {/* <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
+                                          <div className="div-img-cover" /> */}
                                         </a>
                                       </td>
                                     </tr>
@@ -105,10 +111,11 @@ const Projects = (props) => {
                                       <td>
                                         <p>See GitHub <br />Repository:</p>
                                       </td>
-                                      <td className="highlight-blue position-relative">
-                                        <a href={image.linkGitHub}>
-                                          <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
-                                          <div className="div-img-cover" />
+                                      <td className="highlight-blue td-button">
+                                        <a href={image.linkGitHub} type="button" aria-label="GitHub Project Link">
+                                          <i className="fa fa-github social-icon" aria-hidden="true" />
+                                          {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
+                                          <div className="div-img-cover" /> */}
                                         </a>
                                       </td>
                                     </tr>

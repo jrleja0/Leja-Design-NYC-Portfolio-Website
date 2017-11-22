@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
-import {Nav, Navbar, NavDropdown, NavItem, MenuItem} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
+import {NavLink} from 'react-router-dom';
+import {MainLogo} from './index';
 
 /*///
  COMPONENT
@@ -13,9 +12,14 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
+      menuActive: false,
+      menuColor: 'blue',
       showScrollUpButton: false
     };
 
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.hideMenu = this.hideMenu.bind(this);
+    this.mouseOverMenuOptions = this.mouseOverMenuOptions.bind(this);
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
   }
@@ -26,6 +30,76 @@ class Main extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScrollUpButton);
+  }
+
+  toggleMenu(menuColor) {
+    const body = document.getElementsByTagName('body')[0];
+    const navContact = document.getElementsByClassName('nav-contact')[0];
+    const navMenu = document.getElementsByClassName('nav-menu')[0];
+    const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
+    if (this.state.menuActive) {
+      body.style.overflow = 'auto';
+      navContact.style.visibility = '';
+      navMenu.className = 'nav-menu';
+      dropdown.style.display = 'none';
+      menuColor ?
+        this.setState({
+          menuActive: false,
+          menuColor: menuColor
+        })
+        : this.setState({
+            menuActive: false
+        });
+    } else {
+      body.style.overflow = 'hidden';
+      navContact.style.visibility = 'hidden';
+      navMenu.className += ' active';
+      dropdown.style.display = 'block';
+      this.setState({menuActive: true});
+    }
+  }
+
+  hideMenu() {
+    if (this.state.menuActive) {
+      this.toggleMenu('blue');
+    } else {
+      this.setState({
+        menuColor: 'blue'
+      });
+    }
+  }
+
+  mouseOverMenuOptions(event) {
+    const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
+    if (event.target.tagName === 'A') {
+      let dropdownColor;
+      if (event.target.className.indexOf('active') !== -1) {
+        const classNames = event.target.className.split(' ');
+        classNames.forEach((className) => {
+          if (className.indexOf('dropdown-main-menu-') !== -1) {
+            dropdownColor = className;
+          }
+        });
+      } else {
+        dropdownColor = event.target.className;
+      }
+      switch (dropdownColor) {
+        case 'dropdown-main-menu-blue':
+          dropdown.className = 'dropdown-main-menu blueBackground';
+          break;
+        case 'dropdown-main-menu-green':
+          dropdown.className = 'dropdown-main-menu greenBackground';
+          break;
+        case 'dropdown-main-menu-red':
+          dropdown.className = 'dropdown-main-menu redBackground';
+          break;
+        default:
+          dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
+      }
+    } else {
+      if (event.target.tagName === 'SPAN') return;
+      dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
+    }
   }
 
   scrollUp() {
@@ -43,41 +117,66 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-      {/*
-        <nav className="stylingMainNavbar">
-          <div className="container">
-            <div className="navbar-header">
-              <Link className="mainTitle" to="/home" />
-      */}
-        <Navbar className="stylingMainNavbar" inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link className="mainTitle" to="/home" />
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav id="main-nav" className="navbar-float-tabs">
-              <NavDropdown eventKey={1} title="Projects | Apps | Art" id="navbar-projects-dropdown">
-                <LinkContainer className="dropdownMenuItem" to="/projects" activeClassName="active">
-                  <MenuItem eventKey={1.1}>Projects & Apps</MenuItem>
-                </LinkContainer>
-                <LinkContainer className="dropdownMenuItem" to="/art" activeClassName="active">
-                  <MenuItem eventKey={1.2}>Art</MenuItem>
-                </LinkContainer>
-              </NavDropdown>
-              <LinkContainer className="nav-contact" to="/contact" activeClassName="active">
-                <NavItem eventKey={2}>Contact</NavItem>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <div className="main-navbar-styling">
+          <div className="main-logo-container">
+            <MainLogo className="main-logo-lg" width="380" height="70"
+              display="block" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
+            <MainLogo className="main-logo-sm" width="270" height="50"
+              display="none" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
+          </div>
+          <div className="main-nav-buttons">
+            <div className="nav-contact">
+              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            </div>
+            <div className="nav-menu">
+              <a role="button" tabIndex="0" onClick={() => this.toggleMenu(this.state.menuColor)}>
+                <span>Menu</span>
+                <i className="fa fa-bars" aria-hidden="true" />
+                <i className="fa fa-times-circle" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className={`dropdown-main-menu ${this.state.menuColor || 'blue'}Background`} onMouseOver={this.mouseOverMenuOptions}>
+          <ul>
+            <li>
+              <NavLink to="/home" activeClassName="active"
+                className="dropdown-main-menu-blue"
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Home</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" activeClassName="active"
+                className="dropdown-main-menu-red"
+                onClick={() => this.toggleMenu('red')}>
+                <span>Contact</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects" activeClassName="active"
+                className="dropdown-main-menu-green"
+                onClick={() => this.toggleMenu('green')}>
+                <span>Coding Projects & Apps</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/art" activeClassName="active"
+                className="dropdown-main-menu-blue yellow-highlight"
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Art</span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
           {this.props.children}
         <div className="position-relative">
-          <img className="img-fluid" src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+          <img src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
           <div>
             <pre className="footer-text">
-              <span className="glyphicon glyphicon-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
             </pre>
           </div>
           <div className="div-img-cover" />
@@ -85,7 +184,7 @@ class Main extends React.Component {
             { this.state.showScrollUpButton ?
               <div>
                 <a role="button" tabIndex="0" onClick={this.scrollUp}>
-                  <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" />
+                  <i className="fa fa-chevron-up" aria-hidden="true" />
                 </a>
               </div>
               : null

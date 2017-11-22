@@ -8,148 +8,162 @@ body {
  MAIN (Navbar) Styling
 *////
 
-  .mainTitle {
-    background: url("/assets/text/jrlejaDesignNYCTitle.png") left top/cover no-repeat;
-    display: block;
-    float: left;
-    height: 50px;
-    width: 360px;
-    margin: 7px;
-    margin-left: -15px;
-  }
-
-  .mainTitle:hover {
-    @extend .mainTitle;
-    background-position: 0 -50px;
-  }
-
-  .stylingMainNavbar {
-    @extend .black-with-red;
-    position: relative;
-    min-height: 50px;
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-size: 16px;
-    border: 1px solid $black-with-blue;
-    border-radius: 0;
-
-    .container {
-      margin-left: 0;
-      margin-right: 0;
+  .main-title {
+    .jrlejaDesignNYCTitle {
+      display: block;
     }
-
-    .navbar-header {
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .navbar-toggle {
+    .jrlejaDesignNYCTitleHover {
       display: none;
+    }
+  }
+
+  .main-navbar-styling {
+    @extend .black-with-red;
+    border: 1px solid $black-with-blue;
+    font-size: 18px;
+    min-height: 50px;
+
+    div {
+      display: inline-block;
+    }
+
+    .main-nav-buttons {
       position: relative;
-      float: right;
-      margin: 12px 15px 8px 0px;
-      padding: 12px 10px;
-      background-color: transparent;
-      background-image: none;
-      border: 1px solid transparent;
-      border-radius: 4px;
-      border-color: $medium-grey;
-    }
+      margin-left: 60px;
+      top: -22px;
 
-    .navbar-float-tabs {
-      float: right;
-      padding-top: 8px;
-    }
-
-    #main-nav {
-      padding-top: 4px;
-      padding-bottom: 2px;
-
-      > li {
-        margin: 4px;
+      div {
+        padding: 0 10px;
       }
 
       a {
         color: white;
         text-align: center;
+        padding: 15px 40px 13px 40px;
       }
-
-      a:hover {
-        @extend .highlight-basic:hover;
-      }
-
-      .active {
-
-        a {
-          background-color: $blue-bold-rgba6;
-        }
-
-        a:hover {
-          background-color: $blue-bold-rgba8;
-        }
-
-      }
-
-      #navbar-projects-dropdown {
-        border: 1px solid white;
-      }
-
-      .open {
-        border: 1px solid white;
-
-        #navbar-projects-dropdown {
-          background-color: white;
-          color: $black-with-blue;
-        }
-
-        #navbar-projects-dropdown:hover {
-          background-color: $light-grey;
-        }
-
-        .dropdown-menu {
-          border: 1px solid white;
-          padding: 0;
-        }
-
-        .dropdownMenuItem {
-
-          a {
-            padding-top: 10px;
-            padding-bottom: 10px;
-          }
-
-        }
-
-      }
-
-    }
-
-    .dropdown-menu {
-      background-color: $black-with-red;
-      font-size: 16px;
-    }
-
-    .dropdownMenuItem {
-      width: 186px;
     }
 
     .nav-contact {
-
       a {
         border: 2px solid $blue-bold;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 13px;
+        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
+      a:hover, a.active {
+        background-color: $blue-bold-rgba6;
+      }
+
+      a.active:hover {
+        background-color: $blue-bold-rgba8;
+      }
     }
 
+    .nav-menu {
+      a {
+        color: white;
+        border: 2px solid white;
+        padding-right: 30px;
+        cursor: pointer;
+        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      a:hover {
+        background-color: $light-blue-rgba8;
+      }
+
+      i {
+        font-size: 36px;
+        padding-left: 15px;
+        top: 4px;
+        position: relative;
+      }
+
+      i.fa-times-circle {
+        display: none;
+      }
+      i.fa-bars {
+        display: inline-block;
+      }
+    }
+
+    .nav-menu.active {
+      a {
+        color: $black-with-blue;
+        background-color: $light-blue-rgba8;
+      }
+
+      a:hover {
+        background-color: $light-blue;
+      }
+
+      i.fa-bars {
+        display: none;
+      }
+      i.fa-times-circle {
+        display: inline-block;
+      }
+    }
   }
 
-  #top {
-    position: absolute;
-    top: 0;
+  .dropdown-main-menu {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    display: none;
+
+    ul {
+      padding: 40px 0;
+    }
+
+    @mixin box-shadow-menu-link($bottomLength, $color) {
+      box-shadow: inset 0 $bottomLength 0 0 $color;
+      -webkit-box-shadow: inset 0 $bottomLength 0 0 $color;
+    }
+
+    a {
+      display: inline-block;
+      border: 2px solid transparent;
+      padding: 30px 0;
+      width: 100%;
+      transition: all .3s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+      @include box-shadow-menu-link(-3px, $blue-bold-rgba6);
+    }
+
+    a.active {
+      background-color: $black-with-blue-rgba8;
+    }
+
+    a:hover, a.active:hover {
+      @include box-shadow-menu-link(-90px, $blue-bold-rgba6);
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .dropdown-main-menu-green {
+      @include box-shadow-menu-link(-3px, $green-bold-rgba6);
+    }
+    .dropdown-main-menu-green:hover, .dropdown-main-menu-green.active:hover {
+      @include box-shadow-menu-link(-90px, $green-bold-rgba6);
+    }
+    .dropdown-main-menu-red {
+      @include box-shadow-menu-link(-3px, $red-bold-rgba6);
+    }
+    .dropdown-main-menu-red:hover, .dropdown-main-menu-red.active:hover {
+      @include box-shadow-menu-link(-90px, $red-bold-rgba6);
+    }
+    .yellow-highlight {
+      @include box-shadow-menu-link(-3px, $yellow-golden-rgba);
+    }
+    .yellow-highlight:hover, .yellow-highlight.active:hover {
+      @include box-shadow-menu-link(-90px, $yellow-golden-rgba);
+    }
   }
 
 /*///
@@ -161,10 +175,12 @@ body {
     bottom: 5px;
     right: 5px;
     text-align: center;
-    font-size: 150px;
+    font-size: 170px;
 
     a {
       color: $pink-rgba;
+      background-color: transparent;
+      border: 5px solid transparent;
       display: inline-block;
       @include border-radius(140px);
       position: relative;
@@ -173,21 +189,11 @@ body {
       outline-width: 0;
     }
 
-    a:hover {
-      color: $pink-bold;
-      background-color: $light-green;
-      border: 5px solid $pink-bold;
+    i {
+      display: inline-block;
+      position: relative;
+      bottom: 14px;
     }
-
-    span {
-      width: 135px;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
-
   }
 
   .footer-text {
@@ -196,7 +202,8 @@ body {
     color: white;
     font-size: 18px;
     text-align: center;
-    margin-bottom: 0;
+    border: 1px solid white;
+    border-radius: 4px;
   }
 
 /*///
@@ -214,22 +221,19 @@ body {
     color: $light-blue;
     @extend .basic-textbox;
     @include border-radius(50px);
-    // border: 5px solid $yellow;
     text-align: center;
-    padding: 20px;
-    // margin-bottom: 20px;
+    padding: 24px;
     max-width: 800px;
-    height: 190px;
-    font-size: 18px;
+    font-size: 23px;
+    line-height: 28px;
 
     li {
       @extend .li-add-padding-bottom-5;
     }
 
     .green-text {
-      color: $green-background;
+      color: $green-bold;
     }
-
   }
 
 /*///
@@ -238,10 +242,16 @@ body {
 
   .div-project-main-title {
     background-color: $black-with-green-rgba;
-    @extend .basic-div-main-title;
-    @extend .left-right-margin-10;
-    margin: 50px auto 0 auto;
-    padding: 0 60px;
+    margin: 60px 0 20px 0;
+
+    h1 {
+      padding: 15px 0 28px 0;
+      @extend .basic-main-title-animation-move-up;
+    }
+
+    .subheading-font {
+      color: $warm-green;
+    }
   }
 
   .projects-main-container {
@@ -282,7 +292,6 @@ body {
   }
 
   .project-textbox {
-    // @extend .green;
     @extend .basic-textbox;
     font-size: 18px;
     font-weight: 600;
@@ -297,8 +306,21 @@ body {
     }
 
     td, th {
-      min-width: 100px;
-      padding: 6px 0;
+      min-width: 80px;
+      padding: 6px;
+
+    }
+
+    td.td-button {
+      border: 2px solid white;
+      background-color: $blue-bold-rgba4;
+      @include border-radius(10px);
+      @extend .highlight-blue;
+    }
+
+    td.td-button:hover {
+      // @extend .highlight-blue:hover;
+      border: 2px solid $blue-bold;
     }
 
     li:nth-child(even) {
@@ -308,8 +330,6 @@ body {
     }
 
     li:nth-child(odd) {
-      // background-color: $light-blue;
-      // color: $blue-bold;
       background-color: white;
       color: black;
     }
@@ -317,9 +337,8 @@ body {
     p {
       color: white;
       font-weight: 400;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
     }
-
   }
 
   .description-column {
@@ -338,7 +357,6 @@ body {
     .links-title {
       padding-left: 52px;
     }
-
   }
 
 /*///
@@ -346,9 +364,17 @@ body {
 *////
 
   .artShowcase-main-title {
-    @extend .basic-div-main-title;
-    margin-bottom: 30px;
-    padding: 0 60px;
+    background-color: $black-with-green-rgba;
+    margin: 60px 0 20px 0;
+
+    h1 {
+      padding: 15px 0 28px 0;
+      @extend .basic-main-title-animation-move-up;
+    }
+
+    .subheading-font {
+      color: $yellow-bold;
+    }
   }
 
   .div-artShowcase-main-img {
@@ -382,9 +408,19 @@ body {
 *////
 
   .contact-main-title {
-    @extend .basic-div-main-title;
-    width: 60%;
-    margin-top: 40px;
+    background-color: $black-with-green-rgba;
+    margin: 60px 0 20px 0;
+
+    h1 {
+      padding: 15px 0 10px 0;
+      @extend .basic-main-title-animation-move-up;
+    }
+
+    .subheading-font {
+      color: $blue-bold-violet;
+      position: relative;
+      top: -20px;
+    }
   }
 
   .headshotBackground {
@@ -405,16 +441,14 @@ body {
       padding: 45px 40px 0 40px;
 
       .highlightLink {
-        color: $yellow;
+        color: $yellow-bold;
         text-decoration: none;
       }
 
       .highlightLink:hover {
         color: $pink-rgba;
       }
-
     }
-
   }
 
   .div-socialMediaLinks {
@@ -433,18 +467,20 @@ body {
         padding-top: 6px;
       }
     }
-
   }
 
   .social-icon {
-    width: 64px;
-    height: 64px;
-    padding: 5px;
+    padding: 10px 5px;
+    font-size: 55px;
+  }
+
+  .link-icon {
+    @extend .social-icon;
+    font-size: 45px;
   }
 
   .social-labels {
     white-space: pre;
     font-size: 20px;
   }
-
 }

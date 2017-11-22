@@ -21,8 +21,9 @@ const createApp = () => {
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')));
   app.use('/resume', express.static(path.join(__dirname, '..', 'public/assets')));
-  app.use('/bootstrap', express.static(path.join(__dirname, '..', 'node_modules/bootstrap/dist')));
-  app.use('/jquery', express.static(path.join(__dirname, '..', 'node_modules/jquery/dist')));
+  app.use('/font-awesome', express.static(path.join(__dirname, '..', 'node_modules/font-awesome')));
+  // app.use('/bootstrap', express.static(path.join(__dirname, '..', 'node_modules/bootstrap/dist')));
+  // app.use('/jquery', express.static(path.join(__dirname, '..', 'node_modules/jquery/dist')));
 
   // 404 handling middleware
   app.use((req, res, next) => {
