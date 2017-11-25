@@ -178,7 +178,7 @@ body {
     font-size: 170px;
 
     a {
-      color: $pink-rgba;
+      color: $pink-rgba8;
       background-color: transparent;
       border: 5px solid transparent;
       display: inline-block;
@@ -311,15 +311,16 @@ body {
 
     }
 
-    td.td-button {
+    a.a-td-button {
+      display: inline-block;
       border: 2px solid white;
       background-color: $blue-bold-rgba4;
       @include border-radius(10px);
       @extend .highlight-blue;
+      width: 80px;
     }
 
-    td.td-button:hover {
-      // @extend .highlight-blue:hover;
+    a.a-td-button:hover {
       border: 2px solid $blue-bold;
     }
 
@@ -393,7 +394,7 @@ body {
   }
 
   .art-image-description {
-    background-color: $pink-rgba;
+    background-color: $pink-rgba8;
     color: white;
     font-size: 16px;
     text-align: right;
@@ -441,42 +442,50 @@ body {
       padding: 45px 40px 0 40px;
 
       .highlightLink {
+        @extend .basic-highlight-transition;
         color: $yellow-bold;
         text-decoration: none;
       }
 
       .highlightLink:hover {
-        color: $pink-rgba;
+        color: $red-bold;
       }
     }
   }
 
   .div-socialMediaLinks {
     @extend .basic-div-links;
-    height: 130px;
-    padding: 20px;
-
-    div {
-      display: inline-block;
-      padding: 0 18px;
-    }
+    padding: 14px 8px 14px 8px;
 
     a {
+      display: inline-block;
+      border: 2px solid white;
+      background-color: $pink-rgba4;
+      @include border-radius(10px);
+      @extend .highlight-red;
+      width: 26%;
+      margin: 0 10px;
+
       p {
         font-size: 16px;
-        padding-top: 6px;
+        padding: 5px 0 10px 0;
+        margin: 0;
       }
+    }
+
+    a:hover {
+      border: 2px solid $pink-bold;
     }
   }
 
   .social-icon {
-    padding: 10px 5px;
-    font-size: 55px;
+    padding: 10px 0;
+    font-size: 50px;
   }
 
   .link-icon {
     @extend .social-icon;
-    font-size: 45px;
+    font-size: 48px;
   }
 
   .social-labels {

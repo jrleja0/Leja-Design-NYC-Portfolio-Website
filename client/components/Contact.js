@@ -46,35 +46,37 @@ const Contact = (props) => {
                     <span>&emsp; </span><span>Links:</span>
                   </li>
                   <div className="div-socialMediaLinks">
-                    <li>
-                      <div className="highlight-pink">
-                        <a href="https://github.com/jrleja0" type="button" aria-label="GitHub Profile">
-                          <i className="fa fa-github social-icon" aria-hidden="true" />
-                          <p>GitHub</p>
-                          {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
-                          <p>GitHub</p>
-                          <div className="div-img-cover" /> */}
-                        </a>
-                      </div>
-                      <div className="highlight-pink">
-                        <a href="https://linkedin.com/in/jrleja" type="button" aria-label="LinkedIn Profile">
-                          <i className="fa fa-linkedin-square social-icon" aria-hidden="true" />
-                          <p>LinkedIn</p>
-                          {/* <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
-                          <p>LinkedIn</p>
-                          <div className="div-img-cover" /> */}
-                        </a>
-                      </div>
-                      <div className="highlight-pink">
-                        <a href="https://instagram.com/jrleja" type="button" aria-label="Instagram Profile">
-                          <i className="fa fa-instagram social-icon" aria-hidden="true" />
-                          <p>Instagram</p>
-                          {/* <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
-                          <p>Instagram</p>
-                          <div className="div-img-cover" /> */}
-                        </a>
-                      </div>
-                    </li>
+                    {/* <div className="row"> */}
+                      {/* <li> */}
+                        {/* <div className="col-sm-4 col-md-4 col-lg-4"> */}
+                          <a href="https://github.com/jrleja0" type="button" aria-label="GitHub Profile">
+                            <i className="fa fa-github social-icon" aria-hidden="true" />
+                            <p>GitHub</p>
+                            {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub profile" />
+                            <p>GitHub</p>
+                            <div className="div-img-cover" /> */}
+                          </a>
+                        {/* </div> */}
+                        {/* <div className="col-sm-4 col-md-4 col-lg-4"> */}
+                          <a className="a-td-button" href="https://linkedin.com/in/jrleja" type="button" aria-label="LinkedIn Profile">
+                            <i className="fa fa-linkedin-square social-icon" aria-hidden="true" />
+                            <p>LinkedIn</p>
+                            {/* <img className="social-icon" src="/assets/social_icons/linkedin.png" alt="LinkedIn profile" />
+                            <p>LinkedIn</p>
+                            <div className="div-img-cover" /> */}
+                          </a>
+                        {/* </div> */}
+                        {/* <div className="col-sm-4 col-md-4 col-lg-4"> */}
+                          <a className="a-td-button" href="https://instagram.com/jrleja" type="button" aria-label="Instagram Profile">
+                            <i className="fa fa-instagram social-icon" aria-hidden="true" />
+                            <p>Instagram</p>
+                            {/* <img className="social-icon" src="/assets/social_icons/instagram.png" alt="Instagram profile" />
+                            <p>Instagram</p>
+                            <div className="div-img-cover" /> */}
+                          </a>
+                        {/* </div> */}
+                      {/* </li> */}
+                    {/* </div> */}
                   </div>
                 </ul>
               </div>

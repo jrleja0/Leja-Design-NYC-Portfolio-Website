@@ -127,7 +127,7 @@ body {
 
     @keyframes revealScrollUpPointer {
       0% {
-        color: $pink-rgba;
+        color: $pink-rgba8;
         background-color: transparent;
         border: 5px solid transparent;
         bottom: 0;
@@ -141,7 +141,7 @@ body {
     }
     @-webkit-keyframes revealScrollUpPointer {
       0% {
-        color: $pink-rgba;
+        color: $pink-rgba8;
         background-color: transparent;
         border: 5px solid transparent;
         bottom: 0;
