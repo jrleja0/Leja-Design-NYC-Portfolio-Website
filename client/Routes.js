@@ -9,12 +9,12 @@ import { fetchImages } from './store';
 
 const Home = () => (
   <div>
-    <div>
+    {/* <div>
       <div className="img-background" />
       <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!" />
       <div className="div-img-cover" />
-    </div>
-    {/* <Slideshow /> */}
+    </div> */}
+    <Slideshow />
     <Welcome />
     <Projects />
     <Contact />

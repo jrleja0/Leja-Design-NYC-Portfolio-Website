@@ -7,6 +7,15 @@ body {
 
   @media screen and (max-width: 1199px) {
 
+    .slide-thumbnails-container {
+      height: auto;
+
+      img {
+        display: inline-block;
+        width: 33.333%
+      }
+    }
+
     .main-navbar-styling {
       .main-nav-buttons {
         margin-left: 40px;
@@ -112,6 +121,10 @@ body {
   }
 
   @media screen and (max-width: 767px) {
+
+    .main-slide-container {
+      height: 300px;
+    }
 
     .main-navbar-styling {
       .nav-contact, .main-logo-lg {

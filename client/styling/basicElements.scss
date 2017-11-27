@@ -277,14 +277,17 @@ body {
 
   //// Button Highlight Color ////
 
-  .basic-highlight-transition {
-    transition: all .4s ease-in-out;
+  .basic-transition {
     -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .basic-highlight-transition {
+    @extend .basic-transition;
   }
 
   .basic-highlight-transition-fast {
-    transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
 
   .highlight-blue, .highlight-pink, .highlight-red {

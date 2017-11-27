@@ -24,12 +24,12 @@ body {
     .jrlejaDesignNYCTitleHover {
       display: block;
       opacity: 1;
-      animation: 3s infinite animateHoverLogo;
       -webkit-animation: 3s infinite animateHoverLogo;
+      animation: 3s infinite animateHoverLogo;
     }
 
     @mixin mainLogoAnimationMixin($pixelsDown) {
-      @keyframes animateHoverLogo {
+      @-webkit-keyframes animateHoverLogo {
         25%, 52% {
           @include animateDown($pixelsDown);
         }
@@ -37,7 +37,7 @@ body {
           @include rotateUp(-45deg);
         }
       }
-      @-webkit-keyframes animateHoverLogo {
+      @keyframes animateHoverLogo {
         25%, 52% {
           @include animateDown($pixelsDown);
         }
@@ -61,11 +61,11 @@ body {
 //// Dropdown Main Menu ////
 
   .dropdown-main-menu {
-    animation: 0.5s fadeIn;
     -webkit-animation: 0.5s fadeIn;
+    animation: 0.5s fadeIn;
   }
 
-  @keyframes fadeIn {
+  @-webkit-keyframes fadeIn {
     0% {
       opacity: 0.5;
     }
@@ -73,7 +73,7 @@ body {
       opacity: 1;
     }
   }
-  @-webkit-keyframes fadeIn {
+  @keyframes fadeIn {
     0% {
       opacity: 0.5;
     }
@@ -85,11 +85,11 @@ body {
 //// Dropdown Main Menu Options (Spans) ////
 
   .dropdown-main-menu a span {
-    animation: 1s revealMenuOptions;
     -webkit-animation: 1s revealMenuOptions;
+    animation: 1s revealMenuOptions;
   }
 
-  @keyframes revealMenuOptions {
+  @-webkit-keyframes revealMenuOptions {
     0%, 25% {
       position: relative;
       left: -100px;
@@ -101,7 +101,7 @@ body {
       opacity: 1;
     }
   }
-  @-webkit-keyframes revealMenuOptions {
+  @keyframes revealMenuOptions {
     0%, 25% {
       position: relative;
       left: -100px;
@@ -121,11 +121,11 @@ body {
   .footer-linkToTop {
 
     a:hover {
-      animation: 10s infinite revealScrollUpPointer;
       -webkit-animation: 10s infinite revealScrollUpPointer;
+      animation: 10s infinite revealScrollUpPointer;
     }
 
-    @keyframes revealScrollUpPointer {
+    @-webkit-keyframes revealScrollUpPointer {
       0% {
         color: $pink-rgba8;
         background-color: transparent;
@@ -139,7 +139,7 @@ body {
         bottom: 40px;
       }
     }
-    @-webkit-keyframes revealScrollUpPointer {
+    @keyframes revealScrollUpPointer {
       0% {
         color: $pink-rgba8;
         background-color: transparent;
@@ -164,11 +164,11 @@ body {
 
   .basic-main-title-animation-move-up {
     position: relative;
-    animation: 3s moveUp;
     -webkit-animation: 3s moveUp;
+    animation: 3s moveUp;
   }
 
-  @keyframes moveUp {
+  @-webkit-keyframes moveUp {
     0% {
       bottom: 80px;
       opacity: 0;
@@ -178,7 +178,7 @@ body {
       opacity: 1;
     }
   }
-  @-webkit-keyframes moveUp {
+  @keyframes moveUp {
     0% {
       bottom: 80px;
       opacity: 0;
@@ -192,8 +192,8 @@ body {
 //// Animating all images (fading in) ////
 
   img {
-    animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
     -webkit-animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+    animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
   }
 
 
@@ -202,11 +202,11 @@ body {
 *////
 
   // .div-project-title {
-  //   animation: 3s moveRight;
-  //   -webkit-animation: 3s moveRight;
+    //   -webkit-animation: 3s moveRight;
+    //   animation: 3s moveRight;
   // }
 
-  // @keyframes moveRight {
+  // @-webkit-keyframes moveRight {
   //   0% {
   //     left: -100px;
   //   }
@@ -214,7 +214,7 @@ body {
   //     left: 0;
   //   }
   // }
-  // @-webkit-keyframes moveRight {
+  // @keyframes moveRight {
   //   0% {
   //     left: -100px;
   //   }
