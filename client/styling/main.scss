@@ -356,7 +356,9 @@ body {
     }
 
     .links-title {
-      padding-left: 52px;
+      font-size: 24px;
+      line-height: 24px;
+      padding-left: 100px;
     }
   }
 
@@ -442,9 +444,13 @@ body {
       padding: 45px 40px 0 40px;
 
       .highlightLink {
-        @extend .basic-highlight-transition;
+        @extend .basic-highlight-transition-fast;
         color: $yellow-bold;
-        text-decoration: none;
+
+        .span-underline {
+          text-decoration: underline;
+          text-decoration-color: $red-bold;
+        }
       }
 
       .highlightLink:hover {
@@ -475,6 +481,7 @@ body {
 
     a:hover {
       border: 2px solid $pink-bold;
+      text-decoration: underline;
     }
   }
 

@@ -32,13 +32,13 @@ const Contact = (props) => {
                   <li className="li-add-padding-bottom-40">
                     <a className="highlightLink" href="mailto:jrleja.design@gmail.com" aria-label="Email Link">
                       <i className="fa fa-envelope" aria-hidden="true" />
-                      <span>&emsp; </span><span>jrleja.design@gmail.com</span>
+                      <span>&emsp; </span><span className="span-underline">jrleja.design@gmail.com</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-40">
                     <a className="highlightLink" href="/resume/Jasiu_Leja_Resume.pdf">
                       <i className="fa fa-briefcase" aria-hidden="true" />
-                      <span>&emsp; </span><span>Resume</span>
+                      <span>&emsp; </span><span className="span-underline">Resume</span>
                     </a>
                   </li>
                   <li className="li-add-padding-bottom-20">

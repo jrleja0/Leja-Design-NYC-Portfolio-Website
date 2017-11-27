@@ -282,6 +282,11 @@ body {
     -webkit-transition: all .4s ease-in-out;
   }
 
+  .basic-highlight-transition-fast {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+  }
+
   .highlight-blue, .highlight-pink, .highlight-red {
     @extend .basic-highlight-transition;
   }
