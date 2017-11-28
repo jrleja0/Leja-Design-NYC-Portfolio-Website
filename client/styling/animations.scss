@@ -136,24 +136,20 @@ body {
 
   @-webkit-keyframes revealMenuOptions {
     0%, 25% {
-      position: relative;
       left: -100px;
       opacity: 0;
     }
     100% {
-      position: relative;
       left: 0;
       opacity: 1;
     }
   }
   @keyframes revealMenuOptions {
     0%, 25% {
-      position: relative;
       left: -100px;
       opacity: 0;
     }
     100% {
-      position: relative;
       left: 0;
       opacity: 1;
     }

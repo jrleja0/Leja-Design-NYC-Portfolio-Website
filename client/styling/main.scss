@@ -134,6 +134,10 @@ body {
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       @include box-shadow-menu-link(-3px, $blue-bold-rgba6);
+
+      span {
+        position: relative;
+      }
     }
 
     a.active {
@@ -510,6 +514,7 @@ body {
 
         .span-underline {
           text-decoration: underline;
+          -webkit-text-decoration-color: $red-bold;
           text-decoration-color: $red-bold;
         }
       }
