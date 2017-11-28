@@ -5,6 +5,68 @@
 body {
 
 /*///
+ GENERAL Animations
+*////
+
+//// fadeIn Mixin ////
+
+@mixin fadeInMixin($initialOpacity) {
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: $initialOpacity;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: $initialOpacity;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@include fadeInMixin(0.3);
+
+//// Animating all main titles (moving up) ////
+
+  .basic-main-title-animation-move-up {
+    position: relative;
+    -webkit-animation: 3s moveUp;
+    animation: 3s moveUp;
+  }
+
+  @-webkit-keyframes moveUp {
+    0% {
+      bottom: 80px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes moveUp {
+    0% {
+      bottom: 80px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+//// Animating all images (fading in) ////
+
+  img {
+    -webkit-animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+    animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+  }
+
+/*///
  MAIN (Navbar) Animations
 *////
 
@@ -63,23 +125,6 @@ body {
   .dropdown-main-menu {
     -webkit-animation: 0.5s fadeIn;
     animation: 0.5s fadeIn;
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
 //// Dropdown Main Menu Options (Spans) ////
@@ -157,45 +202,34 @@ body {
   }
 
 /*///
- GENERAL Animations
-*////
+ SLIDESHOW (HOME) Animations
+*///
 
-//// Animating all main titles (moving up) ////
-
-  .basic-main-title-animation-move-up {
-    position: relative;
-    -webkit-animation: 3s moveUp;
-    animation: 3s moveUp;
+  .main-slide-container span {
+    -webkit-animation: 1s revealSlideSubTitles;
+    animation: 1s revealSlideSubTitles;
   }
 
-  @-webkit-keyframes moveUp {
-    0% {
-      bottom: 80px;
+  @-webkit-keyframes revealSlideSubTitles {
+    0%, 25% {
+      left: -100px;
       opacity: 0;
     }
     100% {
-      bottom: 0;
+      left: 0;
       opacity: 1;
     }
   }
-  @keyframes moveUp {
-    0% {
-      bottom: 80px;
+  @keyframes revealSlideSubTitles {
+    0%, 25% {
+      left: -100px;
       opacity: 0;
     }
     100% {
-      bottom: 0;
+      left: 0;
       opacity: 1;
     }
   }
-
-//// Animating all images (fading in) ////
-
-  img {
-    -webkit-animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
-    animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
-  }
-
 
 /*///
  PROJECTS Animations

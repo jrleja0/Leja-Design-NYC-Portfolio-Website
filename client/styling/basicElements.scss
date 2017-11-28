@@ -44,7 +44,7 @@ $red-bold-rgba8: rgba(224, 22, 39, 0.8);
 $pink-rgba4: rgba(255, 0, 157, 0.4);
 $pink-rgba8: rgba(255, 0, 157, 0.8);
 $red-pink-rgba: rgba(255, 0, 59, 0.8);
-$black-with-red-rgba: rgba(25, 0, 2, 0.8);
+$black-with-red-rgba8: rgba(25, 0, 2, 0.8);
 $yellow-bold-rgba: rgba(247, 247, 12, 0.8);
 $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
 
@@ -275,19 +275,29 @@ body {
     background: $light-blue-bright;
   }
 
-  //// Button Highlight Color ////
+  //// Basic Transitions ////
 
   .basic-transition {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
   }
+  .basic-transition-fast {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  .ease-then-fast-in {
+    -webkit-transition: all 0s cubic-bezier(0.86, -0.15, 1, 1);
+    transition: all 0s cubic-bezier(0.86, -0.15, 1, 1);
+  }
+
+  //// Button Highlight Color ////
+
   .basic-highlight-transition {
     @extend .basic-transition;
   }
-
   .basic-highlight-transition-fast {
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    @extend .basic-transition-fast;
   }
 
   .highlight-blue, .highlight-pink, .highlight-red {

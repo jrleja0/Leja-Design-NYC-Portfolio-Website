@@ -211,16 +211,40 @@ body {
 *////
 
   .main-slide-container {
-    background-color: $black-with-blue;
+    background-color: $black-with-green;
     padding: 0;
     height: 500px;
 
-    img {
-      @extend .basic-transition;
+    div {
       height: 100%;
+      width: 100%;
       top: 0;
       left: 0;
       position: absolute;
+      text-align: center;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    span {
+      @extend .basic-transition;
+      background-color: $black-with-red-rgba8;
+      display: block;
+      padding: 8px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  .main-slide-container:hover {
+    span {
+      color: $red-bold;
+      font-size: 26px;
     }
   }
 
@@ -235,6 +259,11 @@ body {
       padding: 8px;
       opacity: 0.6;
       border: 3px solid $yellow-bold;
+      cursor: pointer;
+    }
+
+    img:hover {
+      opacity: 1 !important;
     }
   }
 
@@ -320,7 +349,7 @@ body {
   }
 
   .project-textbox-backdrop {
-    background-color: $black-with-red-rgba;
+    background-color: $black-with-red-rgba8;
   }
 
   .project-textbox {
