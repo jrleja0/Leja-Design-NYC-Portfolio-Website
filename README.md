@@ -10,11 +10,31 @@ Welcome! J R Leja Design NYC showcases the web apps, games, and other software d
 Jasiu is a NYC-based Fullstack/Front-End Software Developer with a passion for art and design.
 Thanks for visiting!
 
-This website is a fullstack JavaScript app (Node, Express, React/Redux, PostgreSQL/Sequelize) that features a mobile-responsive UI with SCSS styling.
+This is a fullstack JavaScript website (Node, Express, React/Redux, PostgreSQL/Sequelize) that features a mobile-responsive UI with SCSS styling.
 
 ## Projects & Links
 
-Please check out these links to recent group and solo projects:
+Please check out these links to recent solo and group projects:
+
+### D3.js Visualization of Top Searched Visual Artists
+
+Data visualizations using D3.js of the top 20 most searched visual artists on artnet.com in Sept 2017. Visualizations include: tree map, bubble chart, and plain list.
+
+Deployed at:
+https://top-searched-artists-09-2017.herokuapp.com
+
+GitHub Repository:
+https://github.com/jrleja0/D3-Visualization-Top-Searched-Artists
+
+### Easy Press Release Maker
+
+A fullstack RESTful CRUD app that creates press releases quickly and easily.
+
+Deployed at:
+TBA. Currently in development.
+
+GitHub Repository:
+https://github.com/jrleja0/Easy-Press-Release-Maker
 
 ### Smash-Bots
 
@@ -25,7 +45,7 @@ Deployed at:
 https://smashbots.herokuapp.com
 
 GitHub Repository:
-https://github.com/mikevg466/Smash-Bots
+https://github.com/jrleja0/Smash-Bots
 
 Demo Presentation:
 https://www.youtube.com/watch?v=903YYFBc9V8
@@ -51,7 +71,7 @@ Deployed at:
 https://doa-grace-shopper.herokuapp.com
 
 GitHub Repository:
-https://github.com/CandiceBousquet/GraceShopper
+https://github.com/jrleja0/Dining-with-the-Stars-Ecommerce
 
 ### Tech Talk: Intro to Paper.JS: The Graphics and Animation Library
 
