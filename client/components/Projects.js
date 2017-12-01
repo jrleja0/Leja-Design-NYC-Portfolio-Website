@@ -77,8 +77,8 @@ const Projects = (props) => {
                                       <td>
                                         <p>Check It Out:</p>
                                       </td>
-                                      <td className="highlight-blue td-button">
-                                        <a href={image.linkProject} type="button" aria-label="Project Link">
+                                      <td>
+                                        <a className="a-td-button" href={image.linkProject} type="button" aria-label="Project Link">
                                           <i className="fa fa-link link-icon" aria-hidden="true" />
                                         </a>
                                       </td>
@@ -95,8 +95,8 @@ const Projects = (props) => {
                                           }
                                         </p>
                                       </td>
-                                      <td className="highlight-blue td-button">
-                                        <a href={image.linkDemo} type="button" aria-label="YouTube Presentation Link">
+                                      <td>
+                                        <a className="a-td-button" href={image.linkDemo} type="button" aria-label="YouTube Presentation Link">
                                           <i className="fa fa-youtube-play social-icon" aria-hidden="true" />
                                           {/* <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
                                           <div className="div-img-cover" /> */}
@@ -111,8 +111,8 @@ const Projects = (props) => {
                                       <td>
                                         <p>See GitHub <br />Repository:</p>
                                       </td>
-                                      <td className="highlight-blue td-button">
-                                        <a href={image.linkGitHub} type="button" aria-label="GitHub Project Link">
+                                      <td>
+                                        <a className="a-td-button" href={image.linkGitHub} type="button" aria-label="GitHub Project Link">
                                           <i className="fa fa-github social-icon" aria-hidden="true" />
                                           {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
                                           <div className="div-img-cover" /> */}
