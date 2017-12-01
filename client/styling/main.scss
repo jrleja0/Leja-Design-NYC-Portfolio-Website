@@ -257,16 +257,20 @@ body {
     height: 500px;
     padding: 8px;
 
-    img {
+    .thumbnail {
       @extend .basic-transition;
       height: 33.333%;
       padding: 8px;
       opacity: 0.6;
       border: 3px solid $yellow-bold;
       cursor: pointer;
+
+      img {
+        height: 100%;
+      }
     }
 
-    img:hover {
+    .thumbnail:hover {
       opacity: 1 !important;
     }
   }
