@@ -15,9 +15,11 @@ const MainLogo = (props) => {
       <Link className="main-title" to="/home" onClick={hideMenu}>
         <image className="jrlejaDesignNYCTitle"
           x={leftPadding} y={topPadding} width={logoWidth} height={height}
+          xlinkHref="/assets/text/jrlejaDesignNYCTitle.png"
           href="/assets/text/jrlejaDesignNYCTitle.png" />
         <image className="jrlejaDesignNYCTitleHover"
           x={leftPadding} y={`-${heightDown}`} width={logoWidth} height={height}
+          xlinkHref="/assets/text/jrlejaDesignNYCTitle.png"
           href="/assets/text/jrlejaDesignNYCTitleHover.png" />
       </Link>
     </svg>

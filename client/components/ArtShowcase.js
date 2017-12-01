@@ -8,10 +8,6 @@ const ArtShowcase = (props) => {
   return (
     <div>
       <div className="container-fluid blueBackground">
-        {/* <div className="artShowcase-main-title">
-          <img src="/assets/text/artShowcaseTitle.png" alt="Art Showcase: Art | Photo | Design" />
-          <div className="div-img-cover" />
-        </div> */}
         <div className="row">
           <div className="artShowcase-main-title">
             <h1 className="heading-font">Art Showcase<br />

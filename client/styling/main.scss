@@ -46,8 +46,8 @@ body {
     .nav-contact {
       a {
         border: 2px solid $blue-bold;
-        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       a:hover, a.active {
@@ -65,8 +65,8 @@ body {
         border: 2px solid white;
         padding-right: 30px;
         cursor: pointer;
-        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       a:hover {
@@ -122,8 +122,8 @@ body {
     }
 
     @mixin box-shadow-menu-link($bottomLength, $color) {
-      box-shadow: inset 0 $bottomLength 0 0 $color;
       -webkit-box-shadow: inset 0 $bottomLength 0 0 $color;
+      box-shadow: inset 0 $bottomLength 0 0 $color;
     }
 
     a {
@@ -131,9 +131,13 @@ body {
       border: 2px solid transparent;
       padding: 30px 0;
       width: 100%;
-      transition: all .3s ease-in-out;
       -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
       @include box-shadow-menu-link(-3px, $blue-bold-rgba6);
+
+      span {
+        position: relative;
+      }
     }
 
     a.active {
@@ -204,6 +208,71 @@ body {
     text-align: center;
     border: 1px solid white;
     border-radius: 4px;
+  }
+
+/*//
+ SLIDESHOW (HOME) Styling
+*////
+
+  .main-slide-container {
+    background-color: $black-with-green;
+    padding: 0;
+    height: 500px;
+
+    div {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      text-align: center;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    span {
+      @extend .basic-transition;
+      background-color: $black-with-red-rgba8;
+      display: block;
+      padding: 8px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  .main-slide-container:hover {
+    span {
+      color: $red-bold;
+      font-size: 26px;
+    }
+  }
+
+  .slide-thumbnails-container {
+    background-color: $black-with-green;
+    height: 500px;
+    padding: 8px;
+
+    .thumbnail {
+      @extend .basic-transition;
+      height: 33.333%;
+      padding: 8px;
+      opacity: 0.6;
+      border: 3px solid $yellow-bold;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .thumbnail:hover {
+      opacity: 1 !important;
+    }
   }
 
 /*///
@@ -288,7 +357,7 @@ body {
   }
 
   .project-textbox-backdrop {
-    background-color: $black-with-red-rgba;
+    background-color: $black-with-red-rgba8;
   }
 
   .project-textbox {
@@ -356,7 +425,9 @@ body {
     }
 
     .links-title {
-      padding-left: 52px;
+      font-size: 24px;
+      line-height: 24px;
+      padding-left: 100px;
     }
   }
 
@@ -442,9 +513,14 @@ body {
       padding: 45px 40px 0 40px;
 
       .highlightLink {
-        @extend .basic-highlight-transition;
+        @extend .basic-highlight-transition-fast;
         color: $yellow-bold;
-        text-decoration: none;
+
+        .span-underline {
+          text-decoration: underline;
+          -webkit-text-decoration-color: $red-bold;
+          text-decoration-color: $red-bold;
+        }
       }
 
       .highlightLink:hover {
@@ -475,6 +551,7 @@ body {
 
     a:hover {
       border: 2px solid $pink-bold;
+      text-decoration: underline;
     }
   }
 

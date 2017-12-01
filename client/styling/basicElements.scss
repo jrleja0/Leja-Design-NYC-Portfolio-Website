@@ -44,12 +44,18 @@ $red-bold-rgba8: rgba(224, 22, 39, 0.8);
 $pink-rgba4: rgba(255, 0, 157, 0.4);
 $pink-rgba8: rgba(255, 0, 157, 0.8);
 $red-pink-rgba: rgba(255, 0, 59, 0.8);
-$black-with-red-rgba: rgba(25, 0, 2, 0.8);
+$black-with-red-rgba8: rgba(25, 0, 2, 0.8);
 $yellow-bold-rgba: rgba(247, 247, 12, 0.8);
 $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
 
 
 @mixin pattern-background($backgroundColor, $fileColor) {
+  // background: $backgroundColor url(
+  //   "/assets/abstractions/" + $fileColor + "_tile.jpg") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  // background-size: cover;
   background: $backgroundColor url(
     "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
   // background: $backgroundColor url("/assets/abstractions/" + $fileColor + "_tile.jpg") round;
@@ -136,6 +142,22 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
   border-radius: $radius;
 }
 
+//// Basic Transitions ////
+
+  .basic-transition {
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .basic-transition-fast {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  .ease-then-fast-in {
+    -webkit-transition: all 0s cubic-bezier(0.86, -0.15, 1, 1);
+    transition: all 0s cubic-bezier(0.86, -0.15, 1, 1);
+  }
+
 /*///
  Basic Elements Styling
 *////
@@ -153,13 +175,17 @@ html {
 body {
   margin: 0;
   display: block;
-  @extend .greenBackground;
+  background-color: $black-with-green;
+  opacity: 1;
   @extend .main-font;
+  -webkit-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 
   a, a:hover, a:focus {
     color: white;
     text-decoration: none;
     outline-width: 0;
+    cursor: pointer;
   }
 
   button {
@@ -278,8 +304,10 @@ body {
   //// Button Highlight Color ////
 
   .basic-highlight-transition {
-    transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
+    @extend .basic-transition;
+  }
+  .basic-highlight-transition-fast {
+    @extend .basic-transition-fast;
   }
 
   .highlight-blue, .highlight-pink, .highlight-red {
@@ -301,13 +329,13 @@ body {
 /* pseudo elements */
 
   // .btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before,
-  .clearfix:after, .clearfix:before, .container:after, .container:before, .container-fluid:after, .container-fluid:before, .row:after, .row.before {
+  .clearfix::after, .clearfix::before, .container::after, .container::before, .container-fluid::after, .container-fluid::before, .row::after, .row::before {
     display: table;
     content: " ";
   }
 
   // .btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after,
-  .clearfix:after, .container:after, .container-fluid:after, .row:after {
+  .clearfix::after, .container::after, .container-fluid::after, .row::after {
     clear: both;
   }
 
@@ -379,4 +407,15 @@ body {
     }
   }
 
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:-999;
+  @extend .greenBackground;
 }

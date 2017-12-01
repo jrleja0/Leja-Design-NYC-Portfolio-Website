@@ -11,37 +11,32 @@ const Projects = (props) => {
 
   return (
     <div>
-      <div className="container-fluid greenBackground">
-        <div className="row">
-          <div className="div-project-main-title">
-            {/* <img src="/assets/text/recentProjectsTitle.png" alt="Recent Projects: Apps | Games | Tech Talks" />
-            <div className="div-img-cover" />*/}
-            <h1 className="heading-font">Recent Projects<br />
-              <span className="subheading-font">Apps | Games | Tech Talks</span>
-            </h1>
+      <div className="greenBackground">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="div-project-main-title">
+              <h1 className="heading-font">Recent Projects<br />
+                <span className="subheading-font">Apps | Games | Tech Talks</span>
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className="projects-main-container container-fluid">
-          {
-          imageData && imageData.length ? imageData.map(image => (
-            <div key={image.name}>
-              <div className="div-project-title">
-                <img src={ image.titlePath } alt={ image.projectName } />
-                <div className="div-img-cover" />
-              </div>
-              <div className="row">
-                {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
+          <div className="projects-main-container container-fluid">
+            {
+            imageData && imageData.length ? imageData.map(image => (
+              <div key={image.name}>
+                <div className="div-project-title">
+                  <img src={ image.titlePath } alt={ image.projectName } />
+                  <div className="div-img-cover" />
+                </div>
+                <div className="row">
                   <div
                     className={ `img-main-project ${image.name}` }
                     style={ { backgroundImage: `url( ${image.imagePath} )` } }
                   />
-                {/* </div> */}
-              </div>
-              <div className="row project-text-row">
-                {/* <div className="project-textbox-backdrop" > */}
+                </div>
+                <div className="row project-text-row">
                   <div className="project-textbox">
                     <div className="col-lg-7 col-md-7 col-sm-12">
-                      {/* <div className="project-textbox"> */}
                       <ul className="description-column">
                         <li>
                           { image.description }
@@ -98,8 +93,6 @@ const Projects = (props) => {
                                       <td>
                                         <a className="a-td-button" href={image.linkDemo} type="button" aria-label="YouTube Presentation Link">
                                           <i className="fa fa-youtube-play social-icon" aria-hidden="true" />
-                                          {/* <img className="social-icon" src="/assets/social_icons/youtube.png" alt="YouTube presentation link" />
-                                          <div className="div-img-cover" /> */}
                                         </a>
                                       </td>
                                     </tr>
@@ -114,8 +107,6 @@ const Projects = (props) => {
                                       <td>
                                         <a className="a-td-button" href={image.linkGitHub} type="button" aria-label="GitHub Project Link">
                                           <i className="fa fa-github social-icon" aria-hidden="true" />
-                                          {/* <img className="social-icon" src="/assets/social_icons/github.png" alt="GitHub project link" />
-                                          <div className="div-img-cover" /> */}
                                         </a>
                                       </td>
                                     </tr>
@@ -129,17 +120,17 @@ const Projects = (props) => {
                     </div>
                   </div>
                 </div>
-              {/* </div> */}
-            </div>
-          ))
-          : <div className="div-container-image-under-construction">
-              <img
-                src="/assets/under_construction.gif"
-                alt="Sorry, page is under construction."
-              />
-              <div className="div-img-cover" />
-            </div>
-          }
+              </div>
+            ))
+            : <div className="div-container-image-under-construction">
+                <img
+                  src="/assets/under_construction.gif"
+                  alt="Sorry, page is under construction."
+                />
+                <div className="div-img-cover" />
+              </div>
+            }
+          </div>
         </div>
       </div>
     </div>
