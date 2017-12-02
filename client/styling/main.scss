@@ -414,6 +414,11 @@ body {
   .description-column {
     max-width: 570px;
     margin-left: auto;
+
+    li {
+      padding: 30px 40px;
+      line-height: 26px;
+    }
   }
 
   .links-column {
