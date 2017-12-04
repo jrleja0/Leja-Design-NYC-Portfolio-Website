@@ -518,6 +518,7 @@ body {
     ul {
       color: $light-green;
       padding: 45px 40px 0 40px;
+      margin: 0 auto;
 
       .highlightLink {
         @extend .basic-highlight-transition-fast;
