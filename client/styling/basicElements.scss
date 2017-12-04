@@ -50,15 +50,18 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
 
 
 @mixin pattern-background($backgroundColor, $fileColor) {
-  // background: $backgroundColor url(
-  //   "/assets/abstractions/" + $fileColor + "_tile.jpg") center center;
+  background: $backgroundColor url(
+    "/assets/abstractions/" + $fileColor + "_tile.jpg") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  // background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+@mixin pattern-small-background-fixed($backgroundColor, $fileColor) {
   background: $backgroundColor url(
     "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
-  // background: $backgroundColor url("/assets/abstractions/" + $fileColor + "_tile.jpg") round;
   overflow-x: hidden;
 }
 
@@ -410,7 +413,7 @@ body {
 
 }
 
-body::after {
+.fixed-parallax-background {
   content: "";
   position: fixed;
   height: 100vh;
@@ -418,5 +421,23 @@ body::after {
   left: 0;
   right: 0;
   z-index:-999;
+}
+
+.green-fixed-background::after {
+  @extend .fixed-parallax-background;
   @extend .greenBackground;
+}
+.blue-fixed-background::after {
+  @extend .fixed-parallax-background;
+  @extend .blueBackground;
+}
+.red-fixed-background::after {
+  @extend .fixed-parallax-background;
+  @extend .redBackground;
+}
+.blue-fixed-small-background {
+  @include pattern-small-background-fixed($black-with-blue, 'blue');
+}
+.red-fixed-small-background {
+  @include pattern-small-background-fixed($black-with-red, 'red');
 }

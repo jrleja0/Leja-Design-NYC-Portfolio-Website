@@ -11,7 +11,7 @@ const Projects = (props) => {
 
   return (
     <div>
-      <div className="greenBackground">
+      <div className="green-fixed-background">
         <div className="container-fluid">
           <div className="row">
             <div className="div-project-main-title">
