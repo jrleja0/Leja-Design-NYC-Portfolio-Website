@@ -50,7 +50,7 @@ body {
       max-width: 650px;
 
       ul {
-        margin: 15px auto 0 auto;
+        margin: 15px auto 15px auto;
       }
     }
 
@@ -314,8 +314,8 @@ body {
     }
 
     .projects-main-container {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .art-image-description {
@@ -348,6 +348,16 @@ body {
         a {
           padding: 12px 8px 10px 8px;
         }
+      }
+    }
+
+    .projects-main-container {
+      .basic-div-links {
+        padding-left: 5px;
+      }
+
+      .links-title {
+        padding-left: 60px;
       }
     }
 

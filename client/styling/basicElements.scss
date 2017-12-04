@@ -59,6 +59,7 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
   background: $backgroundColor url(
     "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
   // background: $backgroundColor url("/assets/abstractions/" + $fileColor + "_tile.jpg") round;
+  overflow-x: hidden;
 }
 
 .greenBackground {
