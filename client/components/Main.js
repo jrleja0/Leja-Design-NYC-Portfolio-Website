@@ -122,80 +122,78 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <div className="greenBackground">
-          <div className="main-navbar-styling">
-            <div className="main-logo-container">
-              <MainLogo className="main-logo-lg" width="380" height="70"
-                display="block" leftPadding="12" topPadding="6"
-                hideMenu={this.hideMenu} />
-              <MainLogo className="main-logo-sm" width="270" height="50"
-                display="none" leftPadding="12" topPadding="6"
-                hideMenu={this.hideMenu} />
+        <div className="main-navbar-styling">
+          <div className="main-logo-container">
+            <MainLogo className="main-logo-lg" width="380" height="70"
+              display="block" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
+            <MainLogo className="main-logo-sm" width="270" height="50"
+              display="none" leftPadding="12" topPadding="6"
+              hideMenu={this.hideMenu} />
+          </div>
+          <div className="main-nav-buttons">
+            <div className="nav-contact">
+              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </div>
-            <div className="main-nav-buttons">
-              <div className="nav-contact">
-                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-              </div>
-              <div className="nav-menu">
-                <a role="button" tabIndex="0" onClick={() => this.toggleMenu(this.state.menuColor)}>
-                  <span>Menu</span>
-                  <i className="fa fa-bars" aria-hidden="true" />
-                  <i className="fa fa-times-circle" aria-hidden="true" />
+            <div className="nav-menu">
+              <a role="button" tabIndex="0" onClick={() => this.toggleMenu(this.state.menuColor)}>
+                <span>Menu</span>
+                <i className="fa fa-bars" aria-hidden="true" />
+                <i className="fa fa-times-circle" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className={`dropdown-main-menu ${this.state.menuColor || 'blue'}Background`} onMouseOver={this.mouseOverMenuOptions}>
+          <ul>
+            <li>
+              <NavLink to="/home" activeClassName="active"
+                className="dropdown-main-menu-blue"
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Home</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" activeClassName="active"
+                className="dropdown-main-menu-red"
+                onClick={() => this.toggleMenu('red')}>
+                <span>Contact</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects" activeClassName="active"
+                className="dropdown-main-menu-green"
+                onClick={() => this.toggleMenu('green')}>
+                <span>Coding Projects & Apps</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/art" activeClassName="active"
+                className="dropdown-main-menu-blue yellow-highlight"
+                onClick={() => this.toggleMenu('blue')}>
+                <span>Art</span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+          {this.props.children}
+        <div className="position-relative">
+          <img src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+          <div>
+            <pre className="footer-text">
+              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+            </pre>
+          </div>
+          <div className="div-img-cover" />
+          <div className="footer-linkToTop">
+            { this.state.showScrollUpButton ?
+              <div>
+                <a role="button" tabIndex="0" onClick={this.scrollUp}>
+                  <i className="fa fa-chevron-up" aria-hidden="true" />
                 </a>
               </div>
-            </div>
-          </div>
-          <div className={`dropdown-main-menu ${this.state.menuColor || 'blue'}Background`} onMouseOver={this.mouseOverMenuOptions}>
-            <ul>
-              <li>
-                <NavLink to="/home" activeClassName="active"
-                  className="dropdown-main-menu-blue"
-                  onClick={() => this.toggleMenu('blue')}>
-                  <span>Home</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact" activeClassName="active"
-                  className="dropdown-main-menu-red"
-                  onClick={() => this.toggleMenu('red')}>
-                  <span>Contact</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/projects" activeClassName="active"
-                  className="dropdown-main-menu-green"
-                  onClick={() => this.toggleMenu('green')}>
-                  <span>Coding Projects & Apps</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/art" activeClassName="active"
-                  className="dropdown-main-menu-blue yellow-highlight"
-                  onClick={() => this.toggleMenu('blue')}>
-                  <span>Art</span>
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-            {this.props.children}
-          <div className="position-relative">
-            <img src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
-            <div>
-              <pre className="footer-text">
-                <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
-              </pre>
-            </div>
-            <div className="div-img-cover" />
-            <div className="footer-linkToTop">
-              { this.state.showScrollUpButton ?
-                <div>
-                  <a role="button" tabIndex="0" onClick={this.scrollUp}>
-                    <i className="fa fa-chevron-up" aria-hidden="true" />
-                  </a>
-                </div>
-                : null
-              }
-            </div>
+              : null
+            }
           </div>
         </div>
       </div>

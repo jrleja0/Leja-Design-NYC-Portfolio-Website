@@ -330,21 +330,18 @@ body {
   .div-project-title {
     width: 60%;
     padding: 20px 60px;
-    margin: 0 auto;
+    margin: 20px auto 5px auto;
     position: relative;
   }
 
-  .img-main-project {
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
+  .img-project-main {
     height: 400px;
     max-width: 700px;
     margin: 0 auto;
-  }
 
-  .diningWithTheStars1 {
-    background-position: left top;
+    img {
+      height: 100%;
+    }
   }
 
   .project-text-row {
@@ -352,8 +349,7 @@ body {
     background-image: url("/assets/abstractions/greenTile2_FadeRight.jpg"), url("/assets/abstractions/greenTile2_FadeLeft.jpg");
     background-repeat: repeat-y;
     background-position: left, right;
-    margin-left: -30px;
-    margin-right: -30px;
+    margin: 15px -30px 30px -30px;
   }
 
   .project-textbox-backdrop {
@@ -365,6 +361,8 @@ body {
     font-size: 18px;
     font-weight: 600;
     max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     ul {
       margin-top: 15px;
@@ -414,6 +412,11 @@ body {
   .description-column {
     max-width: 570px;
     margin-left: auto;
+
+    li {
+      padding: 30px 40px 50px 40px;
+      line-height: 26px;
+    }
   }
 
   .links-column {
@@ -495,10 +498,20 @@ body {
     }
   }
 
-  .headshotBackground {
-    background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
-    height: 400px;
-    margin-bottom: 20px;
+  .contact-row-below-title {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .div-headshot {
+    height: 450px;
+    text-align: center;
+
+    img {
+      height: 400px;
+      width: auto;
+      margin-top: 25px;
+    }
   }
 
   .contact-textbox {
@@ -511,6 +524,7 @@ body {
     ul {
       color: $light-green;
       padding: 45px 40px 0 40px;
+      margin: 0 auto;
 
       .highlightLink {
         @extend .basic-highlight-transition-fast;

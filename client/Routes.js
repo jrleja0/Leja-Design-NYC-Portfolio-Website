@@ -8,16 +8,13 @@ import {ArtShowcase, Contact, Main, Projects, Slideshow, Welcome} from './compon
 import { fetchImages } from './store';
 
 const Home = () => (
-  <div>
-    {/* <div>
-      <div className="img-background" />
-      <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!" />
-      <div className="div-img-cover" />
-    </div> */}
+  <div className="green-fixed-background">
     <Slideshow />
     <Welcome />
     <Projects />
-    <Contact />
+    <div className="red-fixed-small-background">
+      <Contact />
+    </div>
   </div>
 );
 
