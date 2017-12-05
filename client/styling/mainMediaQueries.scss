@@ -231,7 +231,15 @@ body {
       font-size: 16px;
     }
 
-    .img-main-project, .headshotBackground {
+    .div-project-title {
+      margin-top: 0;
+    }
+
+    .project-text-row {
+      margin-bottom: 20px;
+    }
+
+    .img-project-main, .headshotBackground {
       height: 340px;
     }
 
@@ -263,9 +271,8 @@ body {
       }
     }
 
-    .img-main-project {
-      background-size: contain;
-      height: 250px;
+    .img-project-main {
+      height: 280px;
     }
 
     .diningWithTheStars1 {
@@ -359,10 +366,6 @@ body {
       .links-title {
         padding-left: 60px;
       }
-    }
-
-    .img-main-project {
-      height: 220px;
     }
 
     .art-image-description {
