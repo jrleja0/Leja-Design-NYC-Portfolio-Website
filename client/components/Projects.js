@@ -29,12 +29,7 @@ const Projects = (props) => {
                   <div className="div-img-cover" />
                 </div>
                 <div className="row">
-                  {/* <div
-                    className={ `img-main-project ${image.name}` }
-                    style={ { backgroundImage: `url( ${image.imagePath} )` } }
-                  /> */}
                   <div className="img-project-main">
-                  {/* <div className={ `img-main-project ${image.name}` }> */}
                     <img src={ image.imagePath } alt={`image of ${image.projectName}`} />
                     <div className="div-img-cover" />
                   </div>
