@@ -17,14 +17,15 @@ const Contact = (props) => {
             </div>
           </div>
           <div className="container-fluid">
-            <div className="row contact-row-below-title top-bottom-margin-30">
-              <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="row contact-row-below-title">
+              <div className="col-lg-1" />
+              <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="div-headshot">
                   <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot" />
                   <div className="div-img-cover" />
                 </div>
               </div>
-              <div className="contact-container col-lg-6 col-md-6 col-sm-12">
+              <div className="contact-container col-lg-5 col-md-6 col-sm-12">
                 <div className="contact-textbox">
                   <ul>
                     <li className="li-add-padding-bottom-40">
@@ -64,6 +65,7 @@ const Contact = (props) => {
                   </ul>
                 </div>
               </div>
+              <div className="col-lg-1" />
             </div>
           </div>
         </div>
