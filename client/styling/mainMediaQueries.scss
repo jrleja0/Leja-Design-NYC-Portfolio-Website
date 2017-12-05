@@ -54,6 +54,16 @@ body {
       }
     }
 
+    .div-headshot {
+      height: 400px;
+      margin-bottom: 20px;
+
+      img {
+        height: 100%;
+        margin-top: 0;
+      }
+    }
+
   }
 
   @media screen and (max-width: 850px) {
@@ -239,7 +249,7 @@ body {
       margin-bottom: 20px;
     }
 
-    .img-project-main, .headshotBackground {
+    .img-project-main, .div-headshot {
       height: 340px;
     }
 
@@ -283,7 +293,7 @@ body {
       height: 218px;
     }
 
-    .headshotBackground {
+    .div-headshot {
       height: 300px;
     }
 

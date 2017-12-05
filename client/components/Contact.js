@@ -18,7 +18,13 @@ const Contact = (props) => {
           </div>
           <div className="container-fluid">
             <div className="row contact-row-below-title top-bottom-margin-30">
-              <div className="headshotBackground col-lg-6 col-md-6 col-sm-12" />
+              {/* <div className="headshotBackground col-lg-6 col-md-6 col-sm-12" /> */}
+              <div className="col-lg-6 col-md-6 col-sm-12">
+                <div className="div-headshot">
+                  <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot" />
+                  <div className="div-img-cover" />
+                </div>
+              </div>
               <div className="contact-container col-lg-6 col-md-6 col-sm-12">
                 <div className="contact-textbox">
                   <ul>

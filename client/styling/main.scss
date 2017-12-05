@@ -498,10 +498,21 @@ body {
     }
   }
 
-  .headshotBackground {
-    background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
-    height: 400px;
-    margin-bottom: 20px;
+  // .headshotBackground {
+  //   background: url("/assets/people/headshot2.jpg") center/contain no-repeat;
+  //   height: 400px;
+  //   margin-bottom: 20px;
+  // }
+
+  .div-headshot {
+    height: 450px;
+    text-align: center;
+
+    img {
+      height: 400px;
+      width: auto;
+      margin-top: 25px;
+    }
   }
 
   .contact-textbox {
