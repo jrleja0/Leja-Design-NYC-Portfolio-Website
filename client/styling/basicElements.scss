@@ -56,13 +56,11 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // overflow-x: hidden;
 }
 
 @mixin pattern-small-background-fixed($backgroundColor, $fileColor) {
   background: $backgroundColor url(
     "/assets/abstractions/" + $fileColor + "_tile.jpg") center/cover no-repeat fixed;
-  // overflow-x: hidden;
 }
 
 .greenBackground {
@@ -426,7 +424,6 @@ body {
 .green-fixed-background, .blue-fixed-background, .red-fixed-background {
   overflow-x: hidden;
 }
-
 .green-fixed-background::after {
   @extend .fixed-parallax-background;
   @extend .greenBackground;
