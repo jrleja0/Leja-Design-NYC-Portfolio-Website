@@ -1,4 +1,5 @@
 import React from 'react';
+import {Spinner} from './index';
 
 /*///
  COMPONENT
@@ -21,7 +22,8 @@ const Contact = (props) => {
               <div className="col-lg-1" />
               <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="div-headshot">
-                  <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot" />
+                  <Spinner />
+                  {/* <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot" /> */}
                   <div className="div-img-cover" />
                 </div>
               </div>

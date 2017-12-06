@@ -1,4 +1,5 @@
 import React from 'react';
+import {Spinner} from './index';
 
 /*///
  COMPONENT
@@ -17,8 +18,9 @@ const ArtShowcase = (props) => {
             </div>
           </div>
           <div className="div-artShowcase-main-img">
-            <img src="/assets/photos_with_abstractions/diptych1_london_nyc_frame.jpg" alt="Diptych: Covent Garden, London & The Bowery, NYC" />
-            <img className="text-comingSoon" src="/assets/text/comingSoon.png" alt="Coming Soon!" />
+            <Spinner />
+            {/* <img src="/assets/photos_with_abstractions/diptych1_london_nyc_frame.jpg" alt="Diptych: Covent Garden, London & The Bowery, NYC" /> */}
+            {/* <img className="text-comingSoon" src="/assets/text/comingSoon.png" alt="Coming Soon!" /> */}
             <div className="art-image-description">
               <span>Diptych: Covent Garden, London & The Bowery, NYC</span>
             </div>

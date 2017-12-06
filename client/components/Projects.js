@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {handleImageOnLoad} from '../utilityFunctions';
+import {Spinner} from './index';
 
 /*///
  COMPONENT
@@ -30,7 +32,8 @@ const Projects = (props) => {
                 </div>
                 <div className="row">
                   <div className="img-project-main">
-                    <img src={ image.imagePath } alt={`image of ${image.projectName}`} />
+                    <Spinner />
+                    {/* <img src={ image.imagePath } alt={`image of ${image.projectName}`} /> */}
                     <div className="div-img-cover" />
                   </div>
                 </div>
