@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {handleImageOnLoad} from '../utilityFunctions';
 import {Spinner} from './index';
+import {handleImageOnLoad} from '../utilityFunctions';
 
 /*///
  COMPONENT
@@ -27,13 +27,15 @@ const Projects = (props) => {
             imageData && imageData.length ? imageData.map(image => (
               <div key={image.name}>
                 <div className="div-project-title">
-                  <img src={ image.titlePath } alt={ image.projectName } />
+                  <img src={ image.titlePath } alt={ image.projectName }
+                    onLoad={handleImageOnLoad} />
                   <div className="div-img-cover" />
                 </div>
                 <div className="row">
                   <div className="img-project-main">
                     <Spinner />
-                    {/* <img src={ image.imagePath } alt={`image of ${image.projectName}`} /> */}
+                    <img src={ image.imagePath } alt={`image of ${image.projectName}`}
+                      onLoad={handleImageOnLoad} />
                     <div className="div-img-cover" />
                   </div>
                 </div>
@@ -129,6 +131,7 @@ const Projects = (props) => {
                 <img
                   src="/assets/under_construction.gif"
                   alt="Sorry, page is under construction."
+                  onLoad={handleImageOnLoad}
                 />
                 <div className="div-img-cover" />
               </div>

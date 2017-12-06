@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Spinner} from './index';
+import {handleImageOnLoad} from '../utilityFunctions';
 
 /*///
  COMPONENT
@@ -88,14 +90,17 @@ class Slideshow extends React.Component {
             <div className="slide"
               style={ {zIndex: 30, display: 'block'} }
               data-slide-num="1">
-              <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!" />
+              <Spinner />
+              <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
+                onLoad={handleImageOnLoad} />
               <div className="div-img-cover" />
             </div>
             <Link to="/projects">
               <div className="slide"
                 style={ {zIndex: 20, display: 'none'} }
                 data-slide-num="2">
-                <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps" />
+                <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
+                  onLoad={handleImageOnLoad} />
                 <div className="div-img-cover" />
                 <span>Coding Projects & Apps</span>
               </div>
@@ -104,7 +109,8 @@ class Slideshow extends React.Component {
               <div className="slide"
                 style={ {zIndex: 10, display: 'none'} }
                 data-slide-num="3">
-                <img src="/assets/artSlideWide.jpg" alt="Art" />
+                <img src="/assets/artSlideWide.jpg" alt="Art"
+                  onLoad={handleImageOnLoad} />
                 <div className="div-img-cover" />
                 <span>Art</span>
               </div>
@@ -115,21 +121,24 @@ class Slideshow extends React.Component {
               style={ {opacity: 1} }
               data-thumbnail-num="1"
               onClick={() => this.skipToSlide('1')}>
-              <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!" />
+              <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
+                onLoad={handleImageOnLoad} />
               <div className="div-img-cover" />
             </div>
             <div className="thumbnail"
               style={ {opacity: 0.6, borderColor: 'transparent'} }
               data-thumbnail-num="2"
               onClick={() => this.skipToSlide('2')}>
-              <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps" />
+              <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
+                onLoad={handleImageOnLoad} />
               <div className="div-img-cover" />
             </div>
             <div className="thumbnail"
               style={ {opacity: 0.6, borderColor: 'transparent'} }
               data-thumbnail-num="3"
               onClick={() => this.skipToSlide('3')}>
-              <img src="/assets/artSlideWide.jpg" alt="Art" />
+              <img src="/assets/artSlideWide.jpg" alt="Art"
+                onLoad={handleImageOnLoad} />
               <div className="div-img-cover" />
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Spinner} from './index';
+import {handleImageOnLoad} from '../utilityFunctions';
 
 /*///
  COMPONENT
@@ -23,7 +24,8 @@ const Contact = (props) => {
               <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="div-headshot">
                   <Spinner />
-                  {/* <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot" /> */}
+                  <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot"
+                    onLoad={handleImageOnLoad} />
                   <div className="div-img-cover" />
                 </div>
               </div>
