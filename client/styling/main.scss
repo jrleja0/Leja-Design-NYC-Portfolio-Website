@@ -458,7 +458,9 @@ body {
   }
 
   .div-artShowcase-main-img {
+    background-color: $black-with-blue-rgba8;
     max-width: 1000px;
+    min-height: 400px;
     margin: 10px auto 30px auto;
     position: relative;
   }
