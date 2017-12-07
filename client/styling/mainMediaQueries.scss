@@ -57,11 +57,10 @@ body {
     .div-headshot {
       height: 400px;
       margin-bottom: 20px;
-
-      img {
-        height: 100%;
-        margin-top: 0;
-      }
+    }
+    .div-headshot-backdrop {
+      height: 100%;
+      margin-top: 0;
     }
 
   }
@@ -252,6 +251,9 @@ body {
     .img-project-main, .div-headshot {
       height: 340px;
     }
+    .div-headshot-backdrop {
+      width: 330px;
+    }
 
     .contact-textbox {
       ul {
@@ -295,6 +297,9 @@ body {
 
     .div-headshot {
       height: 300px;
+    }
+    .div-headshot-backdrop {
+      width: 290px;
     }
 
     .contact-main-title {

@@ -23,9 +23,11 @@ const Contact = (props) => {
               <div className="col-lg-1" />
               <div className="col-lg-5 col-md-6 col-sm-12">
                 <div className="div-headshot">
-                  <Spinner />
-                  <img src="/assets/people/headshot2.jpg" alt="Jasiu Leja - Headshot"
-                    onLoad={handleImageOnLoad} />
+                  <div className="div-headshot-backdrop">
+                    <Spinner />
+                    <img src={"/assets/people/headshot2.jpg"} alt="Jasiu Leja - Headshot"
+                      onLoad={handleImageOnLoad} />
+                  </div>
                   <div className="div-img-cover" />
                 </div>
               </div>

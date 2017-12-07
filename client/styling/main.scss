@@ -509,15 +509,21 @@ body {
   }
 
   .div-headshot {
-    background-color: $black-with-blue-rgba8;
     height: 450px;
     text-align: center;
 
     img {
-      height: 400px;
+      height: 100%;
       width: auto;
-      margin-top: 25px;
     }
+  }
+
+  .div-headshot-backdrop {
+    background-color: $black-with-blue-rgba8;
+    margin-top: 25px;
+    display: inline-block;
+    height: 400px;
+    width: 390px;
   }
 
   .contact-textbox {
