@@ -319,7 +319,7 @@ body {
 
     h1 {
       padding: 15px 0 28px 0;
-      @extend .basic-main-title-animation-move-up;
+      @extend .basic-main-title-animation-move-down;
     }
 
     .subheading-font {
@@ -449,7 +449,7 @@ body {
 
     h1 {
       padding: 15px 0 28px 0;
-      @extend .basic-main-title-animation-move-up;
+      @extend .basic-main-title-animation-move-down;
     }
 
     .subheading-font {
@@ -495,7 +495,7 @@ body {
 
     h1 {
       padding: 15px 0 10px 0;
-      @extend .basic-main-title-animation-move-up;
+      @extend .basic-main-title-animation-move-down;
     }
 
     .subheading-font {
