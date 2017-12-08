@@ -243,6 +243,10 @@ body {
       font-size: 24px;
       line-height: 26px;
     }
+
+    .div-spinner {
+      @extend .div-spinner;
+    }
   }
 
   .main-slide-container:hover {
@@ -335,6 +339,7 @@ body {
   }
 
   .img-project-main {
+    background-color: $black-with-blue-rgba8;
     height: 400px;
     max-width: 700px;
     margin: 0 auto;
@@ -453,7 +458,9 @@ body {
   }
 
   .div-artShowcase-main-img {
+    background-color: $black-with-blue-rgba8;
     max-width: 1000px;
+    min-height: 400px;
     margin: 10px auto 30px auto;
     position: relative;
   }
@@ -508,10 +515,17 @@ body {
     text-align: center;
 
     img {
-      height: 400px;
+      height: 100%;
       width: auto;
-      margin-top: 25px;
     }
+  }
+
+  .div-headshot-backdrop {
+    background-color: $black-with-blue-rgba8;
+    margin-top: 25px;
+    display: inline-block;
+    height: 400px;
+    width: 390px;
   }
 
   .contact-textbox {

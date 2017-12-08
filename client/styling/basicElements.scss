@@ -208,6 +208,7 @@ body {
   }
 
   img {
+    visibility: hidden;
     width: 100%;
     height: auto;
     vertical-align: middle;
@@ -269,6 +270,18 @@ body {
       padding-bottom: 0;
     }
 
+  }
+
+  .div-spinner {
+    text-align: center;
+    top: 30%;
+    width: 100%;
+    position: absolute;
+
+    i {
+      -webkit-animation: fa-spin 4s infinite linear;
+      animation: fa-spin 4s infinite linear;
+    }
   }
 
   .div-img-cover {

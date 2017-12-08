@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import {MainLogo} from './index';
+import {handleImageOnLoad} from '..//utilityFunctions';
 
 /*///
  COMPONENT
@@ -178,7 +179,10 @@ class Main extends React.Component {
         </div>
           {this.props.children}
         <div className="position-relative">
-          <img src="/assets/abstractions/cityscape_nyc_fade.jpg" alt="nyc b&w cityscape design" />
+          <img src="/assets/abstractions/cityscape_nyc_fade.jpg"
+            alt="nyc b&w cityscape design"
+            onLoad={handleImageOnLoad}
+          />
           <div>
             <pre className="footer-text">
               <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
