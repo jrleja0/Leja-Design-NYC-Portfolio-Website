@@ -247,6 +247,29 @@ body {
   }
 
 /*///
+ ROUTES Transitions / Animations
+*////
+
+  .fading-transition-enter, .fading-transition-appear {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+  .fading-transition-enter.fading-transition-enter-active,
+  .fading-transition-appear.fading-transition-appear-active {
+    opacity: 1;
+  }
+  // .fading-transition-enter.fading-transition-enter-active {
+  //   transition-delay:1s;
+  // }
+  .fading-transition-exit {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+  }
+  .fading-transition-exit.fading-transition-exit-active {
+    opacity: 0;
+  }
+
+/*///
  PROJECTS Animations
 *////
 
