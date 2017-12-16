@@ -252,7 +252,7 @@ body {
 
   .fading-transition-enter, .fading-transition-appear {
     opacity: 0.5;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 1200ms ease-in-out;
   }
   .fading-transition-enter.fading-transition-enter-active,
   .fading-transition-appear.fading-transition-appear-active {
@@ -263,12 +263,12 @@ body {
   // }
   .fading-transition-exit {
     opacity: 1;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 600ms ease-in-out;
     // background-color: transparent;
     // transition: background-color 3s ease-in-out;
   }
   .fading-transition-exit.fading-transition-exit-active {
-    opacity: 0.5;
+    opacity: 0;
     // background-color: black;
   }
 
