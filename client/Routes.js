@@ -39,8 +39,8 @@ class Routes extends Component {
           <CSSTransition
             key={location.pathname.split('/')[1] || '/'}
             timeout={{
-              enter: 1200,
-              exit: 600,
+              enter: 1600,
+              exit: 750,
               }} appear
             classNames="fading-transition"
             mountOnEnter={true}
