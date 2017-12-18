@@ -56,7 +56,7 @@ class Routes extends Component {
           >
             {(state) => (
               <div>
-              <div>{state}</div>
+              {/* <div>{state}</div> */}
             <Main>
               <Switch location={location}>
                 <Route path="/home" component={Home} />
