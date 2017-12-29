@@ -12,6 +12,9 @@ const Home = () => (
   <div className="green-fixed-background">
     <Slideshow />
     <Welcome />
+    {/* <div className="green-fixed-small-background">
+      <Projects />
+    </div> */}
     <Projects />
     <div className="red-fixed-small-background">
       <Contact />
