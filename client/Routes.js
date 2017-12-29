@@ -8,6 +8,13 @@ import {TransitionGroup, Transition, CSSTransition} from 'react-transition-group
 import {ArtShowcase, Contact, Main, Projects, Slideshow, Welcome} from './components';
 import { fetchImages } from './store';
 
+const pathBackgroundColors = {
+  '/home': 'green',
+  '/contact': 'red',
+  '/projects': 'green',
+  '/art': 'blue',
+};
+
 const Home = () => (
   <div className="green-fixed-background">
     <Slideshow />
@@ -57,10 +64,10 @@ class Routes extends Component {
             }}
             onExit={console.log('onExit')}
           >
-            {(state) => (
-              <div>
+            {/* {(state) => (
+              <div> */}
               {/* <div>{state}</div> */}
-            <Main>
+            <Main pathName={location.pathname} pathBackgroundColors={pathBackgroundColors}>
               <Switch location={location}>
                 <Route path="/home" component={Home} />
                 <Route path="/projects" component={Projects} />
@@ -69,8 +76,8 @@ class Routes extends Component {
                 <Redirect to="/home" />
               </Switch>
             </Main>
-            </div>
-            )}
+            {/* </div>
+            )} */}
           </CSSTransition>
         </TransitionGroup>
       )} />
