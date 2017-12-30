@@ -14,7 +14,6 @@ class Main extends React.Component {
 
     this.state = {
       menuActive: false,
-      menuColor: 'blue',
       showScrollUpButton: false
     };
 
@@ -43,17 +42,6 @@ class Main extends React.Component {
       navContact.style.visibility = '';
       navMenu.className = 'nav-menu';
       dropdown.style.display = 'none';
-      ///////
-      /*
-      // menuColor ?
-      //   this.setState({
-      //     menuActive: false,
-      //     menuColor: menuColor
-      //   })
-      //   : this.setState({
-      //       menuActive: false
-      //   });
-      */
       this.setState({menuActive: false});
     } else {
       body.style.overflow = 'hidden';
@@ -67,12 +55,6 @@ class Main extends React.Component {
   hideMenu() {
     if (this.state.menuActive) {
       this.toggleMenu();
-    } else {
-      /*
-      this.setState({
-        menuColor: 'blue'
-      });
-      */
     }
   }
 
@@ -130,10 +112,6 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        { ///////
-          console.log('menuActive', this.state.menuActive, 'menuColor', this.state.menuColor, 'pathName', this.props.pathName)
-          ///////
-        }
         <div className="main-navbar-styling">
           <div className="main-logo-container">
             <MainLogo className="main-logo-lg" width="380" height="70"
@@ -148,7 +126,7 @@ class Main extends React.Component {
               <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </div>
             <div className="nav-menu">
-              <a role="button" tabIndex="0" onClick={() => this.toggleMenu()}>
+              <a role="button" tabIndex="0" onClick={this.toggleMenu}>
                 <span>Menu</span>
                 <i className="fa fa-bars" aria-hidden="true" />
                 <i className="fa fa-times-circle" aria-hidden="true" />
@@ -163,28 +141,28 @@ class Main extends React.Component {
             <li>
               <NavLink to="/home" activeClassName="active"
                 className="dropdown-main-menu-green"
-                onClick={() => this.toggleMenu()}>
+                onClick={this.toggleMenu}>
                 <span>Home</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact" activeClassName="active"
                 className="dropdown-main-menu-red"
-                onClick={() => this.toggleMenu()}>
+                onClick={this.toggleMenu}>
                 <span>Contact</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/projects" activeClassName="active"
                 className="dropdown-main-menu-green green-highlight"
-                onClick={() => this.toggleMenu()}>
+                onClick={this.toggleMenu}>
                 <span>Coding Projects & Apps</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/art" activeClassName="active"
                 className="dropdown-main-menu-blue yellow-highlight"
-                onClick={() => this.toggleMenu()}>
+                onClick={this.toggleMenu}>
                 <span>Art</span>
               </NavLink>
             </li>

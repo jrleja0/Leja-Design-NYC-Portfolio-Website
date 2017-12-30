@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-// import {Router} from 'react-router';
 import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import history from './history';
-import {TransitionGroup, Transition, CSSTransition} from 'react-transition-group';
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import {ArtShowcase, Contact, Main, Projects, Slideshow, Welcome} from './components';
 import { fetchImages } from './store';
 
@@ -19,9 +17,6 @@ const Home = () => (
   <div className="green-fixed-background">
     <Slideshow />
     <Welcome />
-    {/* <div className="green-fixed-small-background">
-      <Projects />
-    </div> */}
     <Projects />
     <div className="red-fixed-small-background">
       <Contact />
@@ -34,16 +29,12 @@ const Home = () => (
 *////
 class Routes extends Component {
 
-  componentDidMount () {
+  componentDidMount() {
     this.props.loadInitialData();
   }
 
-  render () {
-    console.log('loc', location.pathname.split('/')[1] || '/', this.props.location.pathname.split('/')[1]);
-    const body = document.getElementsByTagName('body')[0];
-
+  render() {
     return (
-      /* <Router history={history}> */
       <Route render={({ location }) => (
         <TransitionGroup>
           <CSSTransition
@@ -55,18 +46,7 @@ class Routes extends Component {
             classNames="fading-transition"
             mountOnEnter={true}
             unmountOnExit={true}
-            onEnter={() => {
-              console.log('onEnter', body);
-              // body.style.opacity = 0;
-              // window.setTimeout(() => {
-              //   body.style.opacity = 1;
-              // }, 1000);
-            }}
-            onExit={console.log('onExit')}
           >
-            {/* {(state) => (
-              <div> */}
-              {/* <div>{state}</div> */}
             <Main pathName={location.pathname} pathBackgroundColors={pathBackgroundColors}>
               <Switch location={location}>
                 <Route path="/home" component={Home} />
@@ -76,12 +56,9 @@ class Routes extends Component {
                 <Redirect to="/home" />
               </Switch>
             </Main>
-            {/* </div>
-            )} */}
           </CSSTransition>
         </TransitionGroup>
       )} />
-      /* </Router> */
     );
   }
 }
