@@ -14,7 +14,6 @@ class Main extends React.Component {
 
     this.state = {
       menuActive: false,
-      menuColor: 'blue',
       showScrollUpButton: false
     };
 
@@ -33,7 +32,7 @@ class Main extends React.Component {
     window.removeEventListener('scroll', this.handleScrollUpButton);
   }
 
-  toggleMenu(menuColor) {
+  toggleMenu() {
     const body = document.getElementsByTagName('body')[0];
     const navContact = document.getElementsByClassName('nav-contact')[0];
     const navMenu = document.getElementsByClassName('nav-menu')[0];
@@ -43,14 +42,7 @@ class Main extends React.Component {
       navContact.style.visibility = '';
       navMenu.className = 'nav-menu';
       dropdown.style.display = 'none';
-      menuColor ?
-        this.setState({
-          menuActive: false,
-          menuColor: menuColor
-        })
-        : this.setState({
-            menuActive: false
-        });
+      this.setState({menuActive: false});
     } else {
       body.style.overflow = 'hidden';
       navContact.style.visibility = 'hidden';
@@ -62,11 +54,7 @@ class Main extends React.Component {
 
   hideMenu() {
     if (this.state.menuActive) {
-      this.toggleMenu('blue');
-    } else {
-      this.setState({
-        menuColor: 'blue'
-      });
+      this.toggleMenu();
     }
   }
 
@@ -74,8 +62,8 @@ class Main extends React.Component {
     const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
     if (event.target.tagName === 'A') {
       let dropdownColor;
-      if (event.target.className.indexOf('active') !== -1) {
-        const classNames = event.target.className.split(' ');
+      const classNames = event.target.className.split(' ');
+      if (classNames.length > 1) {
         classNames.forEach((className) => {
           if (className.indexOf('dropdown-main-menu-') !== -1) {
             dropdownColor = className;
@@ -95,11 +83,12 @@ class Main extends React.Component {
           dropdown.className = 'dropdown-main-menu redBackground';
           break;
         default:
-          dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
+          dropdown.className = 'dropdown-main-menu blueBackground';
       }
     } else {
       if (event.target.tagName === 'SPAN') return;
-      dropdown.className = `dropdown-main-menu ${this.state.menuColor || 'blue'}Background`;
+      dropdown.className = `dropdown-main-menu ${
+        this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`;
     }
   }
 
@@ -137,7 +126,7 @@ class Main extends React.Component {
               <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </div>
             <div className="nav-menu">
-              <a role="button" tabIndex="0" onClick={() => this.toggleMenu(this.state.menuColor)}>
+              <a role="button" tabIndex="0" onClick={this.toggleMenu}>
                 <span>Menu</span>
                 <i className="fa fa-bars" aria-hidden="true" />
                 <i className="fa fa-times-circle" aria-hidden="true" />
@@ -145,33 +134,35 @@ class Main extends React.Component {
             </div>
           </div>
         </div>
-        <div className={`dropdown-main-menu ${this.state.menuColor || 'blue'}Background`} onMouseOver={this.mouseOverMenuOptions}>
+        <div className={`dropdown-main-menu ${
+          this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`
+          } onMouseOver={this.mouseOverMenuOptions}>
           <ul>
             <li>
               <NavLink to="/home" activeClassName="active"
-                className="dropdown-main-menu-blue"
-                onClick={() => this.toggleMenu('blue')}>
+                className="dropdown-main-menu-green"
+                onClick={this.toggleMenu}>
                 <span>Home</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact" activeClassName="active"
                 className="dropdown-main-menu-red"
-                onClick={() => this.toggleMenu('red')}>
+                onClick={this.toggleMenu}>
                 <span>Contact</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/projects" activeClassName="active"
-                className="dropdown-main-menu-green"
-                onClick={() => this.toggleMenu('green')}>
+                className="dropdown-main-menu-green green-highlight"
+                onClick={this.toggleMenu}>
                 <span>Coding Projects & Apps</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/art" activeClassName="active"
                 className="dropdown-main-menu-blue yellow-highlight"
-                onClick={() => this.toggleMenu('blue')}>
+                onClick={this.toggleMenu}>
                 <span>Art</span>
               </NavLink>
             </li>

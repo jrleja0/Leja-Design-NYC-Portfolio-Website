@@ -455,3 +455,6 @@ body {
 .red-fixed-small-background {
   @include pattern-small-background-fixed($black-with-red, 'red');
 }
+.green-fixed-small-background {
+  @include pattern-small-background-fixed($black-with-green, 'green');
+}

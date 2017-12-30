@@ -150,10 +150,10 @@ body {
       line-height: 32px;
     }
 
-    .dropdown-main-menu-green {
+    .green-highlight {
       @include box-shadow-menu-link(-3px, $green-bold-rgba6);
     }
-    .dropdown-main-menu-green:hover, .dropdown-main-menu-green.active:hover {
+    .green-highlight:hover, .green-highlight.active:hover {
       @include box-shadow-menu-link(-90px, $green-bold-rgba6);
     }
     .dropdown-main-menu-red {
