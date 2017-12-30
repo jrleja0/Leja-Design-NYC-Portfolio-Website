@@ -30,15 +30,15 @@ body {
 }
 @include fadeInMixin(0.3);
 
-//// Animating all main titles (moving up) ////
+//// Animating all main titles (moving down) ////
 
-  .basic-main-title-animation-move-up {
+  .basic-main-title-animation-move-down {
     position: relative;
-    -webkit-animation: 3s moveUp;
-    animation: 3s moveUp;
+    -webkit-animation: 3s moveDown;
+    animation: 3s moveDown;
   }
 
-  @-webkit-keyframes moveUp {
+  @-webkit-keyframes moveDown {
     0% {
       bottom: 80px;
       opacity: 0;
@@ -48,7 +48,7 @@ body {
       opacity: 1;
     }
   }
-  @keyframes moveUp {
+  @keyframes moveDown {
     0% {
       bottom: 80px;
       opacity: 0;
@@ -64,6 +64,25 @@ body {
   img {
     -webkit-animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
     animation: 3s cubic-bezier(0.36, 0.6, 0.47, 1) fadeIn;
+  }
+
+//// Animating body (fading in) ////
+
+  @-webkit-keyframes fadeInBody {
+    0%, 30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInBody {
+    0%, 30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 /*///
