@@ -11,20 +11,24 @@ const Project = (props) => {
 
   return (
     <div>
-      <div className="div-project-title">
-        <img src={ proj.titlePath } alt={ proj.projectName }
+      {/* <div className="div-project-title">
+        <img src={ proj.titlePath } alt={ proj.projectTitle }
           onLoad={handleImageOnLoad} />
         <div className="div-img-cover" />
-      </div>
+      </div> */}
       <div className="row">
         <div className="div-project-heading">
-          <h1 className="project-heading-font">{proj.projectName}</h1>
+          <h1 className="project-heading-font">
+            { proj.projectHeading && proj.projectHeading.map(heading => (
+              <span key={heading}>{heading}<br /></span>
+            ))}
+          </h1>
         </div>
       </div>
       <div className="row">
         <div className="img-project-main">
           <Spinner />
-          <img src={ proj.imagePath } alt={`image of ${proj.projectName}`}
+          <img src={ proj.imagePath } alt={`image of ${proj.projectTitle}`}
             onLoad={handleImageOnLoad} />
           <div className="div-img-cover" />
         </div>

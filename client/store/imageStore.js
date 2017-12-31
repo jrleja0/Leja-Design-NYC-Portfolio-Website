@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+const processProjectTitles = projects => {
+  projects.forEach(project => {
+    const projectSplit = project.projectName.split('//');
+    project.projectTitle = projectSplit.join(' ');
+    project.projectHeading = projectSplit;
+  });
+  return projects;
+};
+
 // ---------- ACTION TYPES ----------
 const LOAD_IMAGES = 'LOAD_IMAGES';
 
@@ -15,7 +24,8 @@ const initState = {
 export const fetchImages = () =>
   dispatch =>
     axios.get('/api/images')
-      .then(res => dispatch(loadImages(res.data || [] )))
+      .then(res => processProjectTitles(res.data))
+      .then(projImages => dispatch(loadImages(projImages || [] )))
       .catch(console.error.bind(console));
 
 // ---------- REDUCER ----------
