@@ -32,6 +32,11 @@ const Projects = (props) => {
                   <div className="div-img-cover" />
                 </div>
                 <div className="row">
+                  <div className="div-project-heading">
+                    <h1 className="project-heading-font">{image.projectName}</h1>
+                  </div>
+                </div>
+                <div className="row">
                   <div className="img-project-main">
                     <Spinner />
                     <img src={ image.imagePath } alt={`image of ${image.projectName}`}
