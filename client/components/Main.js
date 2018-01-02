@@ -153,6 +153,13 @@ class Main extends React.Component {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/skills" activeClassName="active"
+                className="dropdown-main-menu-blue blue-with-red-highlight"
+                onClick={this.toggleMenu}>
+                <span>Skills</span>
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/projects" activeClassName="active"
                 className="dropdown-main-menu-green green-highlight"
                 onClick={this.toggleMenu}>
