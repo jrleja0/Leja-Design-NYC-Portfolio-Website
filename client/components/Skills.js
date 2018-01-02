@@ -16,7 +16,10 @@ const Skills = (props) => {
           </div>
           <div className="row skills-lists">
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <h3>Front-End</h3>
+              <h3>
+                <i className="fa fa-bolt" aria-hidden="true" />
+                Front-End
+              </h3>
               <ul>
                 <li>1111</li>
                 <li>2222</li>
@@ -24,7 +27,10 @@ const Skills = (props) => {
               </ul>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <h3>Back-End</h3>
+              <h3>
+                <i className="fa fa-bolt" aria-hidden="true" />
+                Back-End
+              </h3>
               <ul>
                 <li>1111</li>
                 <li>2222</li>
@@ -32,7 +38,10 @@ const Skills = (props) => {
               </ul>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <h3>Tools / Design / Other</h3>
+              <h3>
+                <i className="fa fa-bolt" aria-hidden="true" />
+                Tools | Design | Other
+              </h3>
               <ul>
                 <li>1111</li>
                 <li>2222</li>
