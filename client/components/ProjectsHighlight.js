@@ -27,7 +27,7 @@ const ProjectsHighlight = (props) => {
             {
             projectData && projectData.length ?
               projectData.map((proj, i) => (
-                i < 4 &&
+                (i === 0 || i === 3) &&
                 <div key={proj.name}>
                   <Project proj={proj} />
                 </div>
@@ -42,11 +42,14 @@ const ProjectsHighlight = (props) => {
               </div>
             }
           </div>
-          <div className="row">
-            <div>
-              <NavLink to="/projects" activeClassName="active"
-                onClick={() => { window.scrollTo(0, 0); }}>See More Projects
-              </NavLink>
+          <div className="row project-text-row">
+            <div className="button-home-to-projects-page">
+              <div>
+                <NavLink to="/projects" activeClassName="active"
+                  onClick={() => { window.scrollTo(0, 0); }}>
+                  <h1>See More<br />Projects</h1>
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>

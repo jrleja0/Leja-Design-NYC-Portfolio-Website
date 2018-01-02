@@ -271,6 +271,32 @@ body {
  PROJECTS Animations
 *////
 
+//// "See More Projects" Button (glow animation) ////
+
+.button-home-to-projects-page div {
+  -webkit-animation: 6s infinite glow;
+  animation: 6s infinite glow;
+}
+
+@-webkit-keyframes glow {
+  0%, 100% {
+    background-color: $black-with-red;
+  }
+  50% {
+    background-color: $dark-red;
+  }
+}
+@keyframes glow {
+  0%, 100% {
+    background-color: $black-with-red;
+  }
+  50% {
+    background-color: $dark-red;
+  }
+}
+
+//// project headings move right (not in use) ////
+
   // .div-project-title {
     //   -webkit-animation: 3s moveRight;
     //   animation: 3s moveRight;
