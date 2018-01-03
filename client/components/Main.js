@@ -183,7 +183,7 @@ class Main extends React.Component {
           />
           <div>
             <pre className="footer-text">
-              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2018
             </pre>
           </div>
           <div className="div-img-cover" />
