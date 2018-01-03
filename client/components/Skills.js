@@ -21,9 +21,16 @@ const Skills = (props) => {
                 Front-End
               </h3>
               <ul>
-                <li>1111</li>
-                <li>2222</li>
-                <li>3333</li>
+                <li>JavaScript (ES6)</li>
+                <li>HTML</li>
+                <li>CSS | SCSS</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>D3</li>
+                <li>jQuery</li>
+                <li>AJAX | Axios.js</li>
+                <li>WebSockets | Socket.io</li>
+                <li>Paper.js | Phaser.js | Bootstrap</li>
               </ul>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
@@ -31,10 +38,12 @@ const Skills = (props) => {
                 <i className="fa fa-bolt" aria-hidden="true" />
                 Back-End
               </h3>
-              <ul>
-                <li>1111</li>
-                <li>2222</li>
-                <li>3333</li>
+              <ul className="ul-back-end">
+                <li>Node</li>
+                <li>Express</li>
+                <li>PostgreSQL | Sequelize</li>
+                <li>SQL</li>
+                <li>Cheerio.js</li>
               </ul>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
@@ -43,9 +52,16 @@ const Skills = (props) => {
                 Tools | Design | Other
               </h3>
               <ul>
-                <li>1111</li>
-                <li>2222</li>
-                <li>3333</li>
+                <li>Git | GitHub</li>
+                <li>Chrome DevTools</li>
+                <li>Command Line</li>
+                <li>Mocha | Chai | Enzyme</li>
+                <li>Webpack</li>
+                <li>Heroku</li>
+                <li>Bluebird.js | Promises</li>
+                <li>Agile | Test-Driven Development</li>
+                <li>Photoshop</li>
+                <li>Figma</li>
               </ul>
             </div>
           </div>

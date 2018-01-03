@@ -159,6 +159,16 @@ body {
       line-height: 28px;
     }
 
+    .skills-lists {
+      div {
+        width: 80%;
+        margin: auto;
+      }
+
+      ul.ul-back-end {
+        min-height: 220px;
+      }
+    }
   }
 
   @media screen and (max-width: 630px) {

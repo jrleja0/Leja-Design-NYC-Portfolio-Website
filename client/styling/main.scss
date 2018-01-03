@@ -554,7 +554,8 @@ body {
   }
 
   .skills-lists {
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 
     h3 {
       background-color: black;
@@ -565,6 +566,7 @@ body {
       border-bottom-right-radius: 0;
       font-size: 20px;
       font-weight: 400;
+      text-align: center;
     }
 
     ul {
@@ -574,14 +576,18 @@ body {
       margin-bottom: 20px;
       padding-bottom: 15px;
       list-style-type: disc;
-      list-style-position: inside;
       @include border-radius(20px);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
 
+    ul.ul-back-end {
+      min-height: 425px;
+    }
+
     li {
-      padding-top: 15px;
+      margin-left: 14%;
+      padding: 15px 5px 0 5px;
       line-height: 26px;
     }
 
