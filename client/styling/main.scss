@@ -323,10 +323,14 @@ body {
  PROJECTS Styling
 *////
 
+  div.div-button-to-projects-page {
+    margin-bottom: 40px;
+  }
+
   .button-home-to-projects-page {
     text-align: center;
     min-height: 100px;
-    margin: 20px 0;
+    margin: 0;
 
     div {
       background-color: $black-with-red;
@@ -391,8 +395,7 @@ body {
 
   .div-project-heading {
     background-color: $black-with-green-rgba;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 15px -15px;
 
     .project-heading-font {
       @extend .heading-font;
@@ -417,7 +420,7 @@ body {
     background-image: url("/assets/abstractions/greenTile2_FadeRight.jpg"), url("/assets/abstractions/greenTile2_FadeLeft.jpg");
     background-repeat: repeat-y;
     background-position: left, right;
-    margin: 15px -30px 30px -30px;
+    margin: 15px -30px;
   }
 
   .project-textbox-backdrop {

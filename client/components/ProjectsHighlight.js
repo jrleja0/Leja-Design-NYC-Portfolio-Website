@@ -42,7 +42,7 @@ const ProjectsHighlight = (props) => {
               </div>
             }
           </div>
-          <div className="row project-text-row">
+          <div className="row project-text-row div-button-to-projects-page">
             <div className="button-home-to-projects-page">
               <div>
                 <NavLink to="/projects" activeClassName="active"
