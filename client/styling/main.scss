@@ -240,6 +240,7 @@ body {
 
     img {
       height: 100%;
+      @extend .basic-transition;
     }
 
     span {
@@ -252,6 +253,8 @@ body {
       bottom: 0;
       font-size: 24px;
       line-height: 26px;
+      text-decoration-line: underline;
+      text-decoration-color: transparent;
     }
 
     .div-spinner {
@@ -260,9 +263,14 @@ body {
   }
 
   .main-slide-container:hover {
+    img {
+      -webkit-filter: contrast(130%);
+      filter: contrast(130%);
+    }
     span {
       color: $red-bold;
       font-size: 26px;
+      text-decoration-color: $red-bold;
     }
   }
 
