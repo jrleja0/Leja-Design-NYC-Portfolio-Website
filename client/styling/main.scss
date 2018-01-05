@@ -398,9 +398,12 @@ body {
     margin: 15px -15px;
 
     .project-heading-font {
-      @extend .heading-font;
-      font-size: 70px;
-      // line-height: 98px;
+      font-family: Georgia, serif;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      line-height: 64px;
+      padding: 3px 0;
     }
   }
 
