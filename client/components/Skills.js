@@ -44,6 +44,7 @@ const Skills = (props) => {
                 <li>PostgreSQL | Sequelize</li>
                 <li>SQL</li>
                 <li>Cheerio.js</li>
+                <li>Passport.js | OAuth</li>
               </ul>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
