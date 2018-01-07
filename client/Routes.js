@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
-import {ArtShowcase, Contact, Main, ProjectsHighlight, ProjectsPage, Skills, Slideshow, Welcome} from './components';
+import {ArtShowcase, Contact, Home, Main, ProjectsPage, Skills} from './components';
 import { fetchImages } from './store';
 
 const pathBackgroundColors = {
@@ -12,50 +12,6 @@ const pathBackgroundColors = {
   '/projects': 'green',
   '/art': 'blue',
 };
-
-class Home extends React.Component {
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleHomeBackgroundColor);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleHomeBackgroundColor);
-  }
-
-  handleHomeBackgroundColor() {
-    const homeBackgrounds = [...document.getElementsByClassName('home-background')];
-    homeBackgrounds.forEach(background => {
-      background.style.zIndex = -999;
-      background.style.opacity = 0;
-    });
-    if (window.scrollY < 3125 || window.scrollY > 4825 ) {  // green
-      homeBackgrounds[2].style.zIndex = -998;
-      homeBackgrounds[2].style.opacity = 1;
-    } else if (window.scrollY < 3875) {  // blue
-      homeBackgrounds[1].style.zIndex = -998;
-      homeBackgrounds[1].style.opacity = 1;
-    } else {
-      homeBackgrounds[0].style.zIndex = -998;  // red
-      homeBackgrounds[0].style.opacity = 1;
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Slideshow />
-        <Welcome />
-        <ProjectsHighlight />
-        <Skills />
-        <Contact />
-        <div className="home-background red-fixed-background" />
-        <div className="home-background blue-fixed-background" />
-        <div className="home-background green-fixed-background" />
-      </div>
-    );
-  }
-}
 
 /*///
  COMPONENT
