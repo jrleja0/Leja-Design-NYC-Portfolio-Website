@@ -13,19 +13,49 @@ const pathBackgroundColors = {
   '/art': 'blue',
 };
 
-const Home = () => (
-  <div className="green-fixed-background">
-    <Slideshow />
-    <Welcome />
-    <ProjectsHighlight />
-    <div className="blue-fixed-small-background">
-      <Skills />
-    </div>
-    <div className="red-fixed-small-background">
-      <Contact />
-    </div>
-  </div>
-);
+class Home extends React.Component {
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleHomeBackgroundColor);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleHomeBackgroundColor);
+  }
+
+  handleHomeBackgroundColor() {
+    const homeBackgrounds = [...document.getElementsByClassName('home-background')];
+    homeBackgrounds.forEach(background => {
+      background.style.zIndex = -999;
+      background.style.opacity = 0;
+    });
+    if (window.scrollY < 3125 || window.scrollY > 4825 ) {  // green
+      homeBackgrounds[2].style.zIndex = -998;
+      homeBackgrounds[2].style.opacity = 1;
+    } else if (window.scrollY < 3875) {  // blue
+      homeBackgrounds[1].style.zIndex = -998;
+      homeBackgrounds[1].style.opacity = 1;
+    } else {
+      homeBackgrounds[0].style.zIndex = -998;  // red
+      homeBackgrounds[0].style.opacity = 1;
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Slideshow />
+        <Welcome />
+        <ProjectsHighlight />
+        <Skills />
+        <Contact />
+        <div className="home-background red-fixed-background" />
+        <div className="home-background blue-fixed-background" />
+        <div className="home-background green-fixed-background" />
+      </div>
+    );
+  }
+}
 
 /*///
  COMPONENT
