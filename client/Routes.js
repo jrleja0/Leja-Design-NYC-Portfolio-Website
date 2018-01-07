@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
-import {ArtShowcase, Contact, Main, Projects, Slideshow, Welcome} from './components';
+import {ArtShowcase, Contact, Main, ProjectsHighlight, ProjectsPage, Skills, Slideshow, Welcome} from './components';
 import { fetchImages } from './store';
 
 const pathBackgroundColors = {
@@ -17,7 +17,10 @@ const Home = () => (
   <div className="green-fixed-background">
     <Slideshow />
     <Welcome />
-    <Projects />
+    <ProjectsHighlight />
+    <div className="blue-fixed-small-background">
+      <Skills />
+    </div>
     <div className="red-fixed-small-background">
       <Contact />
     </div>
@@ -50,9 +53,10 @@ class Routes extends Component {
             <Main pathName={location.pathname} pathBackgroundColors={pathBackgroundColors}>
               <Switch location={location}>
                 <Route path="/home" component={Home} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/art" component={ArtShowcase} />
                 <Route path="/contact" component={Contact} />
+                <Route path="/skills" component={Skills} />
+                <Route path="/projects" component={ProjectsPage} />
+                <Route path="/art" component={ArtShowcase} />
                 <Redirect to="/home" />
               </Switch>
             </Main>

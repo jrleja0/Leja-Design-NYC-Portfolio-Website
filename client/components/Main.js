@@ -153,6 +153,13 @@ class Main extends React.Component {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/skills" activeClassName="active"
+                className="dropdown-main-menu-blue blue-with-red-highlight"
+                onClick={this.toggleMenu}>
+                <span>Skills</span>
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/projects" activeClassName="active"
                 className="dropdown-main-menu-green green-highlight"
                 onClick={this.toggleMenu}>
@@ -176,7 +183,7 @@ class Main extends React.Component {
           />
           <div>
             <pre className="footer-text">
-              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2017
+              <i className="fa fa-wrench" aria-hidden="true" />  J R Leja Design NYC    |    Jasiu Leja    |    2018
             </pre>
           </div>
           <div className="div-img-cover" />
