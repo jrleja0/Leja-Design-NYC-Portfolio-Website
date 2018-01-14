@@ -429,6 +429,8 @@ body {
 
 }
 
+  //// Fixed Backgrounds ////
+
 .fixed-parallax-background {
   content: "";
   position: fixed;
@@ -437,6 +439,11 @@ body {
   left: 0;
   right: 0;
   z-index:-999;
+}
+
+.home-background {
+  -webkit-transition: opacity .2s cubic-bezier(0.38, 0.4, 1, -0.01);
+  transition: opacity .2s cubic-bezier(0.38, 0.4, 1, -0.01);
 }
 
 .green-fixed-background, .blue-fixed-background, .red-fixed-background {
