@@ -39,12 +39,14 @@ class Main extends React.Component {
     const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
     if (this.state.menuActive) {
       body.style.overflow = 'auto';
+      body.style.position = 'relative';
       navContact.style.visibility = '';
       navMenu.className = 'nav-menu';
       dropdown.style.display = 'none';
       this.setState({menuActive: false});
     } else {
       body.style.overflow = 'hidden';
+      body.style.position = 'fixed';
       navContact.style.visibility = 'hidden';
       navMenu.className += ' active';
       dropdown.style.display = 'block';
