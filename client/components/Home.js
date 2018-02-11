@@ -22,7 +22,7 @@ class Home extends Component {
     window.removeEventListener('scroll', this.handleBackgrounds);
   }
 
-  handleHomeBackgroundColor(blueBackground, greenBackground, redBackground, homeBackgrounds) {
+  handleHomeBackgroundColor(blueBackground, redBackground, homeBackgrounds) {
     const windowTopEdge = $(window).scrollTop();
     const windowBottomEdge = windowTopEdge + $(window).height();
     const documentBottomEdge = $(document).height();
@@ -34,16 +34,11 @@ class Home extends Component {
 
       return elTopEdge <= windowBottomEdge;
     };
-
     const showBackground = background => {
       background.style.visibility = 'visible';
-      //background.style.zIndex = -998; // safari should not change zIndex
-      //background.style.opacity = 1;
     };
     const hideBackground = background => {
       background.style.visibility = 'hidden';
-      //background.style.zIndex = -999; // safari should not change zIndex
-      //background.style.opacity = 0;
     };
 
     let idx;
@@ -64,29 +59,11 @@ class Home extends Component {
         hideBackground(background);
       }
     });
-
-    // let color;
-    // if (elementOnScreen(redBackground)) {
-    //   color = 'red';
-    // } else if (elementOnScreen(blueBackground)) {
-    //   color = 'blue';
-    // } else {
-    //   color = 'green';
-    // }
-
-    // homeBackgrounds.forEach(background => {
-    //   if (background.className.includes(color)) {
-    //     showBackground(background);
-    //   } else {
-    //     hideBackground(background);
-    //   }
-    // });
   }
 
   handleBackgrounds() {
     this.handleHomeBackgroundColor(
       document.querySelector('.blue-fixed-background'),  // starting element of blue background
-      document.querySelector('.green-fixed-background'),  // starting element of green background
       document.querySelector('.red-fixed-background'),  // starting element of red background
       [...document.getElementsByClassName('home-background')]  // array of all home-background elements
     );
@@ -95,17 +72,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {/* <div className="home-dark-fixed-background"> */}
-          <Slideshow />
-          <Welcome />
-          <ProjectsHighlight />
-          <Skills />
-          <Contact />
-          <div className="home-dark-fixed-background" />
-          <div className="home-background red-fixed-background" style={{opacity: 1, visibility: 'hidden'}} />
-          <div className="home-background blue-fixed-background" style={{opacity: 1, visibility: 'hidden'}} />
-          <div className="home-background green-fixed-background" style={{opacity: 1, visibility: 'hidden'}} />
-        {/* </div> */}
+        <Slideshow />
+        <Welcome />
+        <ProjectsHighlight />
+        <Skills />
+        <Contact />
+        <div className="home-dark-fixed-background" />
+        <div className="home-background red-fixed-background" style={{visibility: 'hidden'}} />
+        <div className="home-background blue-fixed-background" style={{visibility: 'hidden'}} />
+        <div className="home-background green-fixed-background" style={{visibility: 'hidden'}} />
       </div>
     );
   }
