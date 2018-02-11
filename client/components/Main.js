@@ -151,6 +151,7 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Home
+                  <i className="fa fa-angle-double-left" aria-hidden="true" />
                 </span>
               </NavLink>
             </li>
@@ -161,6 +162,7 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Contact
+                  <i className="fa fa-angle-double-left" aria-hidden="true" />
                 </span>
               </NavLink>
             </li>
@@ -171,6 +173,7 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Skills
+                  <i className="fa fa-angle-double-left" aria-hidden="true" />
                 </span>
               </NavLink>
             </li>
@@ -181,6 +184,7 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Coding Projects & Apps
+                  <i className="fa fa-angle-double-left" aria-hidden="true" />
                 </span>
               </NavLink>
             </li>
@@ -191,6 +195,7 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Art
+                  <i className="fa fa-angle-double-left" aria-hidden="true" />
                 </span>
               </NavLink>
             </li>

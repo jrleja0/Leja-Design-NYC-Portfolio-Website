@@ -312,6 +312,14 @@ body {
       }
     }
 
+    .dropdown-main-menu {
+      a {
+        i.fa-angle-double-left {
+          display: none;
+        }
+      }
+    }
+
     .heading-font {
       font-size: 36px;
       line-height: 46px;
@@ -377,6 +385,19 @@ body {
       }
     }
 
+    .dropdown-main-menu {
+      a {
+        span {
+          font-size: 24px;
+        }
+
+        i.fa-angle-double-right {
+          font-size: 32px;
+          left: -8px;
+        }
+      }
+    }
+
     .projects-main-container {
       padding-left: 10px;
       padding-right: 10px;
@@ -418,19 +439,6 @@ body {
       .nav-menu {
         a {
           padding: 12px 8px 10px 8px;
-        }
-      }
-    }
-
-    .dropdown-main-menu {
-      a {
-        span {
-          font-size: 24px;
-        }
-
-        i {
-          font-size: 32px;
-          left: -8px;
         }
       }
     }
