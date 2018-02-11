@@ -453,7 +453,7 @@ body {
   transition: opacity .2s cubic-bezier(0.38, 0.4, 1, -0.01);
 }
 
-.green-fixed-background, .blue-fixed-background, .red-fixed-background {
+.green-fixed-background, .blue-fixed-background, .red-fixed-background, .home-dark-fixed-background {
   overflow-x: hidden;
 }
 .green-fixed-background::after {
@@ -467,6 +467,10 @@ body {
 .red-fixed-background::after {
   @extend .fixed-parallax-background;
   @extend .redBackground;
+}
+.home-dark-fixed-background::after {
+  @extend .fixed-parallax-background;
+  background-color: $black-with-green;
 }
 .blue-fixed-small-background {
   @include pattern-small-background-fixed($black-with-blue, 'blue');

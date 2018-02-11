@@ -11,11 +11,6 @@ const Project = (props) => {
 
   return (
     <div>
-      {/* <div className="div-project-title">
-        <img src={ proj.titlePath } alt={ proj.projectTitle }
-          onLoad={handleImageOnLoad} />
-        <div className="div-img-cover" />
-      </div> */}
       <div className="row">
         <div className="div-project-heading">
           <h1 className="project-heading-font">
