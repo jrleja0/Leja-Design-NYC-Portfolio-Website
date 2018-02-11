@@ -151,7 +151,6 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Home
-                  {/* <span>Home</span> */}
                 </span>
               </NavLink>
             </li>
@@ -161,7 +160,6 @@ class Main extends React.Component {
                 onClick={this.toggleMenu}>
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  {/* <span>Contact</span> */}
                   Contact
                 </span>
               </NavLink>
@@ -173,7 +171,6 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Skills
-                  {/* <span>Skills</span> */}
                 </span>
               </NavLink>
             </li>
@@ -184,7 +181,6 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Coding Projects & Apps
-                  {/* <span>Coding Projects & Apps</span> */}
                 </span>
               </NavLink>
             </li>
@@ -195,7 +191,6 @@ class Main extends React.Component {
                 <span>
                   <i className="fa fa-angle-double-right" aria-hidden="true" />
                   Art
-                  {/* <span>Art</span> */}
                 </span>
               </NavLink>
             </li>
