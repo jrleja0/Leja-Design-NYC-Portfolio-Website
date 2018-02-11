@@ -114,25 +114,29 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <div className="main-navbar-styling">
-          <div className="main-logo-container">
-            <MainLogo className="main-logo-lg" width="380" height="70"
-              display="block" leftPadding="12" topPadding="6"
-              hideMenu={this.hideMenu} />
-            <MainLogo className="main-logo-sm" width="270" height="50"
-              display="none" leftPadding="12" topPadding="6"
-              hideMenu={this.hideMenu} />
-          </div>
-          <div className="main-nav-buttons">
-            <div className="nav-contact">
-              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-            </div>
-            <div className="nav-menu">
-              <a role="button" tabIndex="0" onClick={this.toggleMenu}>
-                <span>Menu</span>
-                <i className="fa fa-bars" aria-hidden="true" />
-                <i className="fa fa-times-circle" aria-hidden="true" />
-              </a>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="main-navbar-styling">
+              <div className="main-logo-container">
+                <MainLogo className="main-logo-lg" width="380" height="70"
+                  display="block" leftPadding="12" topPadding="6"
+                  hideMenu={this.hideMenu} />
+                <MainLogo className="main-logo-sm" width="270" height="50"
+                  display="none" leftPadding="12" topPadding="6"
+                  hideMenu={this.hideMenu} />
+              </div>
+              <div className="main-nav-buttons">
+                <div className="nav-contact">
+                  <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                </div>
+                <div className="nav-menu">
+                  <a role="button" tabIndex="0" onClick={this.toggleMenu}>
+                    <span>Menu</span>
+                    <i className="fa fa-bars" aria-hidden="true" />
+                    <i className="fa fa-times-circle" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,35 +148,55 @@ class Main extends React.Component {
               <NavLink to="/home" activeClassName="active"
                 className="dropdown-main-menu-green"
                 onClick={this.toggleMenu}>
-                <span>Home</span>
+                <span>
+                  <i className="fa fa-angle-double-right" aria-hidden="true" />
+                  Home
+                  {/* <span>Home</span> */}
+                </span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact" activeClassName="active"
                 className="dropdown-main-menu-red"
                 onClick={this.toggleMenu}>
-                <span>Contact</span>
+                <span>
+                  <i className="fa fa-angle-double-right" aria-hidden="true" />
+                  {/* <span>Contact</span> */}
+                  Contact
+                </span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/skills" activeClassName="active"
                 className="dropdown-main-menu-blue blue-with-red-highlight"
                 onClick={this.toggleMenu}>
-                <span>Skills</span>
+                <span>
+                  <i className="fa fa-angle-double-right" aria-hidden="true" />
+                  Skills
+                  {/* <span>Skills</span> */}
+                </span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/projects" activeClassName="active"
                 className="dropdown-main-menu-green green-highlight"
                 onClick={this.toggleMenu}>
-                <span>Coding Projects & Apps</span>
+                <span>
+                  <i className="fa fa-angle-double-right" aria-hidden="true" />
+                  Coding Projects & Apps
+                  {/* <span>Coding Projects & Apps</span> */}
+                </span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/art" activeClassName="active"
                 className="dropdown-main-menu-blue yellow-highlight"
                 onClick={this.toggleMenu}>
-                <span>Art</span>
+                <span>
+                  <i className="fa fa-angle-double-right" aria-hidden="true" />
+                  Art
+                  {/* <span>Art</span> */}
+                </span>
               </NavLink>
             </li>
           </ul>

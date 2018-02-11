@@ -77,7 +77,7 @@ class Home extends Component {
         <ProjectsHighlight />
         <Skills />
         <Contact />
-        <div className="home-dark-fixed-background" />
+        <div className="green-fixed-background" />
         <div className="home-background red-fixed-background" style={{visibility: 'hidden'}} />
         <div className="home-background blue-fixed-background" style={{visibility: 'hidden'}} />
         <div className="home-background green-fixed-background" style={{visibility: 'hidden'}} />

@@ -138,31 +138,56 @@ body {
 
     a {
       display: inline-block;
-      border: 2px solid transparent;
+      border: 6px solid $blue-bold-rgba8;
       width: 100%;
       height: 100%;
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
-      @include box-shadow-menu-link(-3px, $blue-bold-rgba6);
+      @include box-shadow-menu-link(-3px, $blue-bold-rgba8);
+      background-color: $black-with-blue-rgba8;
+      text-decoration-line: underline;
+      text-decoration-color: white;
+      // text-decoration-color: $blue-bold-rgba8;
       //background-color: $blue-bold-rgba2;
 
       span {
         position: relative;
         top: 25%;
       }
+
+      i {
+        display: none;
+        //visibility: hidden;
+        font-size: 40px;
+        line-height: 32px;
+        // margin-right: 10px;
+        position: relative;
+        left: -12px;
+      }
     }
 
     a.active {
-      background-color: $black-with-blue-rgba8;
+      color: $white-rgba6;
+      text-decoration-color: $white-rgba6;
+
+      i {
+        display: inline-block;
+        //visibility: visible;
+      }
+      // background-color: $black-with-blue-rgba8;
     }
 
     a:hover, a.active:hover {
-      @include box-shadow-menu-link(-90px, $blue-bold-rgba6);
+      @include box-shadow-menu-link(-120px, $blue-bold-rgba8);
+      color: white;
+      text-decoration-color: white;
       font-size: 32px;
       line-height: 32px;
     }
 
     .blue-with-red-highlight {
+      border: 6px solid $blue-with-red-rgba8;
+      // text-decoration-color: $blue-with-red-rgba8;
       @include box-shadow-menu-link(-3px, $blue-with-red-rgba8);
       //background-color: $blue-with-red-rgba2;
     }
@@ -170,20 +195,26 @@ body {
       @include box-shadow-menu-link(-90px, $blue-with-red-rgba8);
     }
     .green-highlight {
-      @include box-shadow-menu-link(-3px, $green-bold-rgba6);
+      border: 6px solid $green-bold-rgba8;
+      // text-decoration-color: $green-bold-rgba8;
+      @include box-shadow-menu-link(-3px, $green-bold-rgba8);
       //background-color: $green-bold-rgba2;
     }
     .green-highlight:hover, .green-highlight.active:hover {
-      @include box-shadow-menu-link(-90px, $green-bold-rgba6);
+      @include box-shadow-menu-link(-90px, $green-bold-rgba8);
     }
     .dropdown-main-menu-red {
-      @include box-shadow-menu-link(-3px, $red-bold-rgba6);
+      border: 6px solid $red-bold-rgba8;
+      // text-decoration-color: $red-bold-rgba8;
+      @include box-shadow-menu-link(-3px, $red-bold-rgba8);
       //background-color: $red-bold-rgba2;
     }
     .dropdown-main-menu-red:hover, .dropdown-main-menu-red.active:hover {
-      @include box-shadow-menu-link(-90px, $red-bold-rgba6);
+      @include box-shadow-menu-link(-90px, $red-bold-rgba8);
     }
     .yellow-highlight {
+      border: 6px solid $yellow-golden-rgba;
+      // text-decoration-color: $yellow-golden-rgba;
       @include box-shadow-menu-link(-3px, $yellow-golden-rgba);
       //background-color: $yellow-golden-rgba2;
     }
