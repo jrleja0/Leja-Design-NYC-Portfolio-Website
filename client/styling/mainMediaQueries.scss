@@ -312,6 +312,14 @@ body {
       }
     }
 
+    .dropdown-main-menu {
+      a {
+        i.fa-angle-double-left {
+          display: none;
+        }
+      }
+    }
+
     .heading-font {
       font-size: 36px;
       line-height: 46px;
@@ -373,6 +381,19 @@ body {
       .main-nav-buttons {
         div {
           padding: 0;
+        }
+      }
+    }
+
+    .dropdown-main-menu {
+      a {
+        span {
+          font-size: 24px;
+        }
+
+        i.fa-angle-double-right {
+          font-size: 32px;
+          left: -8px;
         }
       }
     }

@@ -27,6 +27,7 @@ $light-red: #fc747f;
 $light-yellow: #f2ff49;
 $light-grey: #dee3ea;
 // translucent
+$white-rgba6: rgba(255, 255, 255, 0.6);
 $light-blue-rgba2: rgba(139, 181, 249, 0.2);
 $light-blue-rgba4: rgba(139, 181, 249, 0.4);
 $light-blue-rgba6: rgba(139, 181, 249, 0.6);
@@ -45,6 +46,7 @@ $blue-with-red-rgba8: rgba(72, 22, 188, 0.8);
 $green-bold-rgba2: rgba(5, 173, 24, 0.2);
 $green-bold-rgba4: rgba(5, 173, 24, 0.4);
 $green-bold-rgba6: rgba(5, 173, 24, 0.6);
+$green-bold-rgba8: rgba(5, 173, 24, 0.8);
 $light-green-rgba: rgba(0, 255, 21, 0.8);
 $black-with-green-rgba: rgba(0, 12, 1,0.8);
 $red-bold-rgba2: rgba(224, 22, 39, 0.2);
@@ -434,6 +436,24 @@ body {
     }
   }
 
+}
+
+/* Flexbox Mixins */
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
 }
 
   //// Fixed Backgrounds ////

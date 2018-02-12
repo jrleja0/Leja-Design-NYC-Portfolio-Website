@@ -20,6 +20,7 @@ class Main extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this);
     this.hideMenu = this.hideMenu.bind(this);
     this.mouseOverMenuOptions = this.mouseOverMenuOptions.bind(this);
+    // this.mouseLeaveMenu = this.mouseLeaveMenu.bind(this);
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScrollUpButton = this.handleScrollUpButton.bind(this);
   }
@@ -40,13 +41,15 @@ class Main extends React.Component {
     if (this.state.menuActive) {
       body.style.overflow = 'auto';
       body.style.position = 'relative';
-      navContact.style.visibility = '';
+      navContact.style.visibility = 'visible';
+      navContact.style.opacity = 1;
       navMenu.className = 'nav-menu';
       dropdown.style.display = 'none';
       this.setState({menuActive: false});
     } else {
       body.style.overflow = 'hidden';
       body.style.position = 'fixed';
+      navContact.style.opacity = 0;
       navContact.style.visibility = 'hidden';
       navMenu.className += ' active';
       dropdown.style.display = 'block';
@@ -94,6 +97,12 @@ class Main extends React.Component {
     }
   }
 
+  // mouseLeaveMenu() {
+  //   const dropdown = document.getElementsByClassName('dropdown-main-menu')[0];
+  //   dropdown.className = `dropdown-main-menu ${
+  //     this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`;
+  // }
+
   scrollUp() {
     const body = document.getElementsByTagName('body')[0];
     body.style.opacity = 0;
@@ -114,68 +123,100 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <div className="main-navbar-styling">
-          <div className="main-logo-container">
-            <MainLogo className="main-logo-lg" width="380" height="70"
-              display="block" leftPadding="12" topPadding="6"
-              hideMenu={this.hideMenu} />
-            <MainLogo className="main-logo-sm" width="270" height="50"
-              display="none" leftPadding="12" topPadding="6"
-              hideMenu={this.hideMenu} />
-          </div>
-          <div className="main-nav-buttons">
-            <div className="nav-contact">
-              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-            </div>
-            <div className="nav-menu">
-              <a role="button" tabIndex="0" onClick={this.toggleMenu}>
-                <span>Menu</span>
-                <i className="fa fa-bars" aria-hidden="true" />
-                <i className="fa fa-times-circle" aria-hidden="true" />
-              </a>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="main-navbar-styling">
+              <div className="main-logo-container">
+                <MainLogo className="main-logo-lg" width="380" height="70"
+                  display="block" leftPadding="12" topPadding="6"
+                  hideMenu={this.hideMenu} />
+                <MainLogo className="main-logo-sm" width="270" height="50"
+                  display="none" leftPadding="12" topPadding="6"
+                  hideMenu={this.hideMenu} />
+              </div>
+              <div className="main-nav-buttons">
+                <div className="nav-contact">
+                  <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                </div>
+                <div className="nav-menu">
+                  <a role="button" tabIndex="0" onClick={this.toggleMenu}>
+                    <span>Menu</span>
+                    <i className="fa fa-bars" aria-hidden="true" />
+                    <i className="fa fa-times-circle" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className={`dropdown-main-menu ${
-          this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`
-          } onMouseOver={this.mouseOverMenuOptions}>
-          <ul>
-            <li>
-              <NavLink to="/home" activeClassName="active"
-                className="dropdown-main-menu-green"
-                onClick={this.toggleMenu}>
-                <span>Home</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" activeClassName="active"
-                className="dropdown-main-menu-red"
-                onClick={this.toggleMenu}>
-                <span>Contact</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/skills" activeClassName="active"
-                className="dropdown-main-menu-blue blue-with-red-highlight"
-                onClick={this.toggleMenu}>
-                <span>Skills</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects" activeClassName="active"
-                className="dropdown-main-menu-green green-highlight"
-                onClick={this.toggleMenu}>
-                <span>Coding Projects & Apps</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/art" activeClassName="active"
-                className="dropdown-main-menu-blue yellow-highlight"
-                onClick={this.toggleMenu}>
-                <span>Art</span>
-              </NavLink>
-            </li>
-          </ul>
+        <div className="dropdown-main-container-flexbox">
+          <div className={`dropdown-main-menu ${
+            this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`
+            } onMouseOver={this.mouseOverMenuOptions}
+            /*onMouseLeave={this.mouseLeaveMenu}*/
+          >
+            <div>
+              <div>
+                <ul>
+                  <li>
+                    <NavLink to="/home" activeClassName="active"
+                      className="dropdown-main-menu-green"
+                      onClick={this.toggleMenu}>
+                      <span>
+                        <i className="fa fa-angle-double-right" aria-hidden="true" />
+                        Home
+                        <i className="fa fa-angle-double-left" aria-hidden="true" />
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/contact" activeClassName="active"
+                      className="dropdown-main-menu-red"
+                      onClick={this.toggleMenu}>
+                      <span>
+                        <i className="fa fa-angle-double-right" aria-hidden="true" />
+                        Contact
+                        <i className="fa fa-angle-double-left" aria-hidden="true" />
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/skills" activeClassName="active"
+                      className="dropdown-main-menu-blue blue-with-red-highlight"
+                      onClick={this.toggleMenu}>
+                      <span>
+                        <i className="fa fa-angle-double-right" aria-hidden="true" />
+                        Skills
+                        <i className="fa fa-angle-double-left" aria-hidden="true" />
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/projects" activeClassName="active"
+                      className="dropdown-main-menu-green green-highlight"
+                      onClick={this.toggleMenu}>
+                      <span>
+                        <i className="fa fa-angle-double-right" aria-hidden="true" />
+                        Coding Projects & Apps
+                        <i className="fa fa-angle-double-left" aria-hidden="true" />
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/art" activeClassName="active"
+                      className="dropdown-main-menu-blue yellow-highlight"
+                      onClick={this.toggleMenu}>
+                      <span>
+                        <i className="fa fa-angle-double-right" aria-hidden="true" />
+                        Art
+                        <i className="fa fa-angle-double-left" aria-hidden="true" />
+                      </span>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
           {this.props.children}
         <div className="position-relative">

@@ -46,7 +46,8 @@ body {
     .nav-contact {
       a {
         border: 2px solid $blue-bold;
-        text-decoration-line: underline;
+        text-decoration: underline;
+        -webkit-text-decoration-color: transparent;
         text-decoration-color: transparent;
         -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
         transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,7 +66,8 @@ body {
       a {
         color: white;
         border: 2px solid white;
-        text-decoration-line: underline;
+        text-decoration: underline;
+        -webkit-text-decoration-color: transparent;
         text-decoration-color: transparent;
         padding-right: 30px;
         cursor: pointer;
@@ -111,84 +113,189 @@ body {
     }
   }
 
-  .dropdown-main-menu {
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 32px;
-    display: none;
-
-    ul {
-      height: 80%;
-      padding: 40px 0;
-      margin: 0;
-    }
-
-    li {
-      height: 20%;
-    }
-
-    @mixin box-shadow-menu-link($bottomLength, $color) {
-      -webkit-box-shadow: inset 0 $bottomLength 0 0 $color;
-      box-shadow: inset 0 $bottomLength 0 0 $color;
-    }
-
-    a {
-      display: inline-block;
-      border: 2px solid transparent;
+  /* dropdown container without flexbox (not being used) */
+  .dropdown-main-container {
+    .dropdown-main-menu {
+      z-index: 100;
+      position: fixed;
       width: 100%;
       height: 100%;
-      -webkit-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
-      @include box-shadow-menu-link(-3px, $blue-bold-rgba6);
-      //background-color: $blue-bold-rgba2;
+      text-align: center;
+      font-size: 28px;
+      line-height: 32px;
+      display: none;
+
+      div {
+        height: 100%;
+      }
+
+      ul {
+        height: 80%;
+        padding: 40px 0;
+        margin: 0;
+      }
+
+      li {
+        height: 20%;
+      }
+
+      a {
+        display: inline-block;
+        background-color: $black-with-blue-rgba8;
+      }
 
       span {
         position: relative;
         top: 25%;
       }
     }
+  }
+
+  /* dropdown container with flexbox */
+  .dropdown-main-container-flexbox {
+    .dropdown-main-menu {
+      z-index: 100;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 32px;
+      display: none;
+
+      div {
+        height: 100%;
+        background-color: $black-with-blue-rgba6;
+
+        div {
+          @include flexbox();
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 80%;
+          background-color: transparent;
+        }
+      }
+
+      ul {
+        @include flex(1 1 auto);
+        @include flexbox();
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 90%;
+        width: 100%;
+      }
+
+      li {
+        @include flex(0 1 20%);
+        @include flexbox();
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+      }
+
+      a {
+        @include flex(1 1 auto);
+        @include flexbox();
+        margin: auto;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+      }
+
+      span {
+        position: relative;
+        @include flex(1 1 auto);
+        margin: auto;
+      }
+    }
+  }
+
+  .dropdown-main-menu {
+    @mixin box-shadow-menu-link($bottomLength, $color) {
+      -webkit-box-shadow: inset 0 $bottomLength 0 0 $color;
+      box-shadow: inset 0 $bottomLength 0 0 $color;
+    }
+
+    a {
+      border: 6px solid $blue-bold-rgba8;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      @include box-shadow-menu-link(-3px, $blue-bold-rgba8);
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white;
+
+      i {
+        display: none;
+        font-size: 40px;
+        line-height: 32px;
+        position: relative;
+      }
+
+      i.fa-angle-double-right {
+        left: -12px;
+      }
+
+      i.fa-angle-double-left {
+        left: 12px;
+      }
+    }
 
     a.active {
-      background-color: $black-with-blue-rgba8;
+      color: $white-rgba6;
+      -webkit-text-decoration-color: $white-rgba6;
+      text-decoration-color: $white-rgba6;
+
+      i {
+        display: inline-block;
+      }
     }
 
     a:hover, a.active:hover {
-      @include box-shadow-menu-link(-90px, $blue-bold-rgba6);
+      @include box-shadow-menu-link(-120px, $blue-bold-rgba8);
+      color: white;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white;
       font-size: 32px;
       line-height: 32px;
     }
 
     .blue-with-red-highlight {
+      border: 6px solid $blue-with-red-rgba8;
       @include box-shadow-menu-link(-3px, $blue-with-red-rgba8);
-      //background-color: $blue-with-red-rgba2;
     }
     .blue-with-red-highlight:hover, .blue-with-red-highlight.active:hover {
-      @include box-shadow-menu-link(-90px, $blue-with-red-rgba8);
+      @include box-shadow-menu-link(-120px, $blue-with-red-rgba8);
     }
     .green-highlight {
-      @include box-shadow-menu-link(-3px, $green-bold-rgba6);
-      //background-color: $green-bold-rgba2;
+      border: 6px solid $green-bold-rgba8;
+      @include box-shadow-menu-link(-3px, $green-bold-rgba8);
     }
     .green-highlight:hover, .green-highlight.active:hover {
-      @include box-shadow-menu-link(-90px, $green-bold-rgba6);
+      @include box-shadow-menu-link(-120px, $green-bold-rgba8);
     }
     .dropdown-main-menu-red {
-      @include box-shadow-menu-link(-3px, $red-bold-rgba6);
-      //background-color: $red-bold-rgba2;
+      border: 6px solid $red-bold-rgba8;
+      @include box-shadow-menu-link(-3px, $red-bold-rgba8);
     }
     .dropdown-main-menu-red:hover, .dropdown-main-menu-red.active:hover {
-      @include box-shadow-menu-link(-90px, $red-bold-rgba6);
+      @include box-shadow-menu-link(-120px, $red-bold-rgba8);
     }
     .yellow-highlight {
+      border: 6px solid $yellow-golden-rgba;
       @include box-shadow-menu-link(-3px, $yellow-golden-rgba);
-      //background-color: $yellow-golden-rgba2;
     }
     .yellow-highlight:hover, .yellow-highlight.active:hover {
-      @include box-shadow-menu-link(-90px, $yellow-golden-rgba);
+      @include box-shadow-menu-link(-120px, $yellow-golden-rgba);
     }
   }
 
@@ -265,7 +372,8 @@ body {
       bottom: 0;
       font-size: 24px;
       line-height: 26px;
-      text-decoration-line: underline;
+      text-decoration: underline;
+      -webkit-text-decoration-color: transparent;
       text-decoration-color: transparent;
     }
 
@@ -282,6 +390,7 @@ body {
     span {
       color: $red-bold;
       font-size: 26px;
+      -webkit-text-decoration-color: $red-bold;
       text-decoration-color: $red-bold;
     }
   }
@@ -368,7 +477,8 @@ body {
     a {
       border: 3px solid white;
       background-color: transparent;
-      text-decoration-line: underline;
+      text-decoration: underline;
+      -webkit-text-decoration-color: transparent;
       text-decoration-color: transparent;
       @include border-radius(20px);
       width: 100%;
@@ -381,6 +491,7 @@ body {
 
     a:hover {
       border: 3px solid $warm-green;
+      -webkit-text-decoration-color: blue;
       text-decoration-color: blue;
     }
 
@@ -716,7 +827,8 @@ body {
     a {
       display: inline-block;
       border: 2px solid white;
-      text-decoration-line: underline;
+      text-decoration: underline;
+      -webkit-text-decoration-color: transparent;
       text-decoration-color: transparent;
       background-color: $pink-rgba4;
       @include border-radius(10px);
@@ -733,6 +845,7 @@ body {
 
     a:hover {
       border: 2px solid $pink-bold;
+      -webkit-text-decoration-color: white;
       text-decoration-color: white;
     }
   }
