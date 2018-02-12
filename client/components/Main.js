@@ -140,66 +140,70 @@ class Main extends React.Component {
             </div>
           </div>
         </div>
-        <div className={`dropdown-main-menu ${
-          this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`
-          } onMouseOver={this.mouseOverMenuOptions}>
-          <ul>
-            <li>
-              <NavLink to="/home" activeClassName="active"
-                className="dropdown-main-menu-green"
-                onClick={this.toggleMenu}>
-                <span>
-                  <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  Home
-                  <i className="fa fa-angle-double-left" aria-hidden="true" />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" activeClassName="active"
-                className="dropdown-main-menu-red"
-                onClick={this.toggleMenu}>
-                <span>
-                  <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  Contact
-                  <i className="fa fa-angle-double-left" aria-hidden="true" />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/skills" activeClassName="active"
-                className="dropdown-main-menu-blue blue-with-red-highlight"
-                onClick={this.toggleMenu}>
-                <span>
-                  <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  Skills
-                  <i className="fa fa-angle-double-left" aria-hidden="true" />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects" activeClassName="active"
-                className="dropdown-main-menu-green green-highlight"
-                onClick={this.toggleMenu}>
-                <span>
-                  <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  Coding Projects & Apps
-                  <i className="fa fa-angle-double-left" aria-hidden="true" />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/art" activeClassName="active"
-                className="dropdown-main-menu-blue yellow-highlight"
-                onClick={this.toggleMenu}>
-                <span>
-                  <i className="fa fa-angle-double-right" aria-hidden="true" />
-                  Art
-                  <i className="fa fa-angle-double-left" aria-hidden="true" />
-                </span>
-              </NavLink>
-            </li>
-          </ul>
+        <div className="dropdown-main-container-flexbox">
+          <div className={`dropdown-main-menu ${
+            this.props.pathBackgroundColors[this.props.pathName] || 'blue'}Background`
+            } onMouseOver={this.mouseOverMenuOptions}>
+            <div>
+              <ul>
+                <li>
+                  <NavLink to="/home" activeClassName="active"
+                    className="dropdown-main-menu-green"
+                    onClick={this.toggleMenu}>
+                    <span>
+                      <i className="fa fa-angle-double-right" aria-hidden="true" />
+                      Home
+                      <i className="fa fa-angle-double-left" aria-hidden="true" />
+                    </span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact" activeClassName="active"
+                    className="dropdown-main-menu-red"
+                    onClick={this.toggleMenu}>
+                    <span>
+                      <i className="fa fa-angle-double-right" aria-hidden="true" />
+                      Contact
+                      <i className="fa fa-angle-double-left" aria-hidden="true" />
+                    </span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/skills" activeClassName="active"
+                    className="dropdown-main-menu-blue blue-with-red-highlight"
+                    onClick={this.toggleMenu}>
+                    <span>
+                      <i className="fa fa-angle-double-right" aria-hidden="true" />
+                      Skills
+                      <i className="fa fa-angle-double-left" aria-hidden="true" />
+                    </span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/projects" activeClassName="active"
+                    className="dropdown-main-menu-green green-highlight"
+                    onClick={this.toggleMenu}>
+                    <span>
+                      <i className="fa fa-angle-double-right" aria-hidden="true" />
+                      Coding Projects & Apps
+                      <i className="fa fa-angle-double-left" aria-hidden="true" />
+                    </span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/art" activeClassName="active"
+                    className="dropdown-main-menu-blue yellow-highlight"
+                    onClick={this.toggleMenu}>
+                    <span>
+                      <i className="fa fa-angle-double-right" aria-hidden="true" />
+                      Art
+                      <i className="fa fa-angle-double-left" aria-hidden="true" />
+                    </span>
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
           {this.props.children}
         <div className="position-relative">
