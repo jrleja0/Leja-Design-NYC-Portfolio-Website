@@ -113,6 +113,7 @@ body {
     }
   }
 
+  /* dropdown container without flexbox (not being used) */
   .dropdown-main-container {
     .dropdown-main-menu {
       z-index: 100;
@@ -140,6 +141,7 @@ body {
 
       a {
         display: inline-block;
+        background-color: $black-with-blue-rgba8;
       }
 
       span {
@@ -149,6 +151,7 @@ body {
     }
   }
 
+  /* dropdown container with flexbox */
   .dropdown-main-container-flexbox {
     .dropdown-main-menu {
       z-index: 100;
@@ -161,11 +164,17 @@ body {
       display: none;
 
       div {
-        @include flexbox();
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 80%;
+        height: 100%;
+        background-color: $black-with-blue-rgba6;
+
+        div {
+          @include flexbox();
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 80%;
+          background-color: transparent;
+        }
       }
 
       ul {
@@ -175,7 +184,7 @@ body {
         justify-content: center;
         align-items: center;
         margin: 0;
-        height: 100%;
+        height: 90%;
         width: 100%;
       }
 
@@ -221,7 +230,6 @@ body {
       -webkit-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out;
       @include box-shadow-menu-link(-3px, $blue-bold-rgba8);
-      background-color: $black-with-blue-rgba8;
       text-decoration: underline;
       -webkit-text-decoration-color: white;
       text-decoration-color: white;
