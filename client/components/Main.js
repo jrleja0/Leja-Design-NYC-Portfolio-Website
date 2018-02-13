@@ -136,7 +136,9 @@ class Main extends React.Component {
               </div>
               <div className="main-nav-buttons">
                 <div className="nav-contact">
-                  <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                  <NavLink to="/contact" activeClassName="active">
+                    <span>Contact</span>
+                  </NavLink>
                 </div>
                 <div className="nav-menu">
                   <a role="button" tabIndex="0" onClick={this.toggleMenu}>

@@ -144,6 +144,16 @@ body {
     }
 
     .main-navbar-styling {
+      height: 62px;
+
+      .main-nav-buttons {
+        height: 47px;
+      }
+
+      .nav-menu {
+        width: 170px;
+      }
+
       .nav-contact, .main-logo-lg {
         display: none;
       }
@@ -153,12 +163,7 @@ body {
       }
 
       .main-nav-buttons {
-        top: -14px;
         margin-left: 30px;
-
-        a {
-          padding: 12px 30px 10px 30px;
-        }
       }
     }
 
@@ -220,13 +225,13 @@ body {
 
     .main-navbar-styling {
       .main-nav-buttons {
-        top: -16px;
+        div {
+          padding: 0;
+        }
       }
 
       .nav-menu {
-        a {
-          padding: 12px 25px 10px 25px;
-        }
+        width: 85px;
 
         span {
           display: none;
@@ -235,7 +240,6 @@ body {
         i {
           font-size: 32px;
           padding-left: 0;
-          left: 2px;
         }
       }
     }
@@ -296,18 +300,14 @@ body {
 
     .main-navbar-styling {
       .main-nav-buttons {
-        margin-left: 10px;
+        margin-left: 20px;
       }
 
       .nav-menu {
-        a {
-          padding: 12px 15px 10px 15px;
-        }
+        width: 60px;
 
         i {
           font-size: 26px;
-          top: 2px;
-          left: 0;
         }
       }
     }
@@ -377,14 +377,6 @@ body {
 
   @media only screen and (max-width: 370px) {
 
-    .main-navbar-styling {
-      .main-nav-buttons {
-        div {
-          padding: 0;
-        }
-      }
-    }
-
     .dropdown-main-menu {
       a {
         span {
@@ -437,9 +429,7 @@ body {
       }
 
       .nav-menu {
-        a {
-          padding: 12px 8px 10px 8px;
-        }
+        width: 42px;
       }
     }
 
@@ -477,6 +467,13 @@ body {
       font-size: 12px;
     }
 
+  }
+
+  @media only screen and (max-width: 319px) {
+    .main-navbar-styling {
+      flex-flow: row wrap;
+      z-index: 200;
+    }
   }
 
 }
