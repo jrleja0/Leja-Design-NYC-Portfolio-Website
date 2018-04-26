@@ -9,7 +9,7 @@ import { fetchImages } from './store';
 const pathBackgroundColors = {
   '/home': 'green',
   '/contact': 'red',
-  '/projects': 'green',
+  '/work': 'green',
   '/art': 'blue',
 };
 
@@ -41,7 +41,7 @@ class Routes extends Component {
                 <Route path="/home" component={Home} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/skills" component={Skills} />
-                <Route path="/projects" component={ProjectsPage} />
+                <Route path="/work" component={ProjectsPage} />
                 <Route path="/art" component={ArtShowcase} />
                 <Redirect to="/home" />
               </Switch>

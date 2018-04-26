@@ -18,8 +18,8 @@ const ProjectsHighlight = (props) => {
         <div className="container-fluid">
           <div className="row">
             <div className="div-project-main-title">
-              <h1 className="heading-font">Recent Projects<br />
-                <span className="subheading-font">Apps | Games | Tech Talks</span>
+              <h1 className="heading-font">Recent Work<br />
+                <span className="subheading-font">Full Stack | Front End</span>
               </h1>
             </div>
           </div>
@@ -45,9 +45,9 @@ const ProjectsHighlight = (props) => {
           <div className="row project-text-row div-button-to-projects-page">
             <div className="button-home-to-projects-page">
               <div>
-                <NavLink to="/projects" activeClassName="active"
+                <NavLink to="/work" activeClassName="active"
                   onClick={() => { window.scrollTo(0, 0); }}>
-                  <h1>See More<br />Projects</h1>
+                  <h1>See More<br />Work</h1>
                 </NavLink>
               </div>
             </div>

@@ -94,14 +94,14 @@ class Slideshow extends React.Component {
                   onLoad={handleSlideshowImageOnLoad} />
                 <div className="div-img-cover" />
               </div>
-              <Link to="/projects">
+              <Link to="/work">
                 <div className="slide"
                   style={ {zIndex: 20, display: 'none'} }
                   data-slide-num="2">
-                  <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
+                  <img src="/assets/projectSlideWide.jpg" alt="Work | Projects"
                     onLoad={handleSlideshowImageOnLoad} />
                   <div className="div-img-cover" />
-                  <span>Coding Projects & Apps</span>
+                  <span>Work | Projects</span>
                 </div>
               </Link>
               <Link to="/art">
@@ -128,7 +128,7 @@ class Slideshow extends React.Component {
                 style={ {opacity: 0.6, borderColor: 'transparent'} }
                 data-thumbnail-num="2"
                 onClick={() => this.skipToSlide('2')}>
-                <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
+                <img src="/assets/projectSlideWide.jpg" alt="Work | Projects"
                   onLoad={handleSlideshowImageOnLoad} />
                 <div className="div-img-cover" />
               </div>

@@ -194,12 +194,12 @@ class Main extends React.Component {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/projects" activeClassName="active"
+                    <NavLink to="/work" activeClassName="active"
                       className="dropdown-main-menu-green green-highlight"
                       onClick={this.toggleMenu}>
                       <span>
                         <i className="fa fa-angle-double-right" aria-hidden="true" />
-                        Coding Projects & Apps
+                        Work
                         <i className="fa fa-angle-double-left" aria-hidden="true" />
                       </span>
                     </NavLink>
