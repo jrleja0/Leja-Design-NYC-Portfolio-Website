@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Contact, ProjectsHighlight, Skills, Slideshow, Welcome} from './index';
 import $ from 'jquery';
+import {elementOnScreen} from '../utilityFunctions';
 
 /*///
  COMPONENT
@@ -26,14 +27,7 @@ class Home extends Component {
     const windowTopEdge = $(window).scrollTop();
     const windowBottomEdge = windowTopEdge + $(window).height();
     const documentBottomEdge = $(document).height();
-    // return if element is between window's top and bottom edges (boolean)
-    const elementOnScreen = el => {
-      el = $(el);
-      const offset = 300;
-      const elTopEdge = el.offset().top + offset;
 
-      return elTopEdge <= windowBottomEdge;
-    };
     const showBackground = background => {
       background.style.visibility = 'visible';
     };
@@ -44,9 +38,9 @@ class Home extends Component {
     let idx;
     if (windowBottomEdge >= documentBottomEdge - 20) {
       idx = 2;   // display greenBackground when user has scrolled to bottom of document
-    } else if (elementOnScreen(redBackground)) {
+    } else if (elementOnScreen(redBackground, 300)) {
       idx = 0; // redBackground is index 0
-    } else if (elementOnScreen(blueBackground)) {
+    } else if (elementOnScreen(blueBackground, 300)) {
       idx = 1; // blueBackground is index 1
     } else {
       idx = 2; // greenBackground is index 2

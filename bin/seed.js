@@ -4,9 +4,18 @@ const Promise = require('bluebird');
 const data = {
   image: [
     {
+      name: 'seconddibs1',
+      imagePath: 'assets/projects/seconddibs/screenshots.gif',
+      category: 'project',
+      projectName: 'SecondDibs//Ecommerce Site',
+      description: 'Ecommerce site inspired by 1stdibs.com — Users can browse and search items, make purchases, view order history, and save a list of favorite items, with or without creating a user account',
+      technologies: 'JavaScript - React, Redux; Node, Express, PostgreSQL/Sequelize, Express-Session & Passport.js for authentication; HTML/SCSS, Material-UI',
+      linkProject: 'https://seconddibs.herokuapp.com',
+      linkGitHub: 'https://github.com/jrleja0/SecondDibs-Ecommerce-Site',
+    },
+    {
       name: 'smashbots1',
       imagePath: 'assets/projects/smashbots/smashbots_intro.gif',
-      titlePath: 'assets/text/smashBots.png',
       category: 'project',
       projectName: 'Smash-Bots',
       description: 'Smash-Bots is a 2-D multiplayer online fighting game, loosely based off the game Super Smash Brothers, with an item store and robots. This group project was completed in two and a half weeks.',
@@ -16,31 +25,8 @@ const data = {
       linkGitHub: 'https://github.com/jrleja0/Smash-Bots',
     },
     {
-      name: 'colorChaos1',
-      imagePath: 'assets/projects/color_chaos/game2.jpg',
-      titlePath: 'assets/text/catchingMatchingColorChaosGame.png',
-      category: 'project',
-      projectName: '"Catching Matching//Color Chaos!" Game',
-      description: '"Catching Matching Color Chaos!" is a fast-paced color matching multiplayer game that was created as a solo hackathon project in 4 days.',
-      technologies: 'JavaScript - Paper.js, Socket.io, Node, Express; HTML/CSS.',
-      linkProject: 'https://color-chaos.herokuapp.com',
-      linkDemo: 'https://www.youtube.com/watch?v=EYTeEmcarnY',
-      linkGitHub: 'https://github.com/jrleja0/Color-Chaos-Hackathon-Paper.JS-Game',
-    },
-    {
-      name: 'diningWithTheStars1',
-      imagePath: 'assets/projects/dining_with_the_stars/screenshot_zoolander.jpg',
-      titlePath: 'assets/text/diningWithTheStarsEcommerceSite.png',
-      category: 'project',
-      projectName: 'Dining with the Stars//Ecommerce Site',
-      description: 'Dining with the Stars is a prototype ecommerce site for a trendy business that sells dining experiences with famous celebrities. This group project was completed in 10 days.',
-      technologies: 'JavaScript - React, Redux; Node, Express, and PostgreSQL/Sequelize; HTML/CSS.',
-      linkProject: 'https://doa-grace-shopper.herokuapp.com',
-      linkGitHub: 'https://github.com/jrleja0/Dining-with-the-Stars-Ecommerce',
-    },
-    {
       name: 'd3TopSearchedArtists1',
-      imagePath: 'assets/projects/d3_top_searched_artists/screenshot1.jpg',
+      imagePath: 'assets/projects/d3_top_searched_artists/screenshots.gif',
       category: 'project',
       projectName: 'D3.js Visualization://Top Searched Visual Artists',
       description: 'Data visualizations using D3.js of the top 20 most searched visual artists on artnet.com in Sept 2017. Visualizations include: tree map, bubble chart, and plain list.',
@@ -48,6 +34,7 @@ const data = {
       linkProject: 'https://top-searched-artists-09-2017.herokuapp.com',
       linkGitHub: 'https://github.com/jrleja0/D3-Visualization-Top-Searched-Artists',
     },
+    /*
     {
       name: 'easyPressReleaseMaker1',
       imagePath: 'assets/projects/easy_press_release_maker/screenshot1.jpg',
@@ -57,6 +44,8 @@ const data = {
       technologies: 'JavaScript - React, Redux; Node, Express, and PostgreSQL/Sequelize; HTML/SCSS.',
       linkGitHub: 'https://github.com/jrleja0/Easy-Press-Release-Maker',
     },
+    */
+    /*
     {
       name: 'quickLookChromeExt1',
       imagePath: 'assets/projects/quick_look_chrome_ext/screenshot1.jpg',
@@ -66,36 +55,7 @@ const data = {
       technologies: 'JavaScript - React, Axios, Cheerio, Webpack; HTML/CSS',
       linkGitHub: 'https://github.com/jrleja0/quick-look-google-search-chrome-extension',
     },
-    {
-      name: 'tileSwappingPuzzleGame1',
-      imagePath: 'assets/projects/tile_swapping_puzzle_game/screenshot1.jpg',
-      category: 'project',
-      projectName: 'Tile Swapping//Puzzle Game',
-      description: 'HTML5 Canvas & JavaScript puzzle game. Click two tiles to swap them. Swap tiles until the image is unscrambled.',
-      technologies: 'JavaScript, HTML5 Canvas; HTML/CSS',
-      linkProject: 'https://jrleja0.github.io/tile-swapping-game-jrleja0',
-      linkGitHub: 'https://github.com/jrleja0/tile-swapping-game-jrleja0',
-    },
-    {
-      name: 'movingTilesAnimation1',
-      imagePath: 'assets/projects/moving_tiles_animation/screenshot1.jpg',
-      category: 'project',
-      projectName: 'Moving Tiles//Animation',
-      description: 'HTML5 Canvas & JavaScript animation.',
-      technologies: 'JavaScript, HTML5 Canvas; HTML/CSS',
-      linkProject: 'https://jrleja0.github.io/Tile-Abstraction-v2',
-      linkGitHub: 'https://github.com/jrleja0/Tile-Abstraction-v2',
-    },
-    {
-      name: 'techTalkPaperJS1',
-      imagePath: 'assets/projects/tech_talk_paperjs/tech_talk_paperjs.jpg',
-      titlePath: 'assets/text/introToPaper.jsTechTalk.png',
-      category: 'project',
-      projectName: '"Intro to Paper.js"//Tech Talk',
-      description: 'In this "Intro to Paper.js" tech talk, learn the basics of Paper.js, the vector graphics library, including items, their hierarchy, and event handlers, for creating engaging animations.',
-      linkDemo: 'https://www.youtube.com/watch?v=HYFUitjFQT0',
-      linkGitHub: 'https://github.com/jrleja0/paper.js-Project-1',
-    }
+    */
   ]
 };
 

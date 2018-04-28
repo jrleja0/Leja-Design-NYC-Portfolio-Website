@@ -113,12 +113,13 @@ body {
 
 //// Main Title Logo ////
 
-  .main-title:hover {
+  @mixin animateDown($pixelsDown) {
+    transform: translate(0px,$pixelsDown);
+    opacity: 1;
+  }
 
-    @mixin animateDown($pixelsDown) {
-      transform: translate(0px,$pixelsDown);
-      opacity: 1;
-    }
+  .main-title {
+
     @mixin rotateUp($degrees) {
       transform: rotate($degrees);
       opacity: 0.5;
@@ -127,25 +128,55 @@ body {
     .jrlejaDesignNYCTitleHover {
       display: block;
       opacity: 1;
-      -webkit-animation: 3s infinite animateHoverLogo;
-      animation: 3s infinite animateHoverLogo;
+      -webkit-animation: 1.5s animateHoverLogoUp forwards;
+      animation: 1.5s animateHoverLogoUp forwards;
     }
 
     @mixin mainLogoAnimationMixin($pixelsDown) {
-      @-webkit-keyframes animateHoverLogo {
-        25%, 52% {
+      @-webkit-keyframes animateHoverLogoUp {
+        0% {
           @include animateDown($pixelsDown);
         }
         100% {
           @include rotateUp(-45deg);
         }
       }
-      @keyframes animateHoverLogo {
-        25%, 52% {
+      @keyframes animateHoverLogoUp {
+        0% {
           @include animateDown($pixelsDown);
         }
         100% {
           @include rotateUp(-45deg);
+        }
+      }
+    }
+
+    @include mainLogoAnimationMixin(70px);
+
+    @media screen and (max-width: 767px) {
+      @include mainLogoAnimationMixin(50px);
+    }
+
+  }
+
+  .main-title:hover {
+
+    .jrlejaDesignNYCTitleHover {
+      display: block;
+      opacity: 1;
+      -webkit-animation: 1s animateHoverLogoDown forwards;
+      animation: 1s animateHoverLogoDown forwards;
+    }
+
+    @mixin mainLogoAnimationMixinHover($pixelsDown) {
+      @-webkit-keyframes animateHoverLogoDown {
+        100% {
+          @include animateDown($pixelsDown);
+        }
+      }
+      @keyframes animateHoverLogoDown {
+        100% {
+          @include animateDown($pixelsDown);
         }
       }
     }
@@ -153,10 +184,10 @@ body {
     //// when logo is large, move hover-logo down 70px.
     //// when logo is small, move hover-logo down 50px.
 
-    @include mainLogoAnimationMixin(70px);
+    @include mainLogoAnimationMixinHover(70px);
 
     @media screen and (max-width: 767px) {
-      @include mainLogoAnimationMixin(50px);
+      @include mainLogoAnimationMixinHover(50px);
     }
 
   }
@@ -301,8 +332,8 @@ body {
 //// "See More Projects" Button (glow animation) ////
 
 .button-home-to-projects-page div {
-  -webkit-animation: 6s infinite glow;
-  animation: 6s infinite glow;
+  -webkit-animation: 3s infinite glow ;
+  animation: 3s infinite glow;
 }
 
 @-webkit-keyframes glow {

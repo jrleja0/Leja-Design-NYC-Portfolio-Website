@@ -94,7 +94,9 @@ class Slideshow extends React.Component {
                   onLoad={handleSlideshowImageOnLoad} />
                 <div className="div-img-cover" />
               </div>
-              <Link to="/work">
+              <Link to="/work"
+                onClick={() => { window.scrollTo(0, 0); }}
+              >
                 <div className="slide"
                   style={ {zIndex: 20, display: 'none'} }
                   data-slide-num="2">
@@ -104,7 +106,9 @@ class Slideshow extends React.Component {
                   <span>Work | Projects</span>
                 </div>
               </Link>
-              <Link to="/art">
+              <Link to="/art"
+                onClick={() => { window.scrollTo(0, 0); }}
+              >
                 <div className="slide"
                   style={ {zIndex: 10, display: 'none'} }
                   data-slide-num="3">

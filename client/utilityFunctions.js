@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export const handleImageOnLoad = (event) => {
   const img = event.target;
   const previousSibling = img.previousSibling;
@@ -27,3 +29,26 @@ export const handleSlideshowImageOnLoad = (() => {
     }
   };
 })();
+
+// return if element is between window's top and bottom edges (boolean)
+// checks both windowBottomEdge and windowTopEdge
+export const elementOnScreenStrict = (el, offset) => {
+  const windowTopEdge = $(window).scrollTop();
+  const windowBottomEdge = windowTopEdge + $(window).height();
+
+  el = $(el);
+  const elTopEdge = el.offset().top + offset;
+
+  return elTopEdge <= windowBottomEdge && elTopEdge >= (windowTopEdge - offset);
+};
+
+// checks only windowBottomEdge; used for home page background images
+export const elementOnScreen = (el, offset) => {
+  const windowTopEdge = $(window).scrollTop();
+  const windowBottomEdge = windowTopEdge + $(window).height();
+
+  el = $(el);
+  const elTopEdge = el.offset().top + offset;
+
+  return elTopEdge <= windowBottomEdge;
+};

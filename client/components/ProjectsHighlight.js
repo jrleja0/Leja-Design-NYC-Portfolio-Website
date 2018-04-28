@@ -9,7 +9,6 @@ import {handleImageOnLoad} from '../utilityFunctions';
  COMPONENT
 *////
 const ProjectsHighlight = (props) => {
-
   const { projectData } = props;
 
   return (
@@ -25,9 +24,8 @@ const ProjectsHighlight = (props) => {
           </div>
           <div className="projects-main-container container-fluid">
             {
-            projectData && projectData.length ?
-              projectData.map((proj, i) => (
-                (i === 0 || i === 3) &&
+            projectData && projectData.length && projectData[0] ?
+              projectData.map(proj => (
                 <div key={proj.name}>
                   <Project proj={proj} />
                 </div>
@@ -62,7 +60,7 @@ const ProjectsHighlight = (props) => {
  CONTAINER
 *////
 const mapState = (state) => ({
-  projectData: state.imageStore.imagesList
+  projectData: [ state.imageStore.imagesList[0] ],
 });
 
 const mapDispatch = null;
