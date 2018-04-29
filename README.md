@@ -32,7 +32,7 @@ https://github.com/jrleja0/SecondDibs-Ecommerce-Site
 
 Smash-Bots is a 2-D multiplayer online fighting game loosely based off the game Super Smash Brothers, with an item store and robots. This group project was completed in two and a half weeks.
 
-Technologies used: Phaser, React, and Redux for the front end; Node, Express, and PostgreSQL | Sequelize for the backend; Socket.io for multiplayer functionality; HTML, CSS
+Technologies used: Phaser, React, and Redux for the front end; Node, Express, and PostgreSQL | Sequelize for the backend; Socket.io for multiplayer functionality; HTML, CSS, Bootstrap
 
 Deployed at:
 https://smashbots.herokuapp.com
