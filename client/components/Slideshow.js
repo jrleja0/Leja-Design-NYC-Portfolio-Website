@@ -86,70 +86,74 @@ class Slideshow extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-            <div className="main-slide-container col-sm-12 col-md-12 col-lg-9">
-              <div className="slide"
-                style={ {zIndex: 30, display: 'block'} }
-                data-slide-num="1">
-                <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
-                  onLoad={handleSlideshowImageOnLoad} />
-                <div className="div-img-cover" />
-              </div>
-              <Link to="/projects">
-                <div className="slide"
-                  style={ {zIndex: 20, display: 'none'} }
-                  data-slide-num="2">
-                  <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
-                    onLoad={handleSlideshowImageOnLoad} />
-                  <div className="div-img-cover" />
-                  <span>Coding Projects & Apps</span>
-                </div>
-              </Link>
-              <Link to="/art">
-                <div className="slide"
-                  style={ {zIndex: 10, display: 'none'} }
-                  data-slide-num="3">
-                  <img src="/assets/artSlideWide.jpg" alt="Art"
-                    onLoad={handleSlideshowImageOnLoad} />
-                  <div className="div-img-cover" />
-                  <span>Art</span>
-                </div>
-              </Link>
+          <div className="main-slide-container col-sm-12 col-md-12 col-lg-9">
+            <div className="slide"
+              style={ {zIndex: 30, display: 'block'} }
+              data-slide-num="1">
+              <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
+                onLoad={handleSlideshowImageOnLoad} />
+              <div className="div-img-cover" />
             </div>
-            <div className="slide-thumbnails-container col-sm-12 col-md-12 col-lg-3">
-              <div className="thumbnail"
-                style={ {opacity: 1} }
-                data-thumbnail-num="1"
-                onClick={() => this.skipToSlide('1')}>
-                <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
+            <Link to="/work"
+              onClick={() => { window.scrollTo(0, 0); }}
+            >
+              <div className="slide"
+                style={ {zIndex: 20, display: 'none'} }
+                data-slide-num="2">
+                <img src="/assets/projectSlideWide.jpg" alt="Work | Projects"
                   onLoad={handleSlideshowImageOnLoad} />
                 <div className="div-img-cover" />
+                <span>Work | Projects</span>
               </div>
-              <div className="thumbnail"
-                style={ {opacity: 0.6, borderColor: 'transparent'} }
-                data-thumbnail-num="2"
-                onClick={() => this.skipToSlide('2')}>
-                <img src="/assets/projectSlideWide.jpg" alt="Coding Projects & Apps"
-                  onLoad={handleSlideshowImageOnLoad} />
-                <div className="div-img-cover" />
-              </div>
-              <div className="thumbnail"
-                style={ {opacity: 0.6, borderColor: 'transparent'} }
-                data-thumbnail-num="3"
-                onClick={() => this.skipToSlide('3')}>
+            </Link>
+            <Link to="/art"
+              onClick={() => { window.scrollTo(0, 0); }}
+            >
+              <div className="slide"
+                style={ {zIndex: 10, display: 'none'} }
+                data-slide-num="3">
                 <img src="/assets/artSlideWide.jpg" alt="Art"
                   onLoad={handleSlideshowImageOnLoad} />
                 <div className="div-img-cover" />
+                <span>Art</span>
               </div>
-            </div>
+            </Link>
           </div>
-          <div className="div-img-cover slideshow-cover">
-            <div>
+          <div className="slide-thumbnails-container col-sm-12 col-md-12 col-lg-3">
+            <div className="thumbnail"
+              style={ {opacity: 1} }
+              data-thumbnail-num="1"
+              onClick={() => this.skipToSlide('1')}>
               <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
-                onLoad={handleImageOnLoad} />
+                onLoad={handleSlideshowImageOnLoad} />
               <div className="div-img-cover" />
             </div>
-            <Spinner />
+            <div className="thumbnail"
+              style={ {opacity: 0.6, borderColor: 'transparent'} }
+              data-thumbnail-num="2"
+              onClick={() => this.skipToSlide('2')}>
+              <img src="/assets/projectSlideWide.jpg" alt="Work | Projects"
+                onLoad={handleSlideshowImageOnLoad} />
+              <div className="div-img-cover" />
+            </div>
+            <div className="thumbnail"
+              style={ {opacity: 0.6, borderColor: 'transparent'} }
+              data-thumbnail-num="3"
+              onClick={() => this.skipToSlide('3')}>
+              <img src="/assets/artSlideWide.jpg" alt="Art"
+                onLoad={handleSlideshowImageOnLoad} />
+              <div className="div-img-cover" />
+            </div>
           </div>
+        </div>
+        <div className="div-img-cover slideshow-cover">
+          <div>
+            <img src="/assets/welcomeSlideWide.jpg" alt="Welcome!"
+              onLoad={handleImageOnLoad} />
+            <div className="div-img-cover" />
+          </div>
+          <Spinner />
+        </div>
       </div>
     );
   }

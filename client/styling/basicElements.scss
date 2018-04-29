@@ -168,6 +168,10 @@ $yellow-golden-rgba: rgba(255, 238, 0, 0.8);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
   }
+  .basic-transition-slow {
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+  }
 
   .ease-then-fast-in {
     -webkit-transition: all 0s cubic-bezier(0.86, -0.15, 1, 1);

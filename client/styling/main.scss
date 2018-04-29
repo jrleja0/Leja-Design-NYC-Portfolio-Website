@@ -439,6 +439,11 @@ body {
   .slideshow-cover {
     background-color: $black-with-green;
     z-index: 50;
+
+    div, img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
 /*///
@@ -480,6 +485,7 @@ body {
   }
 
   .button-home-to-projects-page {
+    @extend .basic-transition-slow;
     text-align: center;
     min-height: 100px;
     margin: 0;
@@ -550,6 +556,7 @@ body {
   .div-project-heading {
     background-color: $black-with-green-rgba;
     margin: 15px -15px;
+    border: 5px solid white;
 
     .project-heading-font {
       font-family: Georgia, serif;

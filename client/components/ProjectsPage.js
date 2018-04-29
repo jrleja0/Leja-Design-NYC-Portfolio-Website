@@ -17,8 +17,8 @@ const ProjectsPage = (props) => {
         <div className="container-fluid">
           <div className="row">
             <div className="div-project-main-title">
-              <h1 className="heading-font">Coding Projects<br />
-                <span className="subheading-font">Apps | Games | Tech Talks</span>
+              <h1 className="heading-font">Work | Projects<br />
+                <span className="subheading-font">Full Stack | Front End</span>
               </h1>
             </div>
           </div>

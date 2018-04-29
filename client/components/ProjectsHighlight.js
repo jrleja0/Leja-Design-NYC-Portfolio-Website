@@ -9,7 +9,6 @@ import {handleImageOnLoad} from '../utilityFunctions';
  COMPONENT
 *////
 const ProjectsHighlight = (props) => {
-
   const { projectData } = props;
 
   return (
@@ -18,16 +17,15 @@ const ProjectsHighlight = (props) => {
         <div className="container-fluid">
           <div className="row">
             <div className="div-project-main-title">
-              <h1 className="heading-font">Recent Projects<br />
-                <span className="subheading-font">Apps | Games | Tech Talks</span>
+              <h1 className="heading-font">Recent Work<br />
+                <span className="subheading-font">Full Stack | Front End</span>
               </h1>
             </div>
           </div>
           <div className="projects-main-container container-fluid">
             {
-            projectData && projectData.length ?
-              projectData.map((proj, i) => (
-                (i === 0 || i === 3) &&
+            projectData && projectData.length && projectData[0] ?
+              projectData.map(proj => (
                 <div key={proj.name}>
                   <Project proj={proj} />
                 </div>
@@ -43,11 +41,11 @@ const ProjectsHighlight = (props) => {
             }
           </div>
           <div className="row project-text-row div-button-to-projects-page">
-            <div className="button-home-to-projects-page">
+            <div className="button-home-to-projects-page" style={{opacity: 0}}>
               <div>
-                <NavLink to="/projects" activeClassName="active"
+                <NavLink to="/work" activeClassName="active"
                   onClick={() => { window.scrollTo(0, 0); }}>
-                  <h1>See More<br />Projects</h1>
+                  <h1>See More<br />Work</h1>
                 </NavLink>
               </div>
             </div>
@@ -62,7 +60,7 @@ const ProjectsHighlight = (props) => {
  CONTAINER
 *////
 const mapState = (state) => ({
-  projectData: state.imageStore.imagesList
+  projectData: [ state.imageStore.imagesList[0] ],
 });
 
 const mapDispatch = null;
