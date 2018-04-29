@@ -34,6 +34,12 @@ class Home extends Component {
     const hideBackground = background => {
       background.style.visibility = 'hidden';
     };
+    const showMoreWorkButton = () => {
+      const moreWorkButton = document.querySelector('.button-home-to-projects-page');
+      if (elementOnScreen(moreWorkButton, 150)) {
+        moreWorkButton.style.opacity = 1;
+      }
+    }
 
     let idx;
     if (windowBottomEdge >= documentBottomEdge - 20) {
@@ -44,6 +50,7 @@ class Home extends Component {
       idx = 1; // blueBackground is index 1
     } else {
       idx = 2; // greenBackground is index 2
+      showMoreWorkButton();
     }
 
     homeBackgrounds.forEach((background, i) => {

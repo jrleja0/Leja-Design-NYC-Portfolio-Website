@@ -41,6 +41,7 @@ class Routes extends Component {
                 <Route path="/home" component={Home} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/skills" component={Skills} />
+                <Redirect from="/projects" to="/work" />
                 <Route path="/work" component={ProjectsPage} />
                 <Route path="/art" component={ArtShowcase} />
                 <Redirect to="/home" />

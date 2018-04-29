@@ -16,21 +16,23 @@ export const handleSlideshowImageOnLoad = (() => {
     images.push(event.target);
     imageNum--;
     if (!imageNum) {
-      images.forEach(img => {
-        img.style.visibility = 'visible';
-      });
-      const slideshowCover = document.getElementsByClassName('slideshow-cover')[0];
-      slideshowCover.className += ' slideshow-cover-fade-out';
-      slideshowCover.style.opacity = '0';
       window.setTimeout(() => {
-        slideshowCover.style.zIndex = '-1';
-      }, 2500);
-      imageNum = 6;
+        images.forEach(img => {
+          img.style.visibility = 'visible';
+        });
+        const slideshowCover = document.getElementsByClassName('slideshow-cover')[0];
+        slideshowCover.className += ' slideshow-cover-fade-out';
+        slideshowCover.style.opacity = '0';
+        window.setTimeout(() => {
+          slideshowCover.style.zIndex = '-1';
+        }, 2500);
+        imageNum = 6;
+      }, 1500);
     }
   };
 })();
 
-// return if element is between window's top and bottom edges (boolean)
+// returns if element is between window's top and bottom edges (boolean)
 // checks both windowBottomEdge and windowTopEdge
 export const elementOnScreenStrict = (el, offset) => {
   const windowTopEdge = $(window).scrollTop();
@@ -51,4 +53,10 @@ export const elementOnScreen = (el, offset) => {
   const elTopEdge = el.offset().top + offset;
 
   return elTopEdge <= windowBottomEdge;
+};
+
+// returns if window viewport's width is greater than its height (boolean)
+export const windowWidthIsGreaterThanHeight = () => {
+  const widthMinusHeight = $(window).width() - $(window).height();
+  return widthMinusHeight >= 0;
 };

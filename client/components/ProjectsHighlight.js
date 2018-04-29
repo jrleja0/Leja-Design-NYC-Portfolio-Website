@@ -41,7 +41,7 @@ const ProjectsHighlight = (props) => {
             }
           </div>
           <div className="row project-text-row div-button-to-projects-page">
-            <div className="button-home-to-projects-page">
+            <div className="button-home-to-projects-page" style={{opacity: 0}}>
               <div>
                 <NavLink to="/work" activeClassName="active"
                   onClick={() => { window.scrollTo(0, 0); }}>

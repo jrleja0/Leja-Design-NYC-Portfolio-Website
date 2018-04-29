@@ -52,6 +52,28 @@ body {
 }
 @include fadeOutMixin(1, 0);
 
+//// slow fadeOut Mixin ////
+
+@mixin delayedFadeOutMixin($initialOpacity, $finalOpacity) {
+  @-webkit-keyframes delayedFadeOut {
+    0%, 50% {
+      opacity: $initialOpacity;
+    }
+    100% {
+      opacity: $finalOpacity;
+    }
+  }
+  @keyframes delayedFadeOut {
+    0%, 50% {
+      opacity: $initialOpacity;
+    }
+    100% {
+      opacity: $finalOpacity;
+    }
+  }
+}
+@include delayedFadeOutMixin(1, 0);
+
 //// Animating all main titles (moving down) ////
 
   .basic-main-title-animation-move-down {
