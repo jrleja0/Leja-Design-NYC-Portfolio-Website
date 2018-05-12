@@ -108,8 +108,10 @@ class Main extends React.Component {
     body.style.opacity = 0;
     window.setTimeout(() => {
       window.scrollTo(0, 0);
+    }, 400);
+    window.setTimeout(() => {
       body.style.opacity = 1;
-    }, 300);
+    }, 450);
   }
 
   handleScrollUpButton() {
