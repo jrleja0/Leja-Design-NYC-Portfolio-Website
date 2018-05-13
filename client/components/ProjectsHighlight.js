@@ -13,7 +13,7 @@ const ProjectsHighlight = (props) => {
 
   return (
     <div>
-      <div className="green-fixed-background">
+      <div className="green-fixed-pointer">
         <div className="container-fluid">
           <div className="row">
             <div className="div-project-main-title">

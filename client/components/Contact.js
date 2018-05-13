@@ -9,7 +9,9 @@ const Contact = (props) => {
 
   return (
     <div>
-      <div className="red-fixed-background">
+      <div className={location.pathname === '/contact' ?
+        'red-fixed-background' : 'red-fixed-pointer'}
+      >
         <div className="container-fluid">
           <div className="row">
             <div className="contact-main-title">

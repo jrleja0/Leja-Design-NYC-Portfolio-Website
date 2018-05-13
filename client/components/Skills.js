@@ -7,7 +7,9 @@ const Skills = (props) => {
 
   return (
     <div>
-      <div className="blue-fixed-background">
+      <div className={location.pathname === '/skills' ?
+        'blue-fixed-background' : 'blue-fixed-pointer'}
+      >
         <div className="container-fluid">
           <div className="row">
             <div className="contact-main-title">
