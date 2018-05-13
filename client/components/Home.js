@@ -64,8 +64,8 @@ class Home extends Component {
 
   handleBackgrounds() {
     this.handleHomeBackgroundColor(
-      document.querySelector('.blue-fixed-background'),  // starting element of blue background
-      document.querySelector('.red-fixed-background'),  // starting element of red background
+      document.querySelector('.blue-fixed-pointer'),  // starting element of blue background
+      document.querySelector('.red-fixed-pointer'),  // starting element of red background
       [...document.getElementsByClassName('home-background')]  // array of all home-background elements
     );
   }

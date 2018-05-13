@@ -24,13 +24,13 @@ class Routes extends Component {
 
   render() {
     return (
-      <Route render={({ location }) => (
+      <div>
         <TransitionGroup>
           <CSSTransition
             key={location.pathname.split('/')[1] || '/'}
             timeout={{
               enter: 1600,
-              exit: 750,
+              exit: 800,
               }} appear
             classNames="fading-transition"
             mountOnEnter={true}
@@ -49,7 +49,7 @@ class Routes extends Component {
             </Main>
           </CSSTransition>
         </TransitionGroup>
-      )} />
+      </div>
     );
   }
 }

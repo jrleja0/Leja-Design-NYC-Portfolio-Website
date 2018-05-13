@@ -130,44 +130,6 @@ body {
     }
   }
 
-  /* dropdown container without flexbox (not being used) */
-  .dropdown-main-container {
-    .dropdown-main-menu {
-      z-index: 100;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      font-size: 28px;
-      line-height: 32px;
-      display: none;
-
-      div {
-        height: 100%;
-      }
-
-      ul {
-        height: 80%;
-        padding: 40px 0;
-        margin: 0;
-      }
-
-      li {
-        height: 20%;
-      }
-
-      a {
-        display: inline-block;
-        background-color: $black-with-blue-rgba8;
-      }
-
-      span {
-        position: relative;
-        top: 25%;
-      }
-    }
-  }
-
   /* dropdown container with flexbox */
   .dropdown-main-container-flexbox {
     .dropdown-main-menu {
@@ -203,6 +165,7 @@ body {
         margin: 0;
         height: 90%;
         width: 100%;
+        position: relative;
       }
 
       li {
@@ -212,8 +175,9 @@ body {
         justify-content: center;
         align-items: center;
         margin: auto;
-        width: 100%;
+        width: 70%;
         min-height: 20%;
+        background-color: $black-with-blue;
       }
 
       a {
@@ -236,10 +200,6 @@ body {
   }
 
   .dropdown-main-menu {
-    @mixin box-shadow-menu-link($bottomLength, $color) {
-      -webkit-box-shadow: inset 0 $bottomLength 0 0 $color;
-      box-shadow: inset 0 $bottomLength 0 0 $color;
-    }
 
     a {
       border: 6px solid $blue-bold-rgba8;
@@ -247,7 +207,7 @@ body {
       height: 100%;
       -webkit-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out;
-      @include box-shadow-menu-link(-3px, $blue-bold-rgba8);
+      background-color: $blue-bold-rgba2;
       text-decoration: underline;
       -webkit-text-decoration-color: white;
       text-decoration-color: white;
@@ -279,7 +239,7 @@ body {
     }
 
     a:hover, a.active:hover {
-      @include box-shadow-menu-link(-120px, $blue-bold-rgba8);
+      background-color: $blue-bold-rgba8;
       color: white;
       -webkit-text-decoration-color: white;
       text-decoration-color: white;
@@ -289,31 +249,31 @@ body {
 
     .blue-with-red-highlight {
       border: 6px solid $blue-with-red-rgba8;
-      @include box-shadow-menu-link(-3px, $blue-with-red-rgba8);
+      background-color: $blue-with-red-rgba2;
     }
     .blue-with-red-highlight:hover, .blue-with-red-highlight.active:hover {
-      @include box-shadow-menu-link(-120px, $blue-with-red-rgba8);
+      background-color: $blue-with-red-rgba8;
     }
     .green-highlight {
       border: 6px solid $green-bold-rgba8;
-      @include box-shadow-menu-link(-3px, $green-bold-rgba8);
+      background-color: $green-bold-rgba2;
     }
     .green-highlight:hover, .green-highlight.active:hover {
-      @include box-shadow-menu-link(-120px, $green-bold-rgba8);
+      background-color: $green-bold-rgba8;
     }
     .dropdown-main-menu-red {
       border: 6px solid $red-bold-rgba8;
-      @include box-shadow-menu-link(-3px, $red-bold-rgba8);
+      background-color: $red-bold-rgba2;
     }
     .dropdown-main-menu-red:hover, .dropdown-main-menu-red.active:hover {
-      @include box-shadow-menu-link(-120px, $red-bold-rgba8);
+      background-color: $red-bold-rgba8;
     }
     .yellow-highlight {
       border: 6px solid $yellow-golden-rgba;
-      @include box-shadow-menu-link(-3px, $yellow-golden-rgba);
+      background-color: $yellow-golden-rgba2;
     }
     .yellow-highlight:hover, .yellow-highlight.active:hover {
-      @include box-shadow-menu-link(-120px, $yellow-golden-rgba);
+      background-color: $yellow-golden-rgba;
     }
   }
 
