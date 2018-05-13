@@ -362,23 +362,19 @@ body {
 .fading-transition-enter,
 .fading-transition-appear {
   opacity: 0;
-  transition-delay: 600ms;
 }
 .fading-transition-enter-active,
 .fading-transition-appear-active {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
-  transition-delay: 700ms;  //750ms;
+  transition: opacity 800ms ease-in-out;
+  transition-delay: 800ms;
 }
 .fading-transition-exit {
-  opacity: 0.3;
-  // background-color: $black-with-blue-rgba6;
+  opacity: 0.5;
 }
 .fading-transition-exit-active {
   opacity: 0;
-  transition: opacity 400ms ease-in-out;
-  // transition-delay: 400ms;
-  // background-color: $black-with-blue-rgba6;
+  transition: opacity 800ms ease-in-out;
 }
 
 /*///
