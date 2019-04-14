@@ -547,6 +547,8 @@ body {
     background-position: left, right;
     background-size: 50%;
     margin: 15px -30px;
+    border-top: 10px solid $black-with-green;
+    border-bottom: 10px solid $black-with-green;
   }
 
   .project-textbox-backdrop {
