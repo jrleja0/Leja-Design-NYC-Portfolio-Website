@@ -441,7 +441,7 @@ body {
 *////
 
   div.div-button-to-projects-page {
-    margin-bottom: 40px;
+    margin: 15px -30px 40px;
   }
 
   .button-home-to-projects-page {
@@ -544,6 +544,7 @@ body {
     background-image: url("/assets/abstractions/greenTile2_FadeRight.jpg"), url("/assets/abstractions/greenTile2_FadeLeft.jpg");
     background-repeat: repeat-y;
     background-position: left, right;
+    background-size: 50%;
     margin: 15px -30px;
   }
 
