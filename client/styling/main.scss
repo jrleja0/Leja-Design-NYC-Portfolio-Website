@@ -441,6 +441,7 @@ body {
 *////
 
   div.div-button-to-projects-page {
+    margin-top: 15px;
     margin-bottom: 40px;
   }
 
@@ -544,7 +545,10 @@ body {
     background-image: url("/assets/abstractions/greenTile2_FadeRight.jpg"), url("/assets/abstractions/greenTile2_FadeLeft.jpg");
     background-repeat: repeat-y;
     background-position: left, right;
+    background-size: 50%;
     margin: 15px -30px;
+    border-top: 10px solid $black-with-green;
+    border-bottom: 10px solid $black-with-green;
   }
 
   .project-textbox-backdrop {
